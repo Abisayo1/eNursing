@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "850662827241",
+    "project_id": "computerize1",
+    "storage_bucket": "computerize1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:850662827241:android:3bf420ba5d89d23a40bc78",
+        "android_client_info": {
+          "package_name": "com.abisayo.computerize1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "850662827241-tkvm8g5lnas6tsl4d4ffouf4ilajnfsd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAU5iE0WzPDgddGR9lic0o59NW4KIByZ5A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "850662827241-tkvm8g5lnas6tsl4d4ffouf4ilajnfsd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

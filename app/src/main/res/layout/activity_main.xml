@@ -8,7 +8,7 @@
 
 
     <TextView
-        android:id="@+id/email"
+        android:id="@+id/password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="29dp"
@@ -19,7 +19,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.043"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
+        app:layout_constraintTop_toBottomOf="@+id/email" />
 
     <TextView
         android:id="@+id/log_in"
@@ -52,7 +52,7 @@
         app:layout_constraintVertical_bias="0.49" />
 
     <EditText
-        android:id="@+id/name"
+        android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="54dp"
         android:layout_margin="15dp"
@@ -60,7 +60,7 @@
         android:ems="10"
         android:hint="Enter Email"
         android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/email"
+        app:layout_constraintBottom_toTopOf="@+id/password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toStartOf="parent"
@@ -79,7 +79,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email"
+        app:layout_constraintTop_toBottomOf="@+id/password"
         app:passwordToggleEnabled = "true"
         app:layout_constraintVertical_bias="0.0" />
 
@@ -91,7 +91,7 @@
         android:layout_marginBottom="-10dp"
         android:text="Email Address"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/name"
+        app:layout_constraintBottom_toTopOf="@+id/email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.047"
         app:layout_constraintStart_toStartOf="parent"

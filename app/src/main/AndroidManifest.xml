@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Computerize1">
         <activity
+            android:name=".Topics"
+            android:exported="false" />
+        <activity
             android:name=".CreateAccount"
             android:exported="false" />
         <activity

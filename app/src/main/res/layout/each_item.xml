@@ -19,9 +19,11 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="120dp"
+            app:cardElevation="4dp"
             app:cardCornerRadius="15dp">
 
             <RelativeLayout
+                android:id="@+id/layout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background= "#da3a3a"

@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Computerize1">
         <activity
+            android:name=".EditProfile"
+            android:exported="false" />
+        <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
             android:name=".Learn"
             android:exported="false" />
         <activity
@@ -32,8 +38,5 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
-
-
-
 
 </manifest>

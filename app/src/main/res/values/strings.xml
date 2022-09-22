@@ -2,5 +2,6 @@
     <string name="app_name">Computerize</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
-    <string name="definition">Flowchart is a graphical representation of an algorithm. Programmers often use it as a program-planning tool to solve a problem. It makes use of symbols which are connected among them to indicate the flow of information and processing.  <br/> <br/> The process of drawing a flowchart for an algorithm is known as “flowcharting”</string>
+    <string name="definition">Flowchart is a graphical representation of an algorithm. Programmers often use it as a program-planning tool to solve a problem. It makes use of symbols which are connected among them to indicate the flow of information and processing.  <br /> <br /> The process of drawing a flowchart for an algorithm is known as “flowcharting”</string>
+    <string name="gdg_description_terminal"><b>1. Terminal:</b> The oval symbol indicates Start, Stop and Halt in a program’s logic flow. A pause/halt is generally used in a program logic under some error conditions. Terminal is the first and last symbols in the flowchart.</string>
 </resources>

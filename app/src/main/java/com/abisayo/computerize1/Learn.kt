@@ -44,8 +44,16 @@ class Learn : AppCompatActivity() {
         navView.setNavigationItemSelectedListener {
 
             when (it.itemId) {
-                R.id.nav_home -> Toast.makeText(applicationContext, "Home!", Toast.LENGTH_SHORT)
-                    .show()
+                R.id.nav_home ->  {intent = Intent(this, Topics::class.java)
+                                   startActivity(intent)
+                                    finish()
+                }
+
+                R.id.profile ->  {intent = Intent(this, Profile::class.java)
+                    startActivity(intent)
+                    finish()
+                }
+
 
             }
             true

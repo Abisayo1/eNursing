@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.abisayo.computerize1.R.*
 
 class TopicAdapter(private val topicList:ArrayList<Topic>)
     :RecyclerView.Adapter<TopicAdapter.TopicViewHolder>(){
@@ -29,10 +30,10 @@ class TopicAdapter(private val topicList:ArrayList<Topic>)
     class TopicViewHolder(itemView: View, listener: onItemClickListener): RecyclerView.ViewHolder(itemView) {
 
 
-        val imageView: ImageView = itemView.findViewById(R.id.img)
-        val textView: TextView = itemView.findViewById(R.id.topic)
-        val detail: TextView = itemView.findViewById(R.id.detail)
-        val layout: RelativeLayout = itemView.findViewById(R.id.layout)
+        val imageView: ImageView = itemView.findViewById(id.img)
+        val textView: TextView = itemView.findViewById(id.topic)
+        val detail: TextView = itemView.findViewById(id.detail)
+        val layout: RelativeLayout = itemView.findViewById(id.layout)
 
         init {
 
@@ -44,7 +45,7 @@ class TopicAdapter(private val topicList:ArrayList<Topic>)
 
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TopicViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.each_item, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(layout.each_item, parent, false)
         return TopicViewHolder(view,mListner)
     }
 
@@ -56,11 +57,14 @@ class TopicAdapter(private val topicList:ArrayList<Topic>)
 
         if (position == 1) {
             holder.layout.setBackgroundColor(Color.parseColor("#da3a3a"))
+            holder.imageView.setImageResource(drawable.algorithm)
         } else if (position == 2) {
             holder.layout.setBackgroundColor(Color.parseColor("#3f88e4"))
         } else if (position == 3) {
             holder.layout.setBackgroundColor(Color.parseColor("#7678d1"))
 
+        } else{
+            holder.imageView.setImageResource(drawable.flowchart)
         }
     }
 

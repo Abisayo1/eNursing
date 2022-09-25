@@ -27,5 +27,10 @@ class Profile : AppCompatActivity() {
             onBackPressed()
 
         }
+
+        binding.button2.setOnClickListener {
+            val intent = Intent(this, EditProfile::class.java)
+            startActivity(intent)
+        }
     }
 }

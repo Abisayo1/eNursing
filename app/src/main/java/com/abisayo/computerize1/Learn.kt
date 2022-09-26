@@ -32,6 +32,11 @@ class Learn : AppCompatActivity() {
         binding = ActivityLearnBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.button.setOnClickListener {
+            val intent = Intent(this, Quiz::class.java)
+            startActivity(intent)
+        }
+
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
 

@@ -84,7 +84,7 @@
             android:layout_margin="15dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/edittext_rounded_corners"
-            android:elevation="10dp"
+            android:elevation="7dp"
             android:layout_marginLeft="15dp"
             android:ems="10"
             android:hint="Enter your favourite topic"
@@ -98,10 +98,10 @@
             android:layout_width="318dp"
             android:layout_height="40dp"
             android:layout_margin="15dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="12dp"
             android:layout_marginLeft="15dp"
             android:background="@drawable/edittext_rounded_corners"
-            android:elevation="10dp"
+            android:elevation="7dp"
             android:ems="10"
             android:hint="Enter First and Last Name"
             app:layout_constraintEnd_toEndOf="parent"
@@ -114,10 +114,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
+            android:layout_marginTop="12dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/status">
+            app:layout_constraintTop_toBottomOf="@+id/status"
+            app:layout_constraintVertical_bias="0.0">
 
             <RadioButton
                 android:id="@+id/firstAnswerRadioButton"
@@ -180,6 +183,21 @@
             app:layout_constraintHorizontal_bias="0.125"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/fav" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="283dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="#171F1D"
+            android:text="Update"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radio_group" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

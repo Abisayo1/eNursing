@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/drawable/circle_progress_bar.xml" value="0.2890625" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/drawable/circle_shape.xml" value="0.2712962962962963" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/drawable/edittext_rounded_corners.xml" value="0.2890625" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.2890625" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/drawable/rounded_corner.xml" value="0.2712962962962963" />
@@ -13,6 +15,7 @@
         <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/layout/activity_profile.xml" value="0.33" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/layout/activity_quiz.xml" value="0.5" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/layout/activity_result.xml" value="0.2675925925925926" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/layout/activity_topics.xml" value="0.5" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/layout/activity_topics1.xml" value="0.5" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/layout/each_item.xml" value="0.27291666666666664" />

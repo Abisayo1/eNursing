@@ -52,7 +52,7 @@ class Topics : AppCompatActivity() {
         topicAdapter.setOnItemClickListener(object : TopicAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
                 if (position == 0) {
-                    val intent = Intent(this@Topics, Learn::class.java)
+                    val intent = Intent(this@Topics, Result::class.java)
                     startActivity(intent)
 
                 } else {
@@ -61,6 +61,7 @@ class Topics : AppCompatActivity() {
             }
 
         })
+
 
     }
 }

@@ -1,11 +1,9 @@
 package com.abisayo.computerize1
 
 import android.content.Intent
+import android.graphics.Point
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MenuItem
-import android.view.Window
-import android.view.WindowManager
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
@@ -13,7 +11,8 @@ import com.abisayo.computerize1.databinding.ActivityLearnBinding
 import com.abisayo.computerize1.databinding.ActivityMainBinding
 import com.google.android.material.navigation.NavigationView
 import android.system.Os.close
-import android.view.Menu
+import android.view.*
+import android.widget.ScrollView
 import androidx.appcompat.app.AppCompatDelegate
 
 
@@ -59,6 +58,8 @@ class Learn : AppCompatActivity() {
                     finish()
                 }
 
+                R.id.flow -> scrollToView(binding.scroll, binding.title)
+
 
             }
             true
@@ -85,6 +86,30 @@ class Learn : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
 
 
+    }
+
+    private fun scrollToView(scrollViewParent: ScrollView, view: View) {
+        // Get deepChild Offset
+        val childOffset = Point()
+        getDeepChildOffset(scrollViewParent, view.parent, view, childOffset)
+        // Scroll to child.
+        scrollViewParent.smoothScrollTo(0, childOffset.y)
+
+        binding.drawerLayout.closeDrawers()
+    }
+    private fun getDeepChildOffset(
+        mainParent: ViewGroup,
+        parent: ViewParent,
+        child: View,
+        accumulatedOffset: Point
+    ) {
+        val parentGroup = parent as ViewGroup
+        accumulatedOffset.x += child.left
+        accumulatedOffset.y += child.top
+        if (parentGroup == mainParent) {
+            return
+        }
+        getDeepChildOffset(mainParent, parentGroup.parent, parentGroup, accumulatedOffset)
     }
 }
 

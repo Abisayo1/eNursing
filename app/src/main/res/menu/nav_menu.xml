@@ -24,8 +24,20 @@
                 android:title="Flowchart"/>
 
             <item
-                android:id="@+id/example"
-                android:title="Types"/>
+                android:id="@+id/element"
+                android:title="Elements of Flowchart"/>
+
+            <item
+                android:id="@+id/rules"
+                android:title="Rules of Flowchart"/>
+
+            <item
+                android:id="@+id/adv"
+                android:title="Advantages"/>
+
+            <item
+                android:id="@+id/dis"
+                android:title="Disadvantages"/>
 
             <item
                 android:id="@+id/quiz"

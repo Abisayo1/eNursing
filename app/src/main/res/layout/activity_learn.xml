@@ -215,6 +215,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
+            android:layout_marginBottom="20dp"
             android:backgroundTint="#124BCD"
             android:text="Take Assessment"
             android:textAllCaps="false"
@@ -310,8 +311,9 @@
 
         <ImageView
             android:id="@+id/example_img"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_width="500dp"
+            android:layout_height="500dp"
+            app:flow_horizontalAlign="center"
             android:layout_marginTop="12dp"
             android:src="@drawable/flowchart_diagram"
             app:layout_constraintEnd_toEndOf="parent"

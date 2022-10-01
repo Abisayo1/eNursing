@@ -94,10 +94,106 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginTop="12dp"
-            android:src="@drawable/img_3"
+            android:src="@drawable/flowchart_oval"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/description" />
+
+        <TextView
+            android:id="@+id/input_output"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/input_output"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/end_image" />
+
+        <ImageView
+            android:id="@+id/output"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/flowchart_parallel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_output" />
+
+        <TextView
+            android:id="@+id/processing"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/process"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/output" />
+
+        <ImageView
+            android:id="@+id/process"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/process"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/processing" />
+
+        <TextView
+            android:id="@+id/decision"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/decision"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/process" />
+
+        <ImageView
+            android:id="@+id/decision_img"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/decision"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/decision" />
+
+        <TextView
+            android:id="@+id/connectors"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/connectors"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/decision_img" />
+
+        <ImageView
+            android:id="@+id/connector_img"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/connectors"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/connectors" />
 
 
         <Button
@@ -105,6 +201,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
+            android:visibility="gone"
             android:backgroundTint="#124BCD"
             android:text="Take Assessment"
             android:textAllCaps="false"

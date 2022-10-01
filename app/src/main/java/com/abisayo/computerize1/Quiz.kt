@@ -22,6 +22,8 @@ class Quiz : AppCompatActivity() {
         )
         setContentView(R.layout.activity_quiz)
 
+        val questionsList = Constants.getQuestions()
+
         builder = AlertDialog.Builder(this)
     }
 

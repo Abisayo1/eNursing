@@ -13,12 +13,14 @@ import com.google.android.material.navigation.NavigationView
 import android.system.Os.close
 import android.view.*
 import android.widget.ScrollView
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatDelegate
 
 
 class Learn : AppCompatActivity() {
     private lateinit var binding: ActivityLearnBinding
     lateinit private var toggle: ActionBarDrawerToggle
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,27 +10,30 @@
     android:background="@drawable/quiz_backgrnd"
     tools:context=".Quiz">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="320dp"
         android:layout_height="201dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         app:cardCornerRadius="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/img_question">
 
         <RelativeLayout
             android:id="@+id/layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#5D9BA4"
-            android:padding="10dp"
-            >
+            android:padding="10dp">
 
             <TextView
-                android:id="@+id/topic"
+                android:id="@+id/question"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -44,15 +50,18 @@
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
+
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
-    <Button
-        android:id="@+id/button3"
+    <TextView
+        android:id="@+id/option1"
         android:layout_width="318dp"
         android:layout_height="60dp"
         android:layout_marginTop="32dp"
-        android:backgroundTint="#5D9BA4"
+        android:textAlignment="center"
+        android:background="@drawable/default_option_border_bg"
+        android:gravity="center"
         android:elevation="10dp"
         android:text="Button"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,78 +69,105 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
-    <Button
-        android:id="@+id/button4"
+    <TextView
+        android:id="@+id/option2"
         android:layout_width="318dp"
         android:layout_height="60dp"
         android:layout_marginTop="25dp"
         android:text="Button"
-        android:backgroundTint="#5D9BA4"
+        android:textAlignment="center"
+        android:background="@drawable/default_option_border_bg"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="318dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="25dp"
-        android:text="Button"
-        android:backgroundTint="#5D9BA4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="318dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="25dp"
-        android:text="Button"
-        android:backgroundTint="#5D9BA4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
+        app:layout_constraintTop_toBottomOf="@+id/option1"
+         />
 
     <TextView
-        android:id="@+id/textView23"
+        android:id="@+id/option3"
+        android:layout_width="318dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="25dp"
+        android:text="Button"
+        android:textAlignment="center"
+        android:background="@drawable/default_option_border_bg"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/option2" />
+
+    <TextView
+        android:id="@+id/option4"
+        android:layout_width="318dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="25dp"
+        android:text="Button"
+        android:textAlignment="center"
+        android:background="@drawable/default_option_border_bg"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/option3" />
+
+    <TextView
+        android:id="@+id/right"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:text="Wrong.."
+        android:visibility="gone"
         android:textColor="#FF0000"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button6" />
+        app:layout_constraintTop_toBottomOf="@+id/option4" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/next"
+        android:visibility="gone"
         android:layout_width="200dp"
         android:layout_height="39dp"
+        android:layout_marginBottom="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView23"
+        app:layout_constraintTop_toBottomOf="@+id/right"
         app:layout_constraintVertical_bias="0.631"
         app:srcCompat="@drawable/next" />
 
     <TextView
-        android:id="@+id/textView24"
+        android:id="@+id/nxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
         android:text="Next"
+        android:visibility="gone"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-        app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintStart_toStartOf="@+id/imageView4"
-        app:layout_constraintTop_toTopOf="@+id/imageView4" />
+        app:layout_constraintBottom_toBottomOf="@+id/next"
+        app:layout_constraintEnd_toEndOf="@+id/next"
+        app:layout_constraintStart_toStartOf="@+id/next"
+        app:layout_constraintTop_toTopOf="@+id/next" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/img_question"
+        android:layout_width="450dp"
+        android:layout_height="450dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05"
+        app:srcCompat="@drawable/flowchart_diagram"
+        tools:ignore="NotSibling" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

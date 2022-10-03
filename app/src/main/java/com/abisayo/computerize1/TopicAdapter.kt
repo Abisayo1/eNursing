@@ -31,7 +31,7 @@ class TopicAdapter(private val topicList:ArrayList<Topic>)
 
 
         val imageView: ImageView = itemView.findViewById(id.img)
-        val textView: TextView = itemView.findViewById(id.topic)
+        val textView: TextView = itemView.findViewById(id.question)
         val detail: TextView = itemView.findViewById(id.detail)
         val layout: RelativeLayout = itemView.findViewById(id.layout)
 

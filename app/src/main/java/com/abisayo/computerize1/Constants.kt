@@ -7,7 +7,7 @@ object Constants {
 
         val que1 = Question(
             1,"What is an algorithm?",
-            0,
+            (R.drawable.flowchart),
             "Algorthm is nothing",
             "Argentina",
             "What are you terying to say?",
@@ -20,7 +20,7 @@ object Constants {
 
         val que2 = Question(
             1,"What is an algorithm?",
-            0,
+            (R.drawable.flowchart),
             "Algorthm is nothing",
             "Argentina",
             "What are you terying to say?",
@@ -33,7 +33,7 @@ object Constants {
 
         val que3 = Question(
             1,"What is an algorithm?",
-            0,
+            (R.drawable.flowchart),
             "Algorthm is nothing",
             "Argentina",
             "What are you terying to say?",
@@ -46,7 +46,7 @@ object Constants {
 
         val que4 = Question(
             1,"What is an algorithm?",
-            0,
+            (R.drawable.flowchart),
             "Algorthm is nothing",
             "Argentina",
             "What are you terying to say?",

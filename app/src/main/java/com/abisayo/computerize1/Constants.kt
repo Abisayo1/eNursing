@@ -2,7 +2,7 @@ package com.abisayo.computerize1
 
 object Constants {
 
-    const val USER_NAME: String = "user_name"
+    const val TOPIC: String = "topic"
     const val TOTAL_QUESTIONS = "total_questions"
     const val CORRECT_ANSWERS = "correct_answers"
 
@@ -11,12 +11,12 @@ object Constants {
         val questionsList = ArrayList<Question>()
 
         val que1 = Question(
-            1,"What is an algorithm?",
+            1,"What is flowchart?",
             (R.drawable.flowchart),
-            "Algorthm is nothing",
-            "Argentina",
-            "What are you terying to say?",
-            "I do not know",
+            "It is a graphical representation of an algorithm",
+            "It is also known as an algorithm",
+            "It is a barchart ",
+            "It is an input device",
             1
         )
 
@@ -24,38 +24,38 @@ object Constants {
 
 
         val que2 = Question(
-            1,"What is an algorithm?",
+            2,"Flowcharts make use of _____ to indicate the flow of information",
             (R.drawable.flowchart),
-            "Algorthm is nothing",
-            "Argentina",
-            "What are you terying to say?",
-            "I do not know",
-            1
+            "code",
+            "cards",
+            "RAM",
+            "symbols",
+            4
         )
 
         questionsList.add(que2)
 
 
         val que3 = Question(
-            1,"What is an algorithm?",
+            3,"The oval symbol indicates _____",
             (R.drawable.flowchart),
-            "Algorthm is nothing",
-            "Argentina",
-            "What are you terying to say?",
-            "I do not know",
-            1
+            "inout/output",
+            "processing",
+            "terminal",
+            "screen",
+            3
         )
 
         questionsList.add(que3)
 
 
         val que4 = Question(
-            1,"What is an algorithm?",
+            1,"The diamond symbol represents?",
             (R.drawable.flowchart),
-            "Algorthm is nothing",
-            "Argentina",
-            "What are you terying to say?",
-            "I do not know",
+            "decision",
+            "connectors",
+            "terminal?",
+            "jewelry",
             1
         )
 

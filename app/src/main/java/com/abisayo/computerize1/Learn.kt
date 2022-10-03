@@ -4,17 +4,12 @@ import android.content.Intent
 import android.graphics.Point
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
 import com.abisayo.computerize1.databinding.ActivityLearnBinding
-import com.abisayo.computerize1.databinding.ActivityMainBinding
 import com.google.android.material.navigation.NavigationView
-import android.system.Os.close
 import android.view.*
 import android.widget.ScrollView
-import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.app.AppCompatDelegate
 
 
 class Learn : AppCompatActivity() {
@@ -50,7 +45,7 @@ class Learn : AppCompatActivity() {
         navView.setNavigationItemSelectedListener {
 
             when (it.itemId) {
-                R.id.nav_home ->  {intent = Intent(this, Topics::class.java)
+                R.id.nav_home ->  {intent = Intent(this, TopicsActivity::class.java)
                                    startActivity(intent)
                                     finish()
                 }
@@ -89,7 +84,7 @@ class Learn : AppCompatActivity() {
             return true
         }
         if (item.itemId == R.id.action_item_one) {
-            val intent = Intent(this, Topics::class.java)
+            val intent = Intent(this, TopicsActivity::class.java)
             startActivity(intent)
             finish()
         }

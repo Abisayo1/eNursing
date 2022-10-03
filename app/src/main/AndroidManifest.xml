@@ -25,7 +25,7 @@
             android:name=".Learn"
             android:exported="false" />
         <activity
-            android:name=".Topics"
+            android:name=".TopicsActivity"
             android:exported="false" />
         <activity
             android:name=".CreateAccount"

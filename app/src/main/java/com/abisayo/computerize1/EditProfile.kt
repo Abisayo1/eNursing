@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.view.Window
 import android.view.WindowManager
 import com.abisayo.computerize1.databinding.ActivityEditProfileBinding
-import com.abisayo.computerize1.databinding.ActivityProfileBinding
 
 
 class EditProfile : AppCompatActivity() {
@@ -28,7 +27,7 @@ class EditProfile : AppCompatActivity() {
         }
 
         binding.button2.setOnClickListener {
-                val intent = Intent(this, Topics::class.java)
+                val intent = Intent(this, TopicsActivity::class.java)
                 startActivity(intent)
 
         }

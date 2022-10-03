@@ -3,17 +3,15 @@ package com.abisayo.computerize1
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.view.Window
 import android.view.WindowManager
-import android.widget.ImageView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.abisayo.computerize1.databinding.ActivityTopics1Binding
 
 
-class Topics : AppCompatActivity() {
+class TopicsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityTopics1Binding
     private lateinit var recyclerView: RecyclerView
     private lateinit var topicList: ArrayList<Topic>
@@ -52,11 +50,11 @@ class Topics : AppCompatActivity() {
         topicAdapter.setOnItemClickListener(object : TopicAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
                 if (position == 0) {
-                    val intent = Intent(this@Topics, Learn::class.java)
+                    val intent = Intent(this@TopicsActivity, Learn::class.java)
                     startActivity(intent)
 
                 } else {
-                    Toast.makeText(this@Topics, "it.exception.toString()", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@TopicsActivity, "it.exception.toString()", Toast.LENGTH_SHORT).show()
                 }
             }
 

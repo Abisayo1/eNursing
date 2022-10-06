@@ -94,7 +94,7 @@ object Constants {
 
 
         val que3 = Question(
-            3,"_______ Algorithm is characterized by breaking a problem into sub-problems, solving and then merging the solutions",
+            3,"_______ Algorithm is characterized by breaking a problem into sub-problems",
             (R.drawable.flowchart),
             "Brute Force",
             "Sorting algorithm",

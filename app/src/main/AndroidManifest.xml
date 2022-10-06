@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Computerize1">
         <activity
+            android:name=".AlgoQuizActivity"
+            android:exported="false" />
+        <activity
             android:name=".AlgorithmActivity"
             android:exported="false" />
         <activity

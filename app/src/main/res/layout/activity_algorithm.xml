@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Learn">
+    tools:context=".AlgorithmActivity">
     <ScrollView
 
         android:layout_width="match_parent"
@@ -29,11 +29,11 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:src="@drawable/flowchart"
-                tools:srcCompat="@drawable/algorithm" />
+                android:src="@drawable/algo_image"
+                tools:srcCompat="@drawable/algo_image" />
 
             <TextView
-                android:id="@+id/title"
+                android:id="@+id/algo_title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -53,22 +53,22 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="15dp"
                 android:textSize="15sp"
-                android:text="@string/definition"
+                android:text="@string/algo_def"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/title"
+                app:layout_constraintTop_toBottomOf="@+id/algo_title"
                 android:layout_marginStart="15dp"
                 android:layout_marginLeft="15dp" />
 
             <TextView
-                android:id="@+id/subtitle"
+                android:id="@+id/algo_typ"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13dp"
                 android:layout_marginLeft="15dp"
                 android:textSize="16sp"
-                android:text="Elements of Flowchart"
+                android:text="Types of Algorithms"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
@@ -83,17 +83,18 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginTop="8dp"
-                android:text="@string/gdg_description_terminal"
+                android:text="@string/types_algo"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/subtitle" />
+                app:layout_constraintTop_toBottomOf="@+id/algo_typ" />
 
             <ImageView
                 android:id="@+id/end_image"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_marginTop="12dp"
+                android:visibility="gone"
                 android:src="@drawable/flowchart_oval"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -107,7 +108,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginTop="8dp"
-                android:text="@string/input_output"
+                android:text="@string/recursive_algo"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
@@ -119,6 +120,7 @@
                 android:layout_height="70dp"
                 android:layout_marginTop="12dp"
                 android:src="@drawable/flowchart_parallel"
+                android:visibility="gone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/input_output" />
@@ -131,7 +133,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginTop="8dp"
-                android:text="@string/process"
+                android:text="@string/back_tracking_algo"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
@@ -143,6 +145,7 @@
                 android:layout_height="70dp"
                 android:layout_marginTop="12dp"
                 android:src="@drawable/process"
+                android:visibility="gone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/processing" />
@@ -155,7 +158,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginTop="8dp"
-                android:text="@string/decision"
+                android:text="@string/searching_algo"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
@@ -165,6 +168,7 @@
                 android:id="@+id/decision_img"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
+                android:visibility="gone"
                 android:layout_marginTop="12dp"
                 android:src="@drawable/decision"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -179,7 +183,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginTop="8dp"
-                android:text="@string/connectors"
+                android:text="@string/sorting_algo"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
@@ -190,6 +194,7 @@
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_marginTop="12dp"
+                android:visibility="gone"
                 android:src="@drawable/connectors"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -203,7 +208,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginTop="8dp"
-                android:text="@string/flowline"
+                android:text="@string/divide_and_conquer"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
@@ -226,13 +231,13 @@
                 />
 
             <TextView
-                android:id="@+id/rule_flow"
+                android:id="@+id/algo_charact"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13dp"
                 android:layout_marginLeft="15dp"
                 android:textSize="16sp"
-                android:text="Rules for Creating Flowchart"
+                android:text="Characteristics of Algorithms"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
@@ -247,20 +252,20 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginTop="8dp"
-                android:text="@string/rules_flow"
+                android:text="@string/characteristic_algo"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/rule_flow" />
+                app:layout_constraintTop_toBottomOf="@+id/algo_charact" />
 
             <TextView
-                android:id="@+id/flow_adv"
+                android:id="@+id/algo_func"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13dp"
                 android:layout_marginLeft="15dp"
                 android:textSize="16sp"
-                android:text="Advantages of Flowchart"
+                android:text="Why do you need Algorithm?"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
@@ -268,32 +273,32 @@
                 app:layout_constraintTop_toBottomOf="@+id/rules_flow_list" />
 
             <TextView
-                android:id="@+id/flow_adv_list"
+                android:id="@+id/algo_need"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginTop="8dp"
-                android:text="@string/advantages_flow"
+                android:text="@string/algo_func"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/flow_adv" />
+                app:layout_constraintTop_toBottomOf="@+id/algo_func" />
 
             <TextView
-                android:id="@+id/flow_dis"
+                android:id="@+id/algo_how_write"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13dp"
                 android:layout_marginLeft="15dp"
                 android:textSize="16sp"
-                android:text="Disdvantages of Flowchart"
+                android:text="How to Write an Algorithm"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/flow_adv_list" />
+                app:layout_constraintTop_toBottomOf="@+id/algo_need" />
 
             <TextView
                 android:id="@+id/flow_dis_list"
@@ -303,11 +308,11 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginTop="8dp"
-                android:text="@string/disadvantages_flow"
+                android:text="@string/algo_how_write"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/flow_dis" />
+                app:layout_constraintTop_toBottomOf="@+id/algo_how_write" />
 
             <ImageView
                 android:id="@+id/example_img"
@@ -315,6 +320,7 @@
                 android:layout_height="500dp"
                 app:flow_horizontalAlign="center"
                 android:layout_marginTop="12dp"
+                android:visibility="gone"
                 android:src="@drawable/flowchart_diagram"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -327,7 +333,7 @@
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navView"
         app:headerLayout="@layout/nav_header"
-        app:menu="@menu/nav_menu"
+        app:menu="@menu/algo"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"

@@ -33,7 +33,7 @@
             tools:srcCompat="@drawable/flowchart" />
 
         <TextView
-            android:id="@+id/title"
+            android:id="@+id/flow"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -57,12 +57,12 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/title"
+            app:layout_constraintTop_toBottomOf="@+id/flow"
             android:layout_marginStart="15dp"
             android:layout_marginLeft="15dp" />
 
         <TextView
-            android:id="@+id/subtitle"
+            android:id="@+id/elements"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="13dp"
@@ -87,7 +87,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/subtitle" />
+            app:layout_constraintTop_toBottomOf="@+id/elements" />
 
         <ImageView
             android:id="@+id/end_image"
@@ -226,7 +226,7 @@
             />
 
         <TextView
-            android:id="@+id/rule_flow"
+            android:id="@+id/rules"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="13dp"
@@ -251,10 +251,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rule_flow" />
+            app:layout_constraintTop_toBottomOf="@+id/rules" />
 
         <TextView
-            android:id="@+id/flow_adv"
+            android:id="@+id/adv"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="13dp"
@@ -268,7 +268,7 @@
             app:layout_constraintTop_toBottomOf="@+id/rules_flow_list" />
 
         <TextView
-            android:id="@+id/flow_adv_list"
+            android:id="@+id/algo_need"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
@@ -279,10 +279,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/flow_adv" />
+            app:layout_constraintTop_toBottomOf="@+id/adv" />
 
         <TextView
-            android:id="@+id/flow_dis"
+            android:id="@+id/dis"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="13dp"
@@ -293,7 +293,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/flow_adv_list" />
+            app:layout_constraintTop_toBottomOf="@+id/algo_need" />
 
         <TextView
             android:id="@+id/flow_dis_list"
@@ -307,7 +307,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/flow_dis" />
+            app:layout_constraintTop_toBottomOf="@+id/dis" />
 
         <ImageView
             android:id="@+id/example_img"

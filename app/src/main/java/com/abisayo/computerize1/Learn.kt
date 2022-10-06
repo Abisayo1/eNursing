@@ -54,11 +54,11 @@ class Learn : AppCompatActivity() {
                     startActivity(intent)
                 }
 
-                R.id.flow -> scrollToView(binding.scroll, binding.title)
-                R.id.element -> scrollToView(binding.scroll, binding.subtitle)
-                R.id.rules -> scrollToView(binding.scroll, binding.ruleFlow)
-                R.id.adv -> scrollToView(binding.scroll, binding.flowAdv)
-                R.id.dis -> scrollToView(binding.scroll, binding.flowDis)
+                R.id.flow -> scrollToView(binding.scroll, binding.flow)
+                R.id.element -> scrollToView(binding.scroll, binding.elements)
+                R.id.rules -> scrollToView(binding.scroll, binding.rules)
+                R.id.adv -> scrollToView(binding.scroll, binding.adv)
+                R.id.dis -> scrollToView(binding.scroll, binding.dis)
 
                 R.id.quiz ->  {intent = Intent(this, Quiz::class.java)
                     startActivity(intent)

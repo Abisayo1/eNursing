@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Computerize</string>
+    <string name="app_name">cSimplify</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="definition">Flowchart is a graphical representation of an algorithm. Programmers often use it as a program-planning tool to solve a problem. It makes use of symbols which are connected among them to indicate the flow of information and processing.  <br /> <br /> The process of drawing a flowchart for an algorithm is known as “flowcharting”</string>

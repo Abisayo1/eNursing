@@ -59,8 +59,6 @@ class TopicsActivity : AppCompatActivity() {
                     val intent = Intent(this@TopicsActivity, AlgorithmActivity::class.java)
                     startActivity(intent)
 
-                } else {
-                    Toast.makeText(this@TopicsActivity, "it.exception.toString()", Toast.LENGTH_SHORT).show()
                 }
             }
 

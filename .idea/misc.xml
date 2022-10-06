@@ -12,6 +12,7 @@
         <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/drawable/rounded_corner.xml" value="0.2712962962962963" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/drawable/wrong_option_border.xml" value="0.2890625" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/layout-v21/activity_edit_profile.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/layout/activity_algo_quiz.xml" value="0.2675925925925926" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/layout/activity_algorithm.xml" value="0.33" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/layout/activity_create_account.xml" value="0.33" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/layout/activity_edit_profile.xml" value="0.33" />
@@ -20,6 +21,7 @@
         <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/layout/activity_profile.xml" value="0.33" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/layout/activity_quiz.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/layout/activity_result.xml" value="0.2675925925925926" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/layout/activity_splash_screen.xml" value="0.2675925925925926" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/layout/activity_topics.xml" value="0.5" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/layout/activity_topics1.xml" value="0.5" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/layout/each_item.xml" value="0.27291666666666664" />
@@ -29,6 +31,7 @@
         <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/menu/algo.xml" value="0.24074074074074073" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/menu/main.xml" value="0.2675925925925926" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/menu/nav_menu.xml" value="0.5" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2890625" />
       </map>
     </option>
   </component>

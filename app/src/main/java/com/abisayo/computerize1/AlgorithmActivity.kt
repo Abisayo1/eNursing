@@ -34,6 +34,10 @@ class AlgorithmActivity : AppCompatActivity() {
         toggle.syncState()
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        binding.button.setOnClickListener {
+            val i = Intent(this, AlgoQuizActivity::class.java)
+            startActivity(i)
+        }
 
         navView.setNavigationItemSelectedListener {
 

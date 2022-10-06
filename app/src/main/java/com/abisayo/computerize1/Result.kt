@@ -28,6 +28,7 @@ class Result : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
 
+
         binding = ActivityResultBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -45,6 +46,16 @@ class Result : AppCompatActivity() {
 
         val  totalQuestions = intent.getIntExtra(Constants.TOTAL_QUESTIONS, 0)
         val correctAnswers = intent.getIntExtra(Constants.CORRECT_ANSWERS, 0)
+
+        if (correctAnswers <=1 ) {
+            binding.motiv.text = "Ouch! It seems you need to study this topic one more time."
+        } else if (correctAnswers == 2) {
+            binding.motiv.text = "An average performance. You can do better!"
+        } else if (correctAnswers == 4) {
+            binding.motiv.text = "Great job computer expert!"
+        } else {
+            binding.motiv.text = "You can do better!"
+        }
 
         i = correctAnswers
         j = totalQuestions

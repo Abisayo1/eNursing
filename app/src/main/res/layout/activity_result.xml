@@ -45,7 +45,7 @@
 
 
     <TextView
-        android:id="@+id/textView20"
+        android:id="@+id/motiv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="-80dp"

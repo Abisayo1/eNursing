@@ -54,7 +54,9 @@ class Learn : AppCompatActivity() {
                     startActivity(intent)
                 }
 
-                R.id.flow -> scrollToView(binding.scroll, binding.flow)
+                R.id.flow -> {intent = Intent(this, FlowCharacteristicsActivity::class.java)
+                    startActivity(intent)
+                }
                 R.id.element -> scrollToView(binding.scroll, binding.elements)
                 R.id.rules -> scrollToView(binding.scroll, binding.rules)
                 R.id.adv -> scrollToView(binding.scroll, binding.adv)

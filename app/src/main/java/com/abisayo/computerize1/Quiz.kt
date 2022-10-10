@@ -139,6 +139,7 @@ class Quiz : AppCompatActivity(), View.OnClickListener {
                         val intent = Intent(this, Result::class.java)
                         intent.putExtra(Constants.CORRECT_ANSWERS, mCorrectAnswers)
                         intent.putExtra(Constants.TOTAL_QUESTIONS, mQuestionsList!!.size)
+                        intent.putExtra(Constants.TOPIC, "Flowchart")
                         startActivity(intent)
                         finish()
                     }

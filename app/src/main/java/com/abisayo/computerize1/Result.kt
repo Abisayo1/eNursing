@@ -32,12 +32,6 @@ class Result : AppCompatActivity() {
         binding = ActivityResultBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.tryAgain.setOnClickListener {
-            val intent = Intent(this, Quiz::class.java)
-            startActivity(intent)
-            finish()
-        }
-
         binding.goHome.setOnClickListener {
             val intent = Intent(this, TopicsActivity::class.java)
             startActivity(intent)
@@ -46,6 +40,21 @@ class Result : AppCompatActivity() {
 
         val  totalQuestions = intent.getIntExtra(Constants.TOTAL_QUESTIONS, 0)
         val correctAnswers = intent.getIntExtra(Constants.CORRECT_ANSWERS, 0)
+        val topic = intent.getStringExtra(Constants.TOPIC,)
+
+        binding.tryAgain.setOnClickListener {
+                if (
+                    topic == "Algorithms"
+                ){
+                    val intent = Intent(this, AlgoQuizActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                } else {
+                    val intent = Intent(this, Quiz::class.java)
+                    startActivity(intent)
+                    finish()
+                }
+        }
 
         if (correctAnswers <=1 ) {
             binding.motiv.text = "Ouch! It seems you need to study this topic one more time."

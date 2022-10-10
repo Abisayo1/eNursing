@@ -50,7 +50,7 @@ class TopicsActivity : AppCompatActivity() {
         topicAdapter.setOnItemClickListener(object : TopicAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
                 if (position == 0) {
-                    val intent = Intent(this@TopicsActivity, Learn::class.java)
+                    val intent = Intent(this@TopicsActivity, FlowSubTopicsActivity::class.java)
                     startActivity(intent)
 
                 }

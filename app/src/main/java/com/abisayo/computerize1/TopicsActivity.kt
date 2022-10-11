@@ -56,7 +56,7 @@ class TopicsActivity : AppCompatActivity() {
                 }
 
                 if (position == 1) {
-                    val intent = Intent(this@TopicsActivity, AlgorithmActivity::class.java)
+                    val intent = Intent(this@TopicsActivity, AlgorithmSubtopicsActivity::class.java)
                     startActivity(intent)
 
                 }

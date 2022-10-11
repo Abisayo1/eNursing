@@ -38,11 +38,15 @@
             <item
                 android:id="@+id/dis"
                 android:title="Disadvantages"/>
+            <item
+                android:id="@+id/flow_example"
+                android:title="Examples"/>
 
             <item
                 android:id="@+id/quiz"
                 android:icon="@drawable/ic_baseline_assessment_24"
                 android:title="Take Quiz"/>
+
 
         </menu>
 

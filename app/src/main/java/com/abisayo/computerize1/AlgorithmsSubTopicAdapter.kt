@@ -10,8 +10,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.abisayo.computerize1.R.*
 
-class SubTopicsAdapter(private val topicList:ArrayList<Topic>)
-    :RecyclerView.Adapter<SubTopicsAdapter.SubTopicsViewHolder>(){
+class AlgorithmsSubTopicAdapter(private val topicList:ArrayList<Topic>)
+    :RecyclerView.Adapter<AlgorithmsSubTopicAdapter.AlgorithmsSubTopicViewHolder>(){
 
     private lateinit var mListner: onItemClickListener
 
@@ -27,7 +27,7 @@ class SubTopicsAdapter(private val topicList:ArrayList<Topic>)
     }
 
 
-    class SubTopicsViewHolder(itemView: View, listener: onItemClickListener): RecyclerView.ViewHolder(itemView) {
+    class AlgorithmsSubTopicViewHolder(itemView: View, listener: onItemClickListener): RecyclerView.ViewHolder(itemView) {
 
 
         val imageView: ImageView = itemView.findViewById(id.img)
@@ -44,37 +44,37 @@ class SubTopicsAdapter(private val topicList:ArrayList<Topic>)
         }
 
     }
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SubTopicsViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AlgorithmsSubTopicViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(layout.sub_topics_item, parent, false)
-        return SubTopicsViewHolder(view,mListner)
+        return AlgorithmsSubTopicViewHolder(view,mListner)
     }
 
-    override fun onBindViewHolder(holder: SubTopicsViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: AlgorithmsSubTopicViewHolder, position: Int) {
         val topic = topicList[position]
         holder.imageView.setImageResource(topic.image)
         holder.textView.text = topic.name
         holder.detail.text = topic.details
 
         if (position == 0) {
-            holder.imageView.setImageResource(drawable.flowchart)
+            holder.imageView.setImageResource(drawable.algorithm)
         }
         if (position == 1) {
             holder.layout.setBackgroundColor(Color.parseColor("#da3a3a"))
-            holder.imageView.setImageResource(drawable.flowchart)
+            holder.imageView.setImageResource(drawable.algorithm)
         } else if (position == 2) {
             holder.layout.setBackgroundColor(Color.parseColor("#6CD0FF"))
-            holder.imageView.setImageResource(drawable.flowchart)
+            holder.imageView.setImageResource(drawable.algorithm)
         } else if (position == 3) {
             holder.layout.setBackgroundColor(Color.parseColor("#801155"))
-            holder.imageView.setImageResource(drawable.flowchart)
+            holder.imageView.setImageResource(drawable.algorithm)
 
         } else if (position == 4) {
             holder.layout.setBackgroundColor(Color.parseColor("#9A6AFF"))
-            holder.imageView.setImageResource(drawable.flowchart)
+            holder.imageView.setImageResource(drawable.algorithm)
 
         } else if (position == 5) {
             holder.layout.setBackgroundColor(Color.parseColor("#1E2029"))
-            holder.imageView.setImageResource(drawable.flowchart)
+            holder.imageView.setImageResource(drawable.algorithm)
 
         }
     }

@@ -33,25 +33,49 @@ class FlowSubTopicsActivity : AppCompatActivity() {
 
     topicList = ArrayList()
 
-    topicList.add(Topic(0, "FlowChart", "Types" ))
-    topicList.add(Topic(0, "FlowCharts", "Characteristics" ))
+    topicList.add(Topic(0, "FlowChart", "Introduction" ))
+    topicList.add(Topic(0, "FlowCharts", "Elements" ))
+    topicList.add(Topic(0, "FlowCharts", "Guidelines" ))
+    topicList.add(Topic(0, "FlowCharts", "Advantages" ))
+    topicList.add(Topic(0, "FlowCharts", "Disadvantages" ))
+    topicList.add(Topic(0, "FlowCharts", "Examples" ))
 
 
 
-    topicAdapter = SubTopicsAdapter(topicList)
+        topicAdapter = SubTopicsAdapter(topicList)
     recyclerView.adapter = topicAdapter
 
 
     topicAdapter.setOnItemClickListener(object : SubTopicsAdapter.onItemClickListener{
         override fun onItemClick(position: Int) {
             if (position == 0) {
-                val intent = Intent(this@FlowSubTopicsActivity, FlowCharacteristicsActivity::class.java)
+                val intent = Intent(this@FlowSubTopicsActivity, Learn::class.java)
                 startActivity(intent)
 
             }
 
             if (position == 1) {
-                val intent = Intent(this@FlowSubTopicsActivity, AlgorithmActivity::class.java)
+                val intent = Intent(this@FlowSubTopicsActivity, FlowChartElelmetsActivity::class.java)
+                startActivity(intent)
+
+            }
+            if (position == 2) {
+                val intent = Intent(this@FlowSubTopicsActivity, FlowchartRulesActivity::class.java)
+                startActivity(intent)
+
+            }
+            if (position == 3) {
+                val intent = Intent(this@FlowSubTopicsActivity, FlowchartAdvantagtesActivity::class.java)
+                startActivity(intent)
+
+            }
+            if (position == 4) {
+                val intent = Intent(this@FlowSubTopicsActivity, FlowchartDisadvantagesActivity::class.java)
+                startActivity(intent)
+
+            }
+            if (position == 5) {
+                val intent = Intent(this@FlowSubTopicsActivity, FlowchartExamplesActivity::class.java)
                 startActivity(intent)
 
             }

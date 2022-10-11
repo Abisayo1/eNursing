@@ -10,6 +10,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Computerize1">
         <activity
+            android:name=".AlgorithmSubtopicsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FlowchartExamplesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FlowchartDisadvantagesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FlowchartAdvantagtesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FlowchartRulesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FlowChartElelmetsActivity"
+            android:exported="false" />
+        <activity
             android:name=".FlowCharacteristicsActivity"
             android:exported="false" />
         <activity

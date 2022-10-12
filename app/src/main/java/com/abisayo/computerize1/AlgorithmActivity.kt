@@ -52,10 +52,22 @@ class AlgorithmActivity : AppCompatActivity() {
                 }
 
                 R.id.algorithms -> scrollToView(binding.scroll, binding.algoTitle)
-                R.id.algo_typ -> scrollToView(binding.scroll, binding.algoTyp)
-                R.id.algo_charact -> scrollToView(binding.scroll, binding.algoCharact)
-                R.id.algo_need -> scrollToView(binding.scroll, binding.algoFunc)
-                R.id.algo_how_write -> scrollToView(binding.scroll, binding.algoHowWrite)
+                R.id.algo_typ -> {intent = Intent(this, AlgorithmTypesActivity::class.java)
+                    startActivity(intent)
+                }
+                R.id.algo_charact -> {intent = Intent(this, AlgorithmCharactActivity::class.java)
+                    startActivity(intent)
+                }
+                R.id.algo_need -> {intent = Intent(this, AlgorithmImportanceActivity::class.java)
+                    startActivity(intent)
+                }
+                R.id.algo_how_write -> {intent = Intent(this, AlgorithmStepsActivity::class.java)
+                    startActivity(intent)
+                }
+
+                R.id.examples -> {intent = Intent(this, AlgorithmExamplesActivity::class.java)
+                    startActivity(intent)
+                }
 
                 R.id.quiz ->  {intent = Intent(this, AlgoQuizActivity::class.java)
                     startActivity(intent)

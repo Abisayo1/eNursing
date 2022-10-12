@@ -39,6 +39,10 @@
                 android:id="@+id/algo_how_write"
                 android:title="How to Write Algorithms"/>
 
+            <item
+                android:id="@+id/examples"
+                android:title="Examples"/>
+
 
             <item
                 android:id="@+id/quiz"

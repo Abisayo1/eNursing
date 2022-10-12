@@ -49,7 +49,7 @@ class AlgorithmSubtopicsActivity : AppCompatActivity() {
         topicAdapter.setOnItemClickListener(object : AlgorithmsSubTopicAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
                 if (position == 0) {
-                    val intent = Intent(this@AlgorithmSubtopicsActivity, Learn::class.java)
+                    val intent = Intent(this@AlgorithmSubtopicsActivity, AlgorithmActivity::class.java)
                     startActivity(intent)
 
                 }

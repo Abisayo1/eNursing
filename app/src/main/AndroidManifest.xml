@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Computerize1">
         <activity
+            android:name=".AlgorithmExamplesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AlgorithmStepsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AlgorithmImportanceActivity"
+            android:exported="false" />
+        <activity
             android:name=".AlgorithmSubtopicsActivity"
             android:exported="false" />
         <activity
@@ -28,7 +37,7 @@
             android:name=".FlowChartElelmetsActivity"
             android:exported="false" />
         <activity
-            android:name=".FlowCharacteristicsActivity"
+            android:name=".AlgorithmTypesActivity"
             android:exported="false" />
         <activity
             android:name=".FlowSubTopicsActivity"

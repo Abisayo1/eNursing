@@ -2,7 +2,13 @@
     <string name="app_name">cSimplify</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
-    <string name="definition">Flowchart is a graphical representation of an algorithm. Programmers often use it as a program-planning tool to solve a problem. It makes use of symbols which are connected among them to indicate the flow of information and processing.  <br /> <br /> The process of drawing a flowchart for an algorithm is known as “flowcharting”</string>
+    <string name="definition">Flowchart is a graphical representation of an algorithm. Programmers often use it as a program-planning tool to solve a problem. It makes use of symbols which are connected among them to indicate the flow of information and processing.  <br /> <br /> The process of drawing a flowchart for an algorithm is known as “flowcharting”
+    \n\nUsing a flowchart has a variety of benefits:\n\n
+
+- It helps to clarify complex processes.\n\n
+- It identifies steps that do not add value to the internal or external customer, including delays; needless storage and transportation; unnecessary work, duplication, and added expense; breakdowns in communication.\n\n
+- It helps team members gain a shared understanding of the process and use this knowledge to collect data, identify problems, focus discussions, and identify resources.\n\n
+- It serves as a basis for designing new processes.</string>
     <string name="gdg_description_terminal"><b>1. Terminal:</b> The oval symbol indicates Start, Stop and Halt in a program’s logic flow. A pause/halt is generally used in a program logic under some error conditions. Terminal is the first and last symbols in the flowchart.</string>
     <string name="input_output"><b>2. Input/Output:</b> A parallelogram denotes any function of input/output type. Program instructions that take input from input devices and display output on output devices are indicated with parallelogram in a flowchart. "</string>
     <string name="process"><b>3. Processing:</b> A box represents arithmetic instructions. All arithmetic processes such as adding, subtracting, multiplication and division are indicated by action or process symbol.</string>

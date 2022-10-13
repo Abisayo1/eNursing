@@ -19,7 +19,6 @@ class Learn : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
         this.window.setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
@@ -29,7 +28,7 @@ class Learn : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.button.setOnClickListener {
-            val intent = Intent(this, Quiz::class.java)
+            val intent = Intent(this, FlowChartElelmetsActivity::class.java)
             startActivity(intent)
         }
 

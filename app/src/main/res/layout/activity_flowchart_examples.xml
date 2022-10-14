@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Learn">
+    tools:context=".FlowchartExamplesActivity">
     <ScrollView
 
         android:layout_width="match_parent"
@@ -32,270 +32,20 @@
                 android:src="@drawable/flowchart"
                 tools:srcCompat="@drawable/flowchart" />
 
+
             <TextView
-                android:id="@+id/flow"
+                android:id="@+id/example"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:textSize="20sp"
-                android:visibility="gone"
-                android:text="FLOWCHARTS"
+                android:layout_marginTop="13dp"
                 android:layout_marginLeft="15dp"
+                android:textSize="20sp"
+                android:text="Examples of FlowChart"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/image" />
-
-            <TextView
-                android:id="@+id/intro_text"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginRight="15dp"
-                android:textSize="15sp"
-                android:visibility="gone"
-                android:text="@string/definition"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/flow"
-                android:layout_marginStart="15dp"
-                android:layout_marginLeft="15dp" />
-
-            <TextView
-                android:id="@+id/elements"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="13dp"
-                android:layout_marginLeft="15dp"
-                android:textSize="20sp"
-                android:text="Elements of Flowchart"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/intro_text" />
-
-            <TextView
-                android:id="@+id/description"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/gdg_description_terminal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/elements" />
-
-            <ImageView
-                android:id="@+id/end_image"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_marginTop="12dp"
-                android:src="@drawable/flowchart_oval"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/description" />
-
-            <TextView
-                android:id="@+id/input_output"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/input_output"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/end_image" />
-
-            <ImageView
-                android:id="@+id/output"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_marginTop="12dp"
-                android:src="@drawable/flowchart_parallel"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/input_output" />
-
-            <TextView
-                android:id="@+id/processing"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/process"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/output" />
-
-            <ImageView
-                android:id="@+id/process"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_marginTop="12dp"
-                android:src="@drawable/process"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/processing" />
-
-            <TextView
-                android:id="@+id/decision"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/decision"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/process" />
-
-            <ImageView
-                android:id="@+id/decision_img"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_marginTop="12dp"
-                android:src="@drawable/decision"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/decision" />
-
-            <TextView
-                android:id="@+id/connectors"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/connectors"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/decision_img" />
-
-            <ImageView
-                android:id="@+id/connector_img"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_marginTop="12dp"
-                android:src="@drawable/connectors"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/connectors" />
-
-            <TextView
-                android:id="@+id/line_desc"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/flowline"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/connector_img" />
-
-
-            <Button
-                android:id="@+id/button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="60dp"
-                android:layout_marginBottom="20dp"
-                android:backgroundTint="#124BCD"
-                android:text="Take Assessment"
-                android:textAllCaps="false"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/example_img"
-                />
-
-            <TextView
-                android:id="@+id/rules"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="13dp"
-                android:layout_marginLeft="15dp"
-                android:textSize="16sp"
-                android:text="Rules for Creating Flowchart"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/line_desc" />
-
-            <TextView
-                android:id="@+id/rules_flow_list"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/rules_flow"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/rules" />
-
-            <TextView
-                android:id="@+id/adv"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="13dp"
-                android:layout_marginLeft="15dp"
-                android:textSize="16sp"
-                android:text="Advantages of Flowchart"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/rules_flow_list" />
-
-            <TextView
-                android:id="@+id/algo_need"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/advantages_flow"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/adv" />
-
-            <TextView
-                android:id="@+id/dis"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="13dp"
-                android:layout_marginLeft="15dp"
-                android:textSize="16sp"
-                android:text="Disdvantages of Flowchart"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/algo_need" />
 
             <TextView
                 android:id="@+id/flow_dis_list"
@@ -305,11 +55,11 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginTop="8dp"
-                android:text="@string/disadvantages_flow"
+                android:text="@string/examples_flow"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/dis" />
+                app:layout_constraintTop_toBottomOf="@+id/example" />
 
             <ImageView
                 android:id="@+id/example_img"
@@ -321,6 +71,20 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/flow_dis_list" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:backgroundTint="#124BCD"
+                android:layout_marginBottom="40dp"
+                android:text="Take assessment"
+                android:textAllCaps="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/example_img" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

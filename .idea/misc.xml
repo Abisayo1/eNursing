@@ -13,7 +13,11 @@
         <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/drawable/wrong_option_border.xml" value="0.2890625" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/layout-v21/activity_edit_profile.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/layout/activity_algo_quiz.xml" value="0.2675925925925926" />
-        <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/layout/activity_algorithm.xml" value="0.33" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/layout/activity_algorithm.xml" value="0.3156626506024096" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/layout/activity_algorithm_charact.xml" value="0.25" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/layout/activity_algorithm_examples.xml" value="0.22" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/layout/activity_algorithm_importance.xml" value="0.2675925925925926" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/layout/activity_algorithm_steps.xml" value="0.2675925925925926" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/layout/activity_algorithm_subtopics.xml" value="0.14270833333333333" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/layout/activity_create_account.xml" value="0.33" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/layout/activity_edit_profile.xml" value="0.33" />
@@ -23,7 +27,7 @@
         <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/layout/activity_flowchart_advantagtes.xml" value="0.2675925925925926" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/layout/activity_flowchart_disadvantages.xml" value="0.2675925925925926" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/layout/activity_flowchart_examples.xml" value="0.2675925925925926" />
-        <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/layout/activity_flowchart_rules.xml" value="0.2675925925925926" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/layout/activity_flowchart_rules.xml" value="0.23183391003460208" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/layout/activity_learn.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/Computerize1/app/src/main/res/layout/activity_profile.xml" value="0.33" />

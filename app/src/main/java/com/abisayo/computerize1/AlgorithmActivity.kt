@@ -35,7 +35,7 @@ class AlgorithmActivity : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         binding.button.setOnClickListener {
-            val i = Intent(this, AlgoQuizActivity::class.java)
+            val i = Intent(this, AlgorithmTypesActivity::class.java)
             startActivity(i)
         }
 

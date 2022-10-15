@@ -32,7 +32,9 @@
         \n\n<b>Effectiveness:</b> Because each instruction in an algorithm affects the overall process, it should be adequate.
         \n\n<b>Language independence:</b> An algorithm must be language-independent, which means that its instructions can be implemented in any language and produce the same results</string>
     <string name="algo_func">You require algorithms for the following reasons:  \n\n<b>Scalability</b> It aids in your understanding of scalability. When you have a sizable real-world problem, you must break it down into small steps to analyze it quickly.  \n\n<b>Performance</b> The real world is challenging to break down into smaller steps. If a problem can be easily divided into smaller steps, it indicates that the problem is feasible.</string>
-    <string name="algo_how_write">There are no well-defined standards for writing algorithms. It is, however, a problem that is resource-dependent. \n\nAlgorithms are never written with a specific programming language in mind. As you all know, basic code constructs such as loops like do, for, while, all programming languages share flow control such as if-else, and so on. An algorithm can be written using these common constructs. \n\nAlgorithms are typically written in a step-by-step fashion, but this is not always the case. Algorithm writing is a process that occurs after the problem domain has been well-defined. That is, you must be aware of the problem domain for which you are developing a solution.\n\nThe following is an example of an algorithm\n\n<b>Problem:</b> Create an algorithm that multiplies two numbers and  displays the output.\n\nStep 1 − Start\n\n
+    <string name="algo_how_write">There are no well-defined standards for writing algorithms. It is, however, a problem that is resource-dependent. \n\nAlgorithms are never written with a specific programming language in mind. As you all know, basic code constructs such as loops like do, for, while, all programming languages share flow control such as if-else, and so on. An algorithm can be written using these common constructs. \n\nAlgorithms are typically written in a step-by-step fashion, but this is not always the case. Algorithm writing is a process that occurs after the problem domain has been well-defined. That is, you must be aware of the problem domain for which you are developing a solution.</string>
+    <string name="examples_flow">The following are examples of flowcharts: \n\n1. Draw a flowchart to input two numbers from the user and display the largest of two numbers:</string>
+    <string name="example_algo">The following is an example of an algorithm:\n\n<b>Problem:</b> Create an algorithm that multiplies two numbers and  displays the output.\n\nStep 1 − Start\n\n
 
 Step 2 − declare three integers x, y &amp; z\n\n
 
@@ -45,5 +47,4 @@ Step 5 − store result of step 4 to z\n\n
 Step 6 − print z\n\n
 
 Step 7 − Stop</string>
-    <string name="examples_flow">The following are examples of flowcharts: \n\n1. Draw a flowchart to input two numbers from the user and display the largest of two numbers:</string>
 </resources>

@@ -13,6 +13,9 @@
             android:name=".AlgorithmExamplesActivity"
             android:exported="false" />
         <activity
+            android:name=".AlgorithmCharactActivity"
+            android:exported="false" />
+        <activity
             android:name=".AlgorithmStepsActivity"
             android:exported="false" />
         <activity

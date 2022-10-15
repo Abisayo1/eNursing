@@ -55,27 +55,27 @@ class AlgorithmSubtopicsActivity : AppCompatActivity() {
                 }
 
                 if (position == 1) {
-                    val intent = Intent(this@AlgorithmSubtopicsActivity, FlowChartElelmetsActivity::class.java)
+                    val intent = Intent(this@AlgorithmSubtopicsActivity, AlgorithmTypesActivity::class.java)
                     startActivity(intent)
 
                 }
                 if (position == 2) {
-                    val intent = Intent(this@AlgorithmSubtopicsActivity, FlowchartRulesActivity::class.java)
+                    val intent = Intent(this@AlgorithmSubtopicsActivity, AlgorithmCharactActivity::class.java)
                     startActivity(intent)
 
                 }
                 if (position == 3) {
-                    val intent = Intent(this@AlgorithmSubtopicsActivity, FlowchartAdvantagtesActivity::class.java)
+                    val intent = Intent(this@AlgorithmSubtopicsActivity, AlgorithmImportanceActivity::class.java)
                     startActivity(intent)
 
                 }
                 if (position == 4) {
-                    val intent = Intent(this@AlgorithmSubtopicsActivity, FlowchartDisadvantagesActivity::class.java)
+                    val intent = Intent(this@AlgorithmSubtopicsActivity, AlgorithmStepsActivity::class.java)
                     startActivity(intent)
 
                 }
                 if (position == 5) {
-                    val intent = Intent(this@AlgorithmSubtopicsActivity, FlowchartExamplesActivity::class.java)
+                    val intent = Intent(this@AlgorithmSubtopicsActivity, AlgorithmExamplesActivity::class.java)
                     startActivity(intent)
 
                 }

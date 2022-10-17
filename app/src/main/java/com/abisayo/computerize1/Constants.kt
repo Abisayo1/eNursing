@@ -191,6 +191,79 @@ object Constants {
 
         questionsList.add(que4)
 
+        val que5 = Question(
+            5,"An algorithm uses mainly ______ to describe the steps ",
+            (R.drawable.flowchart),
+            "arrows",
+            "words",
+            "shapes",
+            "diagram",
+            2
+        )
+
+        questionsList.add(que5)
+
+        val que6 = Question(
+            6,"The unambiguous characteristic of an algorithm means that it can easily be _____",
+            (R.drawable.flowchart),
+            "understood",
+            "drawn",
+            "jumped",
+            "dictated",
+            1
+        )
+
+        questionsList.add(que6)
+
+        val que7 = Question(
+            7,"Algorithms must contain ____ and _____",
+            (R.drawable.flowchart),
+            "output and memory",
+            "flowcharts and memory",
+            "input and output",
+            "databases and tables",
+            3
+        )
+
+        questionsList.add(que7)
+
+        val que8 = Question(
+            8,"Every algorithm can be written in ____",
+            (R.drawable.flowchart),
+            "1 definite manner",
+            "many different ways",
+            "3 different ways",
+            "only 2 different ways",
+            2
+        )
+
+        questionsList.add(que8)
+
+        val que9 = Question(
+            9,"An algorithm is written in ______",
+            (R.drawable.flowchart),
+            "sign language",
+            "human language",
+            "animal language",
+            "signing language",
+            2
+        )
+
+        questionsList.add(que9)
+
+
+        val que10 = Question(
+            10,"Algorithms _______",
+            (R.drawable.flowchart),
+            "explains the problem",
+            "must start, and terminate",
+            "starts but does not terminate",
+            "does not start and does not terminate",
+            2
+        )
+
+        questionsList.add(que10)
+
         return questionsList
     }
 }

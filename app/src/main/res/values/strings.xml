@@ -34,7 +34,7 @@
     <string name="algo_func">You require algorithms for the following reasons:  \n\n<b>Scalability</b> It aids in your understanding of scalability. When you have a sizable real-world problem, you must break it down into small steps to analyze it quickly.  \n\n<b>Performance</b> The real world is challenging to break down into smaller steps. If a problem can be easily divided into smaller steps, it indicates that the problem is feasible.</string>
     <string name="algo_how_write">There are no well-defined standards for writing algorithms. It is, however, a problem that is resource-dependent. \n\nAlgorithms are never written with a specific programming language in mind. As you all know, basic code constructs such as loops like do, for, while, all programming languages share flow control such as if-else, and so on. An algorithm can be written using these common constructs. \n\nAlgorithms are typically written in a step-by-step fashion, but this is not always the case. Algorithm writing is a process that occurs after the problem domain has been well-defined. That is, you must be aware of the problem domain for which you are developing a solution.</string>
     <string name="examples_flow">The following are examples of flowcharts: \n\n1. Draw a flowchart to input two numbers from the user and display the largest of two numbers:</string>
-    <string name="example_algo">The following is an example of an algorithm:\n\n<b>Problem:</b> Create an algorithm that multiplies two numbers and  displays the output.\n\nStep 1 − Start\n\n
+    <string name="example_algo">The following are examples of an algorithm:\n\n<b>Problem 1:</b> Create an algorithm that multiplies two numbers and  displays the output.\n\nStep 1 − Start\n\n
 
 Step 2 − declare three integers x, y &amp; z\n\n
 
@@ -46,7 +46,24 @@ Step 5 − store result of step 4 to z\n\n
 
 Step 6 − print z\n\n
 
-Step 7 − Stop</string>
+        Step 7 − Stop\n\n<b>Problem 2:</b> Write an algorithm to convert temperature from Fahrenheit to Celsius:\n\nStep 1 − Start\n\n
+
+Step 2 − Input two numbers say A and B\n\n
+
+Step 3 − SUM = A+B\n\n
+
+Step 4 − Display SUM\n\n
+
+Step 5 − Stop\n\n<b>Problem 3:</b> Write an algorithm to find the area and perimeter of a square:\n\nL: Side length of square\n AREA: Area of square\nPERIMETER: Perimeter of square\n\nStep 1 − Start\n\n
+
+Step 2 − Input side length of square, say L\n\n
+
+Step 3 − AREA = L * L\n\n
+
+Step 4 − PERIMETER = 4 * L\n\n
+
+Step 5 − Display AREA, PERIMETER\n\n
+        Step 6 − Stop</string>
     <string name="examples_flow2">2. Find the largest among three different numbers entered by the user.</string>
     <string name="examples_flow3">3. Find all the roots of a quadratic equation ax2+bx+c=0</string>
     <string name="examples_flow4">4. Determine and Output Whether Number N is Even or Odd.</string>

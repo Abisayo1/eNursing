@@ -47,4 +47,7 @@ Step 5 − store result of step 4 to z\n\n
 Step 6 − print z\n\n
 
 Step 7 − Stop</string>
+    <string name="examples_flow2">2. Find the largest among three different numbers entered by the user.</string>
+    <string name="examples_flow3">3. Find all the roots of a quadratic equation ax2+bx+c=0</string>
+    <string name="examples_flow4">4. Determine and Output Whether Number N is Even or Odd.</string>
 </resources>

@@ -72,6 +72,81 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/flow_dis_list" />
 
+            <TextView
+                android:id="@+id/flow_example2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/examples_flow2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/example_img" />
+
+            <ImageView
+                android:id="@+id/example_img2"
+                android:layout_width="400dp"
+                android:layout_height="400dp"
+                app:flow_horizontalAlign="center"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/flow_eample2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/flow_example2" />
+
+            <TextView
+                android:id="@+id/flow_example3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/examples_flow3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/example_img2" />
+
+            <ImageView
+                android:id="@+id/example_img3"
+                android:layout_width="400dp"
+                android:layout_height="400dp"
+                app:flow_horizontalAlign="center"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/flow_example3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/flow_example3" />
+
+            <TextView
+                android:id="@+id/flow_example4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/examples_flow4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/example_img3" />
+
+            <ImageView
+                android:id="@+id/example_img4"
+                android:layout_width="400dp"
+                android:layout_height="400dp"
+                app:flow_horizontalAlign="center"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/example_flow4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/flow_example4" />
+
             <Button
                 android:id="@+id/button"
                 android:layout_width="wrap_content"
@@ -84,7 +159,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/example_img" />
+                app:layout_constraintTop_toBottomOf="@+id/example_img4" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

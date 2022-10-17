@@ -56,14 +56,14 @@ class Result : AppCompatActivity() {
                 }
         }
 
-        if (correctAnswers <=1 ) {
+        if (correctAnswers <=4 ) {
             binding.motiv.text = "Ouch! It seems you need to study this topic one more time."
-        } else if (correctAnswers == 2) {
+        } else if (correctAnswers == 5) {
             binding.motiv.text = "An average performance. You can do better!"
-        } else if (correctAnswers == 4) {
+        } else if (correctAnswers == 10) {
             binding.motiv.text = "Great job computer expert!"
         } else {
-            binding.motiv.text = "You can do better!"
+            binding.motiv.text = "Nice! You can do better!"
         }
 
         i = correctAnswers

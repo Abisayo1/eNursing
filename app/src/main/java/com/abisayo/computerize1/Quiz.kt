@@ -67,6 +67,10 @@ class Quiz : AppCompatActivity(), View.OnClickListener {
         val question = mQuestionsList!![mCurrentPosition -1]
         defaultOptionsView()
 
+        if (mCurrentPosition == 5) {
+            binding.imgQuestion.isVisible = true
+        }else binding.imgQuestion.isVisible = mCurrentPosition == 6
+
         if (mCurrentPosition == mQuestionsList!!.size){
             binding.nxt.text = "Finish"
         }

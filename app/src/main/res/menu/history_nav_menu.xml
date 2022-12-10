@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools = "http://schemas.android.com/tools"
+    tools:showIn = "navigation_view">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Home"/>
+
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/avatar4"
+        android:title="Profile"/>
+
+
+    <item
+        android:title="Topics">
+
+        <menu>
+
+            <item
+                android:id="@+id/women_role"
+                android:title="Women’s roles and Status"/>
+
+            <item
+                android:id="@+id/religion"
+                android:title="Religion"/>
+
+            <item
+                android:id="@+id/war"
+                android:title="War"/>
+
+            <item
+                android:id="@+id/societal_att"
+                android:title="Societal Attitude"/>
+
+            <item
+                android:id="@+id/florence"
+                android:title="Florence Nightingale (1820-1910)"/>
+
+            <item
+                android:id="@+id/clara"
+                android:title="Clara Barton (1821-1912)"/>
+
+            <item
+                android:id="@+id/linda"
+                android:title="Linda Richards (1841-1930)"/>
+
+            <item
+                android:id="@+id/mary"
+                android:title="Mary Mahoney (1845-1926)"/>
+
+            <item
+                android:id="@+id/lilian"
+                android:title="Lilian Wald (1867-1940)"/>
+
+            <item
+                android:id="@+id/lavinia"
+                android:title="Lavinia Dock (1858-1956)"/>
+
+            <item
+                android:id="@+id/margaret"
+                android:title="Margaret Higgins Sanger (1879-1966)"/>
+
+            <item
+                android:id="@+id/mary2"
+                android:title="Mary Breckinridge (1881-1965)"/>
+
+            <item
+                android:id="@+id/men"
+                android:title="Men in Nursing"/>
+
+            <item
+                android:id="@+id/videos"
+                android:title="Videos To Watch"/>
+
+            <item
+                android:id="@+id/quiz"
+                android:icon="@drawable/ic_baseline_assessment_24"
+                android:title="Take Quiz"/>
+
+
+        </menu>
+
+
+    </item>
+
+
+    <item
+        android:title="Logout">
+
+        <menu>
+
+            <item
+                android:id="@+id/Logout"
+                android:icon="@drawable/logout"
+                android:title="Logout"/>
+
+
+        </menu>
+
+
+    </item>
+</menu>

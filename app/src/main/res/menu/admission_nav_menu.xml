@@ -19,35 +19,40 @@
 
         <menu>
 
-            <item
-                android:id="@+id/algorithms"
-                android:title="Algorithm"/>
 
             <item
-                android:id="@+id/algo_typ"
-                android:title="Types of Algorithm"/>
+                android:id="@+id/introduction"
+                android:title="Introduction and Purpose"/>
 
             <item
-                android:id="@+id/algo_charact"
-                android:title="Characteristics of Algorithm"/>
+                android:id="@+id/types"
+                android:title="Types of Admission"/>
 
             <item
-                android:id="@+id/algo_need"
-                android:title="Why do you need Algorithms"/>
+                android:id="@+id/responsibilities"
+                android:title="Nursing Responsibilities"/>
 
             <item
-                android:id="@+id/algo_how_write"
-                android:title="How to Write Algorithms"/>
+                android:id="@+id/equipment"
+                android:title="Admission Equipment"/>
 
             <item
-                android:id="@+id/examples"
-                android:title="Examples"/>
+                android:id="@+id/pediatric"
+                android:title="Nursing Responsibilities in admitting the Pediatric Patient"/>
 
+            <item
+                android:id="@+id/special"
+                android:title="Special Considerations"/>
+
+            <item
+                android:id="@+id/legal"
+                android:title="Legal Aspects of Patient Admission"/>
 
             <item
                 android:id="@+id/quiz"
                 android:icon="@drawable/ic_baseline_assessment_24"
                 android:title="Take Quiz"/>
+
 
         </menu>
 

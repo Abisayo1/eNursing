@@ -7,9 +7,8 @@
     android:layout_height="wrap_content"
     android:backgroundTint="#262626"
     android:orientation="vertical"
-    android:padding="20dp"
+    android:padding="8dp"
     android:background="#ffff">
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,7 +17,7 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="match_parent"
             app:cardElevation="4dp"
             app:cardCornerRadius="15dp">
 
@@ -33,11 +32,20 @@
                     android:id="@+id/question"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="1.5dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_toStartOf="@+id/img"
+                    android:layout_toLeftOf="@+id/img"
                     android:text="FlowChart"
                     android:textColor="#ffff"
-                    android:textSize="30sp"
+                    android:textSize="22sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -45,8 +53,8 @@
                     android:layout_width="175dp"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/question"
+                    android:layout_alignParentBottom="true"
                     android:layout_marginLeft="3dp"
-                    android:layout_marginTop="3dp"
                     android:text=""
                     android:textColor="#ffff" />
 
@@ -62,7 +70,7 @@
                     android:layout_toEndOf="@+id/detail"
                     android:layout_toRightOf="@+id/detail"
                     android:maxHeight="100dp"
-                    android:src="@drawable/flowchart" />
+                    android:src="@drawable/history_of_nursing" />
 
 
             </RelativeLayout>

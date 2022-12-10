@@ -10,8 +10,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.abisayo.computerize1.R.*
 
-class TopicAdapter(private val topicList:ArrayList<Topic>)
-    :RecyclerView.Adapter<TopicAdapter.TopicViewHolder>(){
+class TopicAdapter(private val topicList: ArrayList<Topic>) :
+    RecyclerView.Adapter<TopicAdapter.TopicViewHolder>() {
 
     private lateinit var mListner: onItemClickListener
 
@@ -27,7 +27,8 @@ class TopicAdapter(private val topicList:ArrayList<Topic>)
     }
 
 
-    class TopicViewHolder(itemView: View, listener: onItemClickListener): RecyclerView.ViewHolder(itemView) {
+    class TopicViewHolder(itemView: View, listener: onItemClickListener) :
+        RecyclerView.ViewHolder(itemView) {
 
 
         val imageView: ImageView = itemView.findViewById(id.img)
@@ -44,9 +45,10 @@ class TopicAdapter(private val topicList:ArrayList<Topic>)
         }
 
     }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TopicViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(layout.each_item, parent, false)
-        return TopicViewHolder(view,mListner)
+        val view = LayoutInflater.from(parent.context).inflate(layout.topic_item_view, parent, false)
+        return TopicViewHolder(view, mListner)
     }
 
     override fun onBindViewHolder(holder: TopicViewHolder, position: Int) {
@@ -55,16 +57,26 @@ class TopicAdapter(private val topicList:ArrayList<Topic>)
         holder.textView.text = topic.name
         holder.detail.text = topic.details
 
-        if (position == 1) {
-            holder.layout.setBackgroundColor(Color.parseColor("#da3a3a"))
-            holder.imageView.setImageResource(drawable.algorithm)
-        } else if (position == 2) {
-            holder.layout.setBackgroundColor(Color.parseColor("#3f88e4"))
-        } else if (position == 3) {
-            holder.layout.setBackgroundColor(Color.parseColor("#7678d1"))
-
-        } else{
-            holder.imageView.setImageResource(drawable.flowchart)
+        holder.imageView.setImageResource(drawable.history_of_nursing)
+        when (position) {
+            0, 6, 12, 18 -> {
+                holder.layout.setBackgroundColor(Color.parseColor("#da3a3a"))
+            }
+            1, 7, 13, 19 -> {
+                holder.layout.setBackgroundColor(Color.parseColor("#6CD0FF"))
+            }
+            2, 8, 14, 20 -> {
+                holder.layout.setBackgroundColor(Color.parseColor("#801155"))
+            }
+            3, 9, 15, 21 -> {
+                holder.layout.setBackgroundColor(Color.parseColor("#9A6AFF"))
+            }
+            4, 10, 16, 22 -> {
+                holder.layout.setBackgroundColor(Color.parseColor("#1E2029"))
+            }
+            5, 11, 17, 23 -> {
+                holder.layout.setBackgroundColor(Color.parseColor("#E86926"))
+            }
         }
     }
 

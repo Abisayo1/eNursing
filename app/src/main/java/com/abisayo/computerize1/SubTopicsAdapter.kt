@@ -5,13 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.RelativeLayout
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.abisayo.computerize1.R.*
 
-class SubTopicsAdapter(private val topicList:ArrayList<Topic>)
-    :RecyclerView.Adapter<SubTopicsAdapter.SubTopicsViewHolder>(){
+class SubTopicsAdapter(private val topicList: ArrayList<Topic>) :
+    RecyclerView.Adapter<SubTopicsAdapter.SubTopicsViewHolder>() {
 
     private lateinit var mListner: onItemClickListener
 
@@ -27,13 +27,14 @@ class SubTopicsAdapter(private val topicList:ArrayList<Topic>)
     }
 
 
-    class SubTopicsViewHolder(itemView: View, listener: onItemClickListener): RecyclerView.ViewHolder(itemView) {
+    class SubTopicsViewHolder(itemView: View, listener: onItemClickListener) :
+        RecyclerView.ViewHolder(itemView) {
 
 
         val imageView: ImageView = itemView.findViewById(id.img)
         val textView: TextView = itemView.findViewById(id.question)
         val detail: TextView = itemView.findViewById(id.detail)
-        val layout: RelativeLayout = itemView.findViewById(id.layout)
+        val layout: ConstraintLayout = itemView.findViewById(id.layout)
 
         init {
 
@@ -44,9 +45,11 @@ class SubTopicsAdapter(private val topicList:ArrayList<Topic>)
         }
 
     }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SubTopicsViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(layout.sub_topics_item, parent, false)
-        return SubTopicsViewHolder(view,mListner)
+        val view =
+            LayoutInflater.from(parent.context).inflate(layout.sub_topics_item, parent, false)
+        return SubTopicsViewHolder(view, mListner)
     }
 
     override fun onBindViewHolder(holder: SubTopicsViewHolder, position: Int) {
@@ -55,27 +58,27 @@ class SubTopicsAdapter(private val topicList:ArrayList<Topic>)
         holder.textView.text = topic.name
         holder.detail.text = topic.details
 
-        if (position == 0) {
-            holder.imageView.setImageResource(drawable.flowchart)
-        }
-        if (position == 1) {
-            holder.layout.setBackgroundColor(Color.parseColor("#da3a3a"))
-            holder.imageView.setImageResource(drawable.flowchart)
-        } else if (position == 2) {
-            holder.layout.setBackgroundColor(Color.parseColor("#6CD0FF"))
-            holder.imageView.setImageResource(drawable.flowchart)
-        } else if (position == 3) {
-            holder.layout.setBackgroundColor(Color.parseColor("#801155"))
-            holder.imageView.setImageResource(drawable.flowchart)
+        holder.imageView.setImageResource(drawable.history_of_nursing)
 
-        } else if (position == 4) {
-            holder.layout.setBackgroundColor(Color.parseColor("#9A6AFF"))
-            holder.imageView.setImageResource(drawable.flowchart)
-
-        } else if (position == 5) {
-            holder.layout.setBackgroundColor(Color.parseColor("#1E2029"))
-            holder.imageView.setImageResource(drawable.flowchart)
-
+        when (position) {
+            0, 6, 12, 18 -> {
+                holder.layout.setBackgroundColor(Color.parseColor("#da3a3a"))
+            }
+            1, 7, 13, 19 -> {
+                holder.layout.setBackgroundColor(Color.parseColor("#6CD0FF"))
+            }
+            2, 8, 14, 20 -> {
+                holder.layout.setBackgroundColor(Color.parseColor("#801155"))
+            }
+            3, 9, 15, 21 -> {
+                holder.layout.setBackgroundColor(Color.parseColor("#9A6AFF"))
+            }
+            4, 10, 16, 22 -> {
+                holder.layout.setBackgroundColor(Color.parseColor("#1E2029"))
+            }
+            5, 11, 17, 23 -> {
+                holder.layout.setBackgroundColor(Color.parseColor("#E86926"))
+            }
         }
     }
 

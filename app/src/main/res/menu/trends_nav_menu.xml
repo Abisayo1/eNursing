@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools = "http://schemas.android.com/tools"
+    tools:showIn = "navigation_view">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Home"/>
+
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/avatar4"
+        android:title="Profile"/>
+
+
+    <item
+        android:title="Topics">
+
+        <menu>
+
+
+            <item
+                android:id="@+id/introduction"
+                android:title="Introduction"/>
+
+            <item
+                android:id="@+id/telehealth"
+                android:title="Continued Growth of Telehealth and Privacy Concerns"/>
+
+            <item
+                android:id="@+id/specialization"
+                android:title="Increased Specialization"/>
+
+            <item
+                android:id="@+id/outpatient"
+                android:title="Nurses Moving Into the Community Outpatient Setting"/>
+
+            <item
+                android:id="@+id/navigator"
+                android:title="Rise of the Nurse Navigator"/>
+
+            <item
+                android:id="@+id/ent"
+                android:title="Expanding Entrepreneurship Opportunities"/>
+
+            <item
+                android:id="@+id/doctoral"
+                android:title="Increasing Need for Doctoral Education"/>
+
+            <item
+                android:id="@+id/eduOnline"
+                android:title="Furthering Nursing Education Online"/>
+
+            <item
+                android:id="@+id/shortage"
+                android:title="Impact of the Looming Nursing Shortage"/>
+
+            <item
+                android:id="@+id/advocacy"
+                android:title="Nurses Getting Involved Through Advocacy and Action"/>
+
+            <item
+                android:id="@+id/selfCare"
+                android:title="Implementing Self-Care in Nursing"/>
+
+            <item
+                android:id="@+id/salaries"
+                android:title="Increase in Salaries and Benefits"/>
+
+            <item
+                android:id="@+id/bilingual"
+                android:title="Bilingual nurses will be more valued in more demand"/>
+
+            <item
+                android:id="@+id/males"
+                android:title="Males entering the nurse workforce will rise"/>
+
+            <item
+                android:id="@+id/holistic"
+                android:title="Holistic Care will become more popular"/>
+
+            <item
+                android:id="@+id/patients"
+                android:title="Patients are becoming more educated"/>
+
+            <item
+                android:id="@+id/quiz"
+                android:icon="@drawable/ic_baseline_assessment_24"
+                android:title="Take Quiz"/>
+
+
+        </menu>
+
+
+    </item>
+
+
+    <item
+        android:title="Logout">
+
+        <menu>
+
+            <item
+                android:id="@+id/Logout"
+                android:icon="@drawable/logout"
+                android:title="Logout"/>
+
+
+        </menu>
+
+
+    </item>
+</menu>

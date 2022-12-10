@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
+import com.abisayo.computerize1.Constants.EXTRA_CLOSE_APP
 import com.abisayo.computerize1.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
+import kotlin.system.exitProcess
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -49,6 +51,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
+        if (intent.getBooleanExtra(EXTRA_CLOSE_APP, false) ){
+            finish()
+            exitProcess(0)
+        }
 
         if (firebaseAuth.currentUser != null) {
 

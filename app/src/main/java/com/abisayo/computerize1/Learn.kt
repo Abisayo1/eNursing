@@ -11,10 +11,9 @@ import com.google.android.material.navigation.NavigationView
 import android.view.*
 import android.widget.ScrollView
 
-
 class Learn : AppCompatActivity() {
     private lateinit var binding: ActivityLearnBinding
-    lateinit private var toggle: ActionBarDrawerToggle
+    private lateinit var toggle: ActionBarDrawerToggle
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,35 +43,43 @@ class Learn : AppCompatActivity() {
         navView.setNavigationItemSelectedListener {
 
             when (it.itemId) {
-                R.id.nav_home ->  {intent = Intent(this, TopicsActivity::class.java)
-                                   startActivity(intent)
-                                    finish()
+                R.id.nav_home -> {
+                    intent = Intent(this, TopicsActivity::class.java)
+                    startActivity(intent)
+                    finish()
                 }
 
-                R.id.profile ->  {intent = Intent(this, Profile::class.java)
+                R.id.profile -> {
+                    intent = Intent(this, Profile::class.java)
                     startActivity(intent)
                 }
 
                 R.id.flow -> scrollToView(binding.scroll, binding.flow)
-                R.id.element -> {intent = Intent(this, FlowChartElelmetsActivity::class.java)
+                R.id.element -> {
+                    intent = Intent(this, FlowChartElelmetsActivity::class.java)
                     startActivity(intent)
                 }
-                R.id.rules -> {intent = Intent(this, FlowchartRulesActivity::class.java)
+                R.id.rules -> {
+                    intent = Intent(this, FlowchartRulesActivity::class.java)
                     startActivity(intent)
                 }
-                R.id.adv -> {intent = Intent(this, FlowchartAdvantagtesActivity::class.java)
+                R.id.adv -> {
+                    intent = Intent(this, FlowchartAdvantagtesActivity::class.java)
                     startActivity(intent)
                 }
-                R.id.dis -> {intent = Intent(this, FlowchartDisadvantagesActivity::class.java)
+                R.id.dis -> {
+                    intent = Intent(this, FlowchartDisadvantagesActivity::class.java)
                     startActivity(intent)
                 }
 
-                R.id.quiz ->  {intent = Intent(this, Quiz::class.java)
+                R.id.quiz -> {
+                    intent = Intent(this, Quiz::class.java)
                     startActivity(intent)
-                    
+
                 }
 
-                R.id.flow_example ->  {intent = Intent(this, FlowchartExamplesActivity::class.java)
+                R.id.flow_example -> {
+                    intent = Intent(this, FlowchartExamplesActivity::class.java)
                     startActivity(intent)
 
                 }
@@ -114,11 +121,12 @@ class Learn : AppCompatActivity() {
 
         binding.drawerLayout.closeDrawers()
     }
+
     private fun getDeepChildOffset(
         mainParent: ViewGroup,
         parent: ViewParent,
         child: View,
-        accumulatedOffset: Point
+        accumulatedOffset: Point,
     ) {
         val parentGroup = parent as ViewGroup
         accumulatedOffset.x += child.left

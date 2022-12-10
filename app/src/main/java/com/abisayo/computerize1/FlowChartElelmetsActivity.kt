@@ -15,7 +15,7 @@ import com.google.android.material.navigation.NavigationView
 
 class FlowChartElelmetsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityFlowChartElelmetsBinding
-    lateinit private var toggle: ActionBarDrawerToggle
+    private lateinit var toggle: ActionBarDrawerToggle
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -4,26 +4,74 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/csimplify_icon1"
+        android:icon="@drawable/e_nursing"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/csimplify_icon1"
+        android:roundIcon="@drawable/e_nursing"
         android:supportsRtl="true"
         android:theme="@style/Theme.Computerize1">
         <activity
-            android:name=".AlgorithmExamplesActivity"
-            android:exported="false" />
+            android:name=".StandardsActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
-            android:name=".AlgorithmCharactActivity"
-            android:exported="false" />
+            android:name=".historyOfNursing.HistorySubTopicActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
-            android:name=".AlgorithmStepsActivity"
-            android:exported="false" />
+            android:name=".historyOfNursing.HistoryFlashcardActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
-            android:name=".AlgorithmImportanceActivity"
-            android:exported="false" />
+            android:name=".trendsInNursing.TrendsFlashcardActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
-            android:name=".AlgorithmSubtopicsActivity"
-            android:exported="false" />
+            android:name=".trendsInNursing.TrendsSubTopicActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".roles.RolesFlashcardActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".roles.RolesSubTopicActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".admission.AdmissionSubTopicActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".admission.AdmissionFlashcardActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".FlowchartExamplesActivity"
             android:exported="false" />
@@ -40,9 +88,6 @@
             android:name=".FlowChartElelmetsActivity"
             android:exported="false" />
         <activity
-            android:name=".AlgorithmTypesActivity"
-            android:exported="false" />
-        <activity
             android:name=".FlowSubTopicsActivity"
             android:exported="false" />
         <activity
@@ -56,9 +101,6 @@
         </activity>
         <activity
             android:name=".AlgoQuizActivity"
-            android:exported="false" />
-        <activity
-            android:name=".AlgorithmActivity"
             android:exported="false" />
         <activity
             android:name=".Result"

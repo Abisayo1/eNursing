@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools = "http://schemas.android.com/tools"
+    tools:showIn = "navigation_view">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Home"/>
+
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/avatar4"
+        android:title="Profile"/>
+
+
+    <item
+        android:title="Topics">
+
+        <menu>
+
+            <item
+                android:id="@+id/caregiver"
+                android:title="Caregiver"/>
+
+            <item
+                android:id="@+id/communicator"
+                android:title="Communicator"/>
+
+            <item
+                android:id="@+id/teacher"
+                android:title="Teacher"/>
+
+            <item
+                android:id="@+id/advocate"
+                android:title="Client advocate"/>
+
+            <item
+                android:id="@+id/councellor"
+                android:title="Counsellor"/>
+
+            <item
+                android:id="@+id/change_agent"
+                android:title="Change Agent"/>
+
+            <item
+                android:id="@+id/leader"
+                android:title="Leader"/>
+
+            <item
+                android:id="@+id/manager"
+                android:title="Manager"/>
+
+            <item
+                android:id="@+id/quiz"
+                android:icon="@drawable/ic_baseline_assessment_24"
+                android:title="Take Quiz"/>
+
+
+        </menu>
+
+
+    </item>
+
+
+    <item
+        android:title="Logout">
+
+        <menu>
+
+            <item
+                android:id="@+id/Logout"
+                android:icon="@drawable/logout"
+                android:title="Logout"/>
+
+
+        </menu>
+
+
+    </item>
+</menu>

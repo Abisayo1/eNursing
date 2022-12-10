@@ -5,14 +5,14 @@ plugins {
 }
 
 android {
-    compileSdk 31
+    compileSdk 33
     buildToolsVersion "30.0.3"
 
     defaultConfig {
         multiDexEnabled true
         applicationId "com.abisayo.computerize1"
         minSdk 16
-        targetSdk 31
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 

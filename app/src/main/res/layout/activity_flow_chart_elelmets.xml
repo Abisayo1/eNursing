@@ -7,6 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FlowChartElelmetsActivity">
+
     <ScrollView
 
         android:layout_width="match_parent"
@@ -229,7 +230,6 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
-
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navView"

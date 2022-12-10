@@ -9,10 +9,10 @@
     tools:context=".SplashScreenActivity">
 
     <ImageView
+        android:id="@+id/splash"
         android:layout_width="400dp"
         android:layout_height="400dp"
-        android:src="@drawable/csimplify_splash"
         android:layout_centerInParent="true"
-        android:id="@+id/splash"/>
+        android:src="@drawable/e_nursing" />
 
 </RelativeLayout>

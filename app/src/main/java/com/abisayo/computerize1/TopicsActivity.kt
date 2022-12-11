@@ -1,7 +1,6 @@
 package com.abisayo.computerize1
 
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.view.Window
 import android.view.WindowManager
@@ -9,13 +8,14 @@ import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.abisayo.computerize1.Constants.EXTRA_CLOSE_APP
+import com.abisayo.computerize1.data.Constants.EXTRA_CLOSE_APP
 import com.abisayo.computerize1.admission.AdmissionSubTopicActivity
+import com.abisayo.computerize1.data.Topic
 import com.abisayo.computerize1.databinding.ActivityTopics1Binding
 import com.abisayo.computerize1.historyOfNursing.HistorySubTopicActivity
 import com.abisayo.computerize1.roles.RolesSubTopicActivity
+import com.abisayo.computerize1.standards.StandardsActivity
 import com.abisayo.computerize1.trendsInNursing.TrendsSubTopicActivity
-import kotlin.system.exitProcess
 
 
 class TopicsActivity : AppCompatActivity() {
@@ -66,8 +66,9 @@ class TopicsActivity : AppCompatActivity() {
                 object : OnBackPressedCallback(true) {
                     override fun handleOnBackPressed() {
                         Intent(this@TopicsActivity, MainActivity::class.java).also { intent ->
-                            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                                intent.putExtra(EXTRA_CLOSE_APP, true)
+                            intent.flags =
+                                Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                            intent.putExtra(EXTRA_CLOSE_APP, true)
                             startActivity(intent)
                             finish()
                         }
@@ -95,9 +96,11 @@ class TopicsActivity : AppCompatActivity() {
 
                     }
                     2 -> {
-                        startActivity(Intent(Intent.ACTION_VIEW,
-                            Uri.parse("https://www.youtube.com/watch?v=xu0pGgQWPYc")));
+//                        startActivity(Intent(Intent.ACTION_VIEW,
+//                            Uri.parse("https://www.youtube.com/watch?v=xu0pGgQWPYc")));
 
+                        startActivity(Intent(this@TopicsActivity,
+                            StandardsActivity::class.java))
                     }
                     3 -> {
                         val intent = Intent(this@TopicsActivity, RolesSubTopicActivity::class.java)
@@ -110,7 +113,8 @@ class TopicsActivity : AppCompatActivity() {
 
                     }
                     5 -> {
-                        val intent = Intent(this@TopicsActivity, AdmissionSubTopicActivity::class.java)
+                        val intent =
+                            Intent(this@TopicsActivity, AdmissionSubTopicActivity::class.java)
                         startActivity(intent)
 
                     }

@@ -1,4 +1,6 @@
-package com.abisayo.computerize1
+package com.abisayo.computerize1.data
+
+import com.abisayo.computerize1.R
 
 object Constants {
 
@@ -8,8 +10,7 @@ object Constants {
     const val TOTAL_QUESTIONS = "total_questions"
     const val CORRECT_ANSWERS = "correct_answers"
 
-
-    fun getQuestions(): ArrayList<Question> {
+    fun getHistoryQuestions(): ArrayList<Question> {
         val questionsList = ArrayList<Question>()
 
         val que1 = Question(
@@ -135,136 +136,6 @@ object Constants {
         questionsList.add(que10)
 
         questionsList.add(que9)
-
-        return questionsList
-    }
-
-    fun getQuestion(): ArrayList<Question> {
-        val questionsList = ArrayList<Question>()
-
-        val que1 = Question(
-            1,"What is algorithm?",
-            (R.drawable.flowchart),
-            "It is a graphical representation of an algorithm",
-            "It is also known as an flowchart",
-            "It is a recipe",
-            "It is a set of rules to be followed in order to achieve a task",
-            4
-        )
-
-        questionsList.add(que1)
-
-
-        val que2 = Question(
-            2,"_____ is NOT a type of algorithm",
-            (R.drawable.flowchart),
-            "FlowChart",
-            "Brute Force",
-            "Recursive",
-            "Backtracking",
-            1
-        )
-
-        questionsList.add(que2)
-
-
-        val que3 = Question(
-            3,"_______ Algorithm is characterized by breaking a problem into sub-problems",
-            (R.drawable.flowchart),
-            "Brute Force",
-            "Sorting algorithm",
-            "Divide and Conquer",
-            "Step by Step",
-            3
-        )
-
-        questionsList.add(que3)
-
-
-        val que4 = Question(
-            1,"To write an algorithm, it is very essential to _____ ",
-            (R.drawable.flowchart),
-            "jump right into it",
-            "wash your hands",
-            "define the problem",
-            "draw a flowchart",
-            3
-        )
-
-        questionsList.add(que4)
-
-        val que5 = Question(
-            5,"An algorithm uses mainly ______ to describe the steps ",
-            (R.drawable.flowchart),
-            "arrows",
-            "words",
-            "shapes",
-            "diagram",
-            2
-        )
-
-        questionsList.add(que5)
-
-        val que6 = Question(
-            6,"The unambiguous characteristic of an algorithm means that it can easily be _____",
-            (R.drawable.flowchart),
-            "understood",
-            "drawn",
-            "jumped",
-            "dictated",
-            1
-        )
-
-        questionsList.add(que6)
-
-        val que7 = Question(
-            7,"Algorithms must contain ____ and _____",
-            (R.drawable.flowchart),
-            "output and memory",
-            "flowcharts and memory",
-            "input and output",
-            "databases and tables",
-            3
-        )
-
-        questionsList.add(que7)
-
-        val que8 = Question(
-            8,"Every algorithm can be written in ____",
-            (R.drawable.flowchart),
-            "1 definite manner",
-            "many different ways",
-            "3 different ways",
-            "only 2 different ways",
-            2
-        )
-
-        questionsList.add(que8)
-
-        val que9 = Question(
-            9,"An algorithm is written in ______",
-            (R.drawable.flowchart),
-            "sign language",
-            "human language",
-            "animal language",
-            "signing language",
-            2
-        )
-
-        questionsList.add(que9)
-
-
-        val que10 = Question(
-            10,"Algorithms _______",
-            (R.drawable.flowchart),
-            "explains the problem",
-            "must start, and terminate",
-            "starts but does not terminate",
-            "does not start and does not terminate",
-            2
-        )
-
-        questionsList.add(que10)
 
         return questionsList
     }

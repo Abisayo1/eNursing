@@ -9,6 +9,7 @@ import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.abisayo.computerize1.R.*
+import com.abisayo.computerize1.data.Topic
 
 class TopicAdapter(private val topicList: ArrayList<Topic>) :
     RecyclerView.Adapter<TopicAdapter.TopicViewHolder>() {

@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
-import com.abisayo.computerize1.Constants.EXTRA_CLOSE_APP
+import com.abisayo.computerize1.data.Constants.EXTRA_CLOSE_APP
 import com.abisayo.computerize1.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
 import kotlin.system.exitProcess

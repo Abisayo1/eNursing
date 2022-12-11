@@ -6,11 +6,11 @@ import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.abisayo.computerize1.flashcard.Flashcards
+import com.abisayo.computerize1.data.Flashcards
 import com.abisayo.computerize1.SubTopicsAdapter
-import com.abisayo.computerize1.Topic
+import com.abisayo.computerize1.data.Topic
 import com.abisayo.computerize1.databinding.ActivityRolesSubTopicBinding
-import com.abisayo.computerize1.startRolesFlashcardActivity
+import com.abisayo.computerize1.data.startRolesFlashcardActivity
 
 class RolesSubTopicActivity : AppCompatActivity() {
 

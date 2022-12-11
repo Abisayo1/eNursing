@@ -1,4 +1,4 @@
-package com.abisayo.computerize1
+package com.abisayo.computerize1.data
 
 import android.app.Activity
 import android.content.Intent

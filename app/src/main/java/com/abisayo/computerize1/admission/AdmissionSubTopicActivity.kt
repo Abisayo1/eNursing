@@ -8,8 +8,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.abisayo.computerize1.*
 import com.abisayo.computerize1.databinding.ActivityAdmissionSubTopicBinding
-import com.abisayo.computerize1.databinding.ActivityTrendSubTopicBinding
-import com.abisayo.computerize1.flashcard.Flashcards
+import com.abisayo.computerize1.data.Flashcards
+import com.abisayo.computerize1.data.Topic
+import com.abisayo.computerize1.data.startAdmissionFlashcardActivity
 
 class AdmissionSubTopicActivity : AppCompatActivity() {
 

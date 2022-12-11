@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.abisayo.computerize1">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/e_nursing"
@@ -10,7 +13,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Computerize1">
         <activity
-            android:name=".StandardsActivity"
+            android:name=".historyOfNursing.HistoryQuizActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".standards.StandardsActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".historyOfNursing.HistoryYoutubeActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -73,24 +90,6 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".FlowchartExamplesActivity"
-            android:exported="false" />
-        <activity
-            android:name=".FlowchartDisadvantagesActivity"
-            android:exported="false" />
-        <activity
-            android:name=".FlowchartAdvantagtesActivity"
-            android:exported="false" />
-        <activity
-            android:name=".FlowchartRulesActivity"
-            android:exported="false" />
-        <activity
-            android:name=".FlowChartElelmetsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".FlowSubTopicsActivity"
-            android:exported="false" />
-        <activity
             android:name=".SplashScreenActivity"
             android:exported="true">
             <intent-filter>
@@ -100,22 +99,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".AlgoQuizActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Result"
-            android:exported="false" />
-        <activity
-            android:name=".Quiz"
+            android:name=".ResultActivity"
             android:exported="false" />
         <activity
             android:name=".EditProfile"
             android:exported="false" />
         <activity
             android:name=".Profile"
-            android:exported="false" />
-        <activity
-            android:name=".Learn"
             android:exported="false" />
         <activity
             android:name=".TopicsActivity"

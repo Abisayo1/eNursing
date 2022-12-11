@@ -1,5 +1,6 @@
 package com.abisayo.computerize1.historyOfNursing
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Window
 import android.view.WindowManager
@@ -8,7 +9,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.abisayo.computerize1.*
 import com.abisayo.computerize1.databinding.ActivityHistorySubTopicBinding
-import com.abisayo.computerize1.flashcard.Flashcards
+import com.abisayo.computerize1.data.Flashcards
+import com.abisayo.computerize1.data.Topic
+import com.abisayo.computerize1.data.startHistoryFlashcardActivity
 
 class HistorySubTopicActivity : AppCompatActivity() {
 
@@ -37,14 +40,20 @@ class HistorySubTopicActivity : AppCompatActivity() {
         topicList.add(Topic(0, "History of Nursing", "Religion"))
         topicList.add(Topic(0, "History of Nursing", "War"))
         topicList.add(Topic(0, "History of Nursing", "Societal Attitude"))
-        topicList.add(Topic(0, "History of Nursing", "Nursing Leaders\nFlorence Nightingale (1820-1910)"))
+        topicList.add(Topic(0,
+            "History of Nursing",
+            "Nursing Leaders\nFlorence Nightingale (1820-1910)"))
         topicList.add(Topic(0, "History of Nursing", "Nursing Leaders\nClara Barton (1821-1912)"))
         topicList.add(Topic(0, "History of Nursing", "Nursing Leaders\nLinda Richards (1841-1930)"))
         topicList.add(Topic(0, "History of Nursing", "Nursing Leaders\nMary Mahoney (1845-1926)"))
         topicList.add(Topic(0, "History of Nursing", "Nursing Leaders\nLilian Wald (1867-1940)"))
         topicList.add(Topic(0, "History of Nursing", "Nursing Leaders\nLavinia Dock (1858-1956)"))
-        topicList.add(Topic(0, "History of Nursing", "Nursing Leaders\nMargaret Higgins Sanger (1879-1966)"))
-        topicList.add(Topic(0, "History of Nursing", "Nursing Leaders\nMary Breckinridge (1881-1965)"))
+        topicList.add(Topic(0,
+            "History of Nursing",
+            "Nursing Leaders\nMargaret Higgins Sanger (1879-1966)"))
+        topicList.add(Topic(0,
+            "History of Nursing",
+            "Nursing Leaders\nMary Breckinridge (1881-1965)"))
         topicList.add(Topic(0, "History of Nursing", "Nursing Leaders\nMen in Nursing"))
         topicList.add(Topic(0, "History of Nursing", "Videos To Watch"))
 
@@ -95,6 +104,10 @@ class HistorySubTopicActivity : AppCompatActivity() {
                     }
                     12 -> {
                         this@HistorySubTopicActivity.startHistoryFlashcardActivity(Flashcards.menFlashcard())
+                    }
+                    13 -> {
+                        startActivity(Intent(this@HistorySubTopicActivity,
+                            HistoryYoutubeActivity::class.java))
                     }
                 }
             }

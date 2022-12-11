@@ -19,7 +19,7 @@
         android:id="@+id/user_name"
         android:paddingTop="8dp"
         android:textSize="20sp"
-        android:text="Robbin"
+        android:text="Oluwatosin"
         android:textColor="@color/black"
         android:textStyle="bold"/>
 
@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:paddingTop="8dp"
         android:textSize="16sp"
-        android:text="robbin@gmail.com"/>
+        android:text="info@9jahub.com.ng"/>
 
     <View
         android:layout_width="match_parent"

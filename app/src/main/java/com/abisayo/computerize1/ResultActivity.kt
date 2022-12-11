@@ -6,12 +6,12 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.Window
 import android.view.WindowManager
-import android.widget.ProgressBar
 import android.widget.TextView
+import com.abisayo.computerize1.data.Constants
 import com.abisayo.computerize1.databinding.ActivityResultBinding
-import com.abisayo.computerize1.databinding.ActivityTopics1Binding
+import com.abisayo.computerize1.historyOfNursing.HistoryQuizActivity
 
-class Result : AppCompatActivity() {
+class ResultActivity : AppCompatActivity() {
     private lateinit var binding: ActivityResultBinding
     var handler: Handler? = null
     private lateinit var progressText : TextView
@@ -43,27 +43,29 @@ class Result : AppCompatActivity() {
         val topic = intent.getStringExtra(Constants.TOPIC,)
 
         binding.tryAgain.setOnClickListener {
-                if (
-                    topic == "Algorithms"
-                ){
-                    val intent = Intent(this, AlgoQuizActivity::class.java)
-                    startActivity(intent)
-                    finish()
-                } else {
-                    val intent = Intent(this, Quiz::class.java)
+            when (topic) {
+                "History" -> {
+                    val intent = Intent(this, HistoryQuizActivity::class.java)
                     startActivity(intent)
                     finish()
                 }
+
+            }
         }
 
-        if (correctAnswers <=4 ) {
-            binding.motiv.text = "Ouch! It seems you need to study this topic one more time."
-        } else if (correctAnswers == 5) {
-            binding.motiv.text = "An average performance. You can do better!"
-        } else if (correctAnswers == 10) {
-            binding.motiv.text = "Great job computer expert!"
-        } else {
-            binding.motiv.text = "Nice! You can do better!"
+        when {
+            correctAnswers <= (totalQuestions / 2) -> {
+                binding.motiv.text = "Ouch! It seems you need to study this topic one more time."
+            }
+            correctAnswers == (totalQuestions / 2) -> {
+                binding.motiv.text = "An average performance. You can do better!"
+            }
+            correctAnswers == totalQuestions -> {
+                binding.motiv.text = "Great job computer expert!"
+            }
+            else -> {
+                binding.motiv.text = "Nice! You can do better!"
+            }
         }
 
         i = correctAnswers

@@ -1,47 +1,44 @@
 package com.abisayo.computerize1.historyOfNursing
 
 import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
-import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.abisayo.computerize1.*
-import com.abisayo.computerize1.data.Constants.EXTRA_FLASH_CARD
-import com.abisayo.computerize1.databinding.ActivityHistoryFlashcardBinding
-import com.abisayo.computerize1.flashcard.FlashCard
-import com.abisayo.computerize1.flashcard.FlashCardAdapter
+import com.abisayo.computerize1.databinding.ActivityHistoryYoutubeBinding
 import com.abisayo.computerize1.data.Flashcards
+import com.abisayo.computerize1.data.YoutubeVideo
 import com.abisayo.computerize1.data.startHistoryFlashcardActivity
 import com.google.android.material.navigation.NavigationView
+import java.util.*
 
-class HistoryFlashcardActivity : AppCompatActivity() {
+class HistoryYoutubeActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityHistoryFlashcardBinding
-    private lateinit var recyclerView: RecyclerView
-    private lateinit var flashCardAdapter: FlashCardAdapter
+    private lateinit var binding: ActivityHistoryYoutubeBinding
     private lateinit var toggle: ActionBarDrawerToggle
+    private val youtubeVideo = Vector<YoutubeVideo>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityHistoryFlashcardBinding.inflate(layoutInflater)
+        binding = ActivityHistoryYoutubeBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        recyclerView = binding.recycler
 
-        recyclerView.layoutManager = GridLayoutManager(this, 2)
-
-        val flashCardList = intent.getSerializableExtra(EXTRA_FLASH_CARD) as? ArrayList<FlashCard>
-        if (flashCardList.isNullOrEmpty()) {
-            Toast.makeText(this, "No flashcard on this topic", Toast.LENGTH_SHORT).show()
-            finish()
-        }
-
-        flashCardAdapter = FlashCardAdapter(flashCardList!!)
-        recyclerView.adapter = flashCardAdapter
+        binding.recycler.setHasFixedSize(true)
+        binding.recycler.layoutManager = LinearLayoutManager(this)
+        youtubeVideo.add(YoutubeVideo("<iframe width=\"100%\" height=\"100%\" src=\"https://www" +
+                ".youtube.com/embed/fa6x-7viOu0\" frameborder=\"0\" allowfullscreen></iframe>"))
+        youtubeVideo.add(YoutubeVideo("<iframe width=\"100%\" height=\"100%\" src=\"https://www" +
+                ".youtube.com/embed/Ll2gjuga1yY\" frameborder=\"0\" allowfullscreen></iframe>"))
+        youtubeVideo.add(YoutubeVideo("<iframe width=\"100%\" height=\"100%\" src=\"https://www" +
+                ".youtube.com/embed/nWvhq-2Gfm8\" frameborder=\"0\" allowfullscreen>lt;/iframe>"))
+        youtubeVideo.add(YoutubeVideo("<iframe width=\"100%\" height=\"100%\" src=\"https://www" +
+                ".youtube.com/embed/ZfO6ygB6uzk\" frameborder=\"0\" allowfullscreen></iframe>"))
+        val videoAdapter = VideoAdapter(youtubeVideo)
+        binding.recycler.adapter = videoAdapter
 
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
@@ -110,15 +107,9 @@ class HistoryFlashcardActivity : AppCompatActivity() {
                         HistoryYoutubeActivity::class.java))
                 }
 
-                R.id.quiz -> {
-                    startActivity(Intent(this,
-                        HistoryQuizActivity::class.java))
-                }
-
             }
             true
         }
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

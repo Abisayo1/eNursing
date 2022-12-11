@@ -7,8 +7,6 @@ import android.view.Window
 import android.view.WindowManager
 import com.abisayo.computerize1.databinding.ActivityProfileBinding
 
-
-
 class Profile : AppCompatActivity() {
     private lateinit var binding: ActivityProfileBinding
     override fun onCreate(savedInstanceState: Bundle?) {

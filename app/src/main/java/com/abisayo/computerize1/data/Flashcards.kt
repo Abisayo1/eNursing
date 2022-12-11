@@ -1,4 +1,6 @@
-package com.abisayo.computerize1.flashcard
+package com.abisayo.computerize1.data
+
+import com.abisayo.computerize1.flashcard.FlashCard
 
 object Flashcards {
 
@@ -22,9 +24,9 @@ object Flashcards {
         flashCardList.add(FlashCard("Who provided houses to care for the poor, sick and the homeless",
             "Fabiola, a wealthy matron of the Roman Empire"))
         flashCardList.add(FlashCard("Which group cared for people with leprosy, syphilis and chronic skin conditions",
-            "The crusades (the formation of several orders of knights)"))
+            "The crusaders (the formation of several orders of knights)"))
         flashCardList.add(FlashCard("Which suppressed group resurfaced during the third and fourth centuries",
-            "The Roman Empire suppressed during the middle Ages by Western churches"))
+            "The deaconess groups of the Roman Empire resurfaced after being suppressed during the middle Ages by Western churches"))
         flashCardList.add(FlashCard("When did Theodore Fliedner reinstitute the order of deaconesses",
             "1836"))
         flashCardList.add(FlashCard("What religious values dominated the practice of nursing",
@@ -40,9 +42,9 @@ object Flashcards {
             "The Crimean war of 1854-1856"))
         flashCardList.add(FlashCard("Name a significant role in solving the problem of care for wounded soldiers",
             "Florence Nightingale"))
-        flashCardList.add(FlashCard("On who's delegation did she recruited nurses to provide care to the sick and injured",
+        flashCardList.add(FlashCard("On who's delegation did Florence Nightingale provide care to the sick and injured",
             "On the delegation of Sir Sydney Herbert of the British War Department in the Crimea"))
-        flashCardList.add(FlashCard("How did they transformed the military hospitals",
+        flashCardList.add(FlashCard("How were the military hospitals transformed",
             "By setting up sanitation practices"))
         flashCardList.add(FlashCard("What war did Hariet Tubman and Sojourner Truth provide care and safety to slaves",
             "During the American Civil War of 1861-1865, they cared for slaves on the run"))
@@ -66,12 +68,12 @@ object Flashcards {
         flashCardList.add(FlashCard("In the early 19th century, what was the image of nurses",
             "Nurses was seen as a doctor’s handmaiden"))
         flashCardList.add(FlashCard("What image was portrayed of nurses during the World War II",
-            "The \"Heroine\" image. Due to the contributions to fighting poliomyelitis"))
+            "The \"Heroine\" image was portrayed due to nurses contributions to fighting poliomyelitis, particularly the Australian nurse Elizabeth Kenney"))
         flashCardList.add(FlashCard("Whose activities caused a wave of changes in the latter part of the 19th century",
             "Florence Nightingale. During the Crimean War"))
         flashCardList.add(FlashCard("What were the results of Florence Nightingale's action to nursing?",
             "Nurses were then viewed as noble, compassionate, moral, religious, dedicated and self-sacrificing"))
-        flashCardList.add(FlashCard("What are the Tri-Council of Nursing?",
+        flashCardList.add(FlashCard("What organisations constitutes the Tri-Council of Nursing?",
             "American Association of Colleges of Nursing, American Nurses Association, American Organization of Nurse Executives, National League for Nursing"))
         flashCardList.add(FlashCard("When were the Tri-Council of Nursing initiated?",
             "In the early 1990’s to improve the image of nursing"))
@@ -194,7 +196,7 @@ object Flashcards {
     fun mary2Flashcard(): ArrayList<FlashCard> {
         val flashCardList = arrayListOf<FlashCard>()
         flashCardList.add(FlashCard("Mary Breckinridge was the founder of what",
-            "She was the founded the Frontier Nursing Service"))
+            "She was the founder of the Frontier Nursing Service"))
         flashCardList.add(FlashCard("She was also the founder of what",
             "The first midwifery training school in the US"))
         return flashCardList

@@ -1,6 +1,7 @@
-package com.abisayo.computerize1
+package com.abisayo.computerize1.data
 
-data class Question(
+data class
+Question(
     val id: Int,
     val question: String,
     val image: Int,

@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawerLayout"
-    tools:context=".roles.RolesFlashcardActivity">
+    android:padding="2dp"
+    tools:context=".historyOfNursing.HistoryYoutubeActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler"
@@ -20,7 +21,7 @@
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navView"
         app:headerLayout="@layout/nav_header"
-        app:menu="@menu/roles_nav_menu"
+        app:menu="@menu/history_nav_menu"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"

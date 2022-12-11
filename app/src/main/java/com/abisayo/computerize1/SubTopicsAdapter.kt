@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.abisayo.computerize1.R.*
+import com.abisayo.computerize1.data.Topic
 
 class SubTopicsAdapter(private val topicList: ArrayList<Topic>) :
     RecyclerView.Adapter<SubTopicsAdapter.SubTopicsViewHolder>() {

@@ -11,12 +11,12 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.abisayo.computerize1.*
-import com.abisayo.computerize1.Constants.EXTRA_FLASH_CARD
+import com.abisayo.computerize1.data.Constants.EXTRA_FLASH_CARD
 import com.abisayo.computerize1.databinding.ActivityAdmissionFlashcardBinding
-import com.abisayo.computerize1.databinding.ActivityTrendsFlashcardBinding
 import com.abisayo.computerize1.flashcard.FlashCard
 import com.abisayo.computerize1.flashcard.FlashCardAdapter
-import com.abisayo.computerize1.flashcard.Flashcards
+import com.abisayo.computerize1.data.Flashcards
+import com.abisayo.computerize1.data.startTrendsFlashcardActivity
 import com.google.android.material.navigation.NavigationView
 
 class AdmissionFlashcardActivity : AppCompatActivity() {

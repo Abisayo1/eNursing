@@ -1,4 +1,4 @@
-package com.abisayo.computerize1
+package com.abisayo.computerize1.historyOfNursing
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -10,18 +10,20 @@ import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
-import com.abisayo.computerize1.databinding.ActivityAlgoQuizBinding
-import com.abisayo.computerize1.databinding.ActivityQuizBinding
+import com.abisayo.computerize1.data.Constants
+import com.abisayo.computerize1.data.Question
+import com.abisayo.computerize1.R
+import com.abisayo.computerize1.ResultActivity
+import com.abisayo.computerize1.databinding.ActivityHistoryQuizBinding
 
-class AlgoQuizActivity : AppCompatActivity(), View.OnClickListener {
+class HistoryQuizActivity : AppCompatActivity(), View.OnClickListener {
 
-    private lateinit var builder : AlertDialog.Builder
-
-    private lateinit var binding : ActivityAlgoQuizBinding
+    private lateinit var binding: ActivityHistoryQuizBinding
     private var mCurrentPosition:Int = 1
     private var mQuestionsList: ArrayList<Question>? = null
     private var mSelectedOptionPosition: Int = 0
     private var mCorrectAnswers = 0
+    private lateinit var builder : AlertDialog.Builder
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,11 +33,10 @@ class AlgoQuizActivity : AppCompatActivity(), View.OnClickListener {
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
-        setContentView(R.layout.activity_quiz)
-        binding = ActivityAlgoQuizBinding.inflate(layoutInflater)
+        binding = ActivityHistoryQuizBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        mQuestionsList = Constants.getQuestion()
+        mQuestionsList = Constants.getHistoryQuestions()
         setQuestion()
 
         binding.option1.setOnClickListener(this)
@@ -43,8 +44,6 @@ class AlgoQuizActivity : AppCompatActivity(), View.OnClickListener {
         binding.option3.setOnClickListener(this)
         binding.option4.setOnClickListener(this)
         binding.next.setOnClickListener(this)
-
-
     }
 
     override fun onBackPressed() {
@@ -64,6 +63,10 @@ class AlgoQuizActivity : AppCompatActivity(), View.OnClickListener {
     private fun setQuestion(){
         val question = mQuestionsList!![mCurrentPosition -1]
         defaultOptionsView()
+
+        if (mCurrentPosition == 5) {
+            binding.imgQuestion.isVisible = true
+        }else binding.imgQuestion.isVisible = mCurrentPosition == 6
 
         if (mCurrentPosition == mQuestionsList!!.size){
             binding.nxt.text = "Finish"
@@ -134,10 +137,10 @@ class AlgoQuizActivity : AppCompatActivity(), View.OnClickListener {
                         mCurrentPosition <= mQuestionsList!!.size -> {
                             setQuestion()
                         }else -> {
-                        val intent = Intent(this, Result::class.java)
+                        val intent = Intent(this, ResultActivity::class.java)
                         intent.putExtra(Constants.CORRECT_ANSWERS, mCorrectAnswers)
                         intent.putExtra(Constants.TOTAL_QUESTIONS, mQuestionsList!!.size)
-                        intent.putExtra(Constants.TOPIC, "Algorithms")
+                        intent.putExtra(Constants.TOPIC, "History")
                         startActivity(intent)
                         finish()
                     }
@@ -173,7 +176,6 @@ class AlgoQuizActivity : AppCompatActivity(), View.OnClickListener {
         binding.option3.isClickable = false
         binding.option4.isClickable = false
     }
-
 
     private fun answerView(answer: Int, drawableView: Int) {
 

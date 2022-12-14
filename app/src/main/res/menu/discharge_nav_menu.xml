@@ -22,31 +22,21 @@
 
             <item
                 android:id="@+id/introduction"
-                android:title="Introduction and Purpose"/>
+                android:title="Introduction"/>
 
             <item
-                android:id="@+id/types"
-                android:title="Types of Admission"/>
+                android:id="@+id/planning"
+                android:title="Process of Discharge Planning"/>
 
             <item
-                android:id="@+id/responsibilities"
-                android:title="Nursing Responsibilities"/>
+                android:id="@+id/structure"
+                android:title="Structure (model) of Discharge Planning"/>
 
             <item
-                android:id="@+id/equipment"
-                android:title="Admission Equipment"/>
+                android:id="@+id/usefulness"
+                android:title="Usefulness of Discharge Planning and Outcome Measures"/>
 
-            <item
-                android:id="@+id/pediatric"
-                android:title="Nursing Responsibilities in admitting the Pediatric Patient"/>
 
-            <item
-                android:id="@+id/special"
-                android:title="Special Considerations"/>
-
-            <item
-                android:id="@+id/legal"
-                android:title="Legal Aspects of Patient Admission"/>
 
 <!--            <item-->
 <!--                android:id="@+id/quiz"-->

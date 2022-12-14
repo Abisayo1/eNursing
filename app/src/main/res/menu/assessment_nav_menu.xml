@@ -25,28 +25,24 @@
                 android:title="Introduction and Purpose"/>
 
             <item
-                android:id="@+id/types"
-                android:title="Types of Admission"/>
+                android:id="@+id/indications"
+                android:title="Indications for health assessment"/>
 
             <item
-                android:id="@+id/responsibilities"
-                android:title="Nursing Responsibilities"/>
+                android:id="@+id/types_levels"
+                android:title="Types/Levels of Health Assessment"/>
 
             <item
-                android:id="@+id/equipment"
-                android:title="Admission Equipment"/>
+                android:id="@+id/typesData"
+                android:title="Types of Data"/>
 
             <item
-                android:id="@+id/pediatric"
-                android:title="Nursing Responsibilities in admitting the Pediatric Patient"/>
+                android:id="@+id/resources"
+                android:title="Additional resource"/>
 
             <item
-                android:id="@+id/special"
-                android:title="Special Considerations"/>
-
-            <item
-                android:id="@+id/legal"
-                android:title="Legal Aspects of Patient Admission"/>
+                android:id="@+id/videos"
+                android:title="Videos" />
 
 <!--            <item-->
 <!--                android:id="@+id/quiz"-->

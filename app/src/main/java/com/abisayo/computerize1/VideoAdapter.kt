@@ -1,4 +1,4 @@
-package com.abisayo.computerize1.historyOfNursing
+package com.abisayo.computerize1
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import android.webkit.WebChromeClient
 import android.webkit.WebView
 import androidx.recyclerview.widget.RecyclerView
-import com.abisayo.computerize1.R
 import com.abisayo.computerize1.data.YoutubeVideo
 
 class VideoAdapter internal constructor(private val youtubeVideos: List<YoutubeVideo>) :

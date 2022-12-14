@@ -10,7 +10,7 @@ object Flashcards {
             "Women’s roles and Status, Religion, War, Societal Attitudes, and Nursing leaders"))
         flashCardList.add(FlashCard("Traditional female role included?",
             "Care and nurturing of other family members including infants and children"))
-        flashCardList.add(FlashCard("It can be said that nursing have its roots in?",
+        flashCardList.add(FlashCard("Nursing have its roots in?",
             "Subservient and dependent"))
         flashCardList.add(FlashCard("Traditional nursing role includes?",
             "Providing humanistic caring, nurturing, comforting and supporting"))
@@ -525,6 +525,74 @@ object Flashcards {
         return flashCardList
     }
 
+    fun assessmentIntroFlashcard(): ArrayList<FlashCard> {
+        val flashCardList = arrayListOf<FlashCard>()
+        flashCardList.add(FlashCard("What is Health Assessment",
+            "A health assessment is the collection and analysis of data"))
+        flashCardList.add(FlashCard("Why is involved in Health Assessment",
+            "It involves the use of one’s senses to determine the general physical and mental conditions of the body by collecting both subjective and objective data"))
+        flashCardList.add(FlashCard("What else is health assessment referred to as",
+            "It is referred to as the “base or foundation” of the nursing process"))
+        flashCardList.add(FlashCard("What is one purpose of health assessment",
+            "To obtain baseline data"))
+        flashCardList.add(FlashCard("What is the data collected used for",
+            "It is used to make clinical judgements"))
+        return flashCardList
+    }
+
+    fun assessmentIndicationsFlashcard(): ArrayList<FlashCard> {
+        val flashCardList = arrayListOf<FlashCard>()
+        flashCardList.add(FlashCard("What is one indication for health assessment process",
+            "Admission on a patient"))
+        flashCardList.add(FlashCard("What is another indication for health assessment process",
+            "At the beginning of each shift"))
+        flashCardList.add(FlashCard("What is another indication for health assessment process",
+            "When patient condition changes"))
+        flashCardList.add(FlashCard("What is another indication for health assessment process",
+            "When evaluating the effectiveness of nursing care"))
+        flashCardList.add(FlashCard("What is another indication for health assessment process",
+            "Any time things do not feel right"))
+        flashCardList.add(FlashCard("What is another indication for health assessment process",
+            "When patient is about to be discharged"))
+        flashCardList.add(FlashCard("What is another indication for health assessment process",
+            "On patient follow up"))
+        flashCardList.add(FlashCard("What is another indication for health assessment process",
+            "Before and after diagnostic procedure"))
+        flashCardList.add(FlashCard("What is another indication for health assessment process",
+            "Before and after therapeutic procedure."))
+        return flashCardList
+    }
+
+    fun assessmentTypesOrLevelsFlashcard(): ArrayList<FlashCard> {
+        val flashCardList = arrayListOf<FlashCard>()
+        flashCardList.add(FlashCard("What are the types or levels of health assessment",
+            "Comprehensive/complete assessment; Interval/abbreviated assessment; Problem-focused assessment; and Assessment for special populations"))
+        flashCardList.add(FlashCard("What is involved in comprehensive/complete assessment",
+            "It involves an in-depth assessment of the whole person usually at admission"))
+        flashCardList.add(FlashCard("When is interval/abbreviated assessment usually conducted",
+            "It is usually performed on subsequent visits in an outpatient setting, at change of shift, when returning from tests, or upon transfer to your unit from another in-house unit"))
+        flashCardList.add(FlashCard("What is involved in problem-focused assessment",
+            "It involves a specific body system e.g. integumentary system, respiratory system"))
+        flashCardList.add(FlashCard("What is another indication for health assessment process",
+            "When evaluating the effectiveness of nursing care"))
+        flashCardList.add(FlashCard("What is involved in assessment for special populations",
+            "It involves assessment for special populations: pregnant patients, infants, children and the elderly"))
+        return flashCardList
+    }
+
+        fun assessmentDataTypesFlashcard(): ArrayList<FlashCard> {
+        val flashCardList = arrayListOf<FlashCard>()
+        flashCardList.add(FlashCard("What are the types or assessment data",
+            "Subjective data; Health Insurance Portability and Accountability Act (HIPAA); and Objective data"))
+        flashCardList.add(FlashCard("What is subjective data",
+            "It is data elicited by the patient through history taking; it may be incomplete, inaccurate, or false"))
+        flashCardList.add(FlashCard("What is Health Insurance Portability and Accountability Act (HIPAA)",
+            "It is an act requiring permission from patients to discuss their health history with family and friends"))
+        flashCardList.add(FlashCard("What is observed data",
+            "It is data observed by the nurse through physical examination, vital signs, laboratory test results, radiological findings"))
+        return flashCardList
+    }
+
     fun admissionIntroFlashcard(): ArrayList<FlashCard> {
         val flashCardList = arrayListOf<FlashCard>()
         flashCardList.add(FlashCard("What does admission entail",
@@ -675,6 +743,196 @@ object Flashcards {
             "A detention procedure is put into placeThe healthcare provider reports the patient admission without their consent to the court"))
         flashCardList.add(FlashCard("What else happens under emergency hospitalization",
             "The court will appoint a guardian to represent the patient during detention"))
+        return flashCardList
+    }
+
+    fun dischargeIntroFlashcard(): ArrayList<FlashCard> {
+        val flashCardList = arrayListOf<FlashCard>()
+        flashCardList.add(FlashCard("What is hospital discharge",
+            "Hospital discharge describes the point at which inpatient hospital care ends"))
+        flashCardList.add(FlashCard("What is discharge plan",
+            "It is the development of an individualized discharge plan for the patient prior to leaving the hospital"))
+        flashCardList.add(FlashCard("What is the aim of a discharge plan",
+            "The aim it to reduce medical costs, improve patient outcomes, and reduce length of stay and unplanned readmissions"))
+        flashCardList.add(FlashCard("What is the goal of adequate and efficient discharge planning",
+            "The goal is to improve a patient's quality of life by ensuring continuity of care and reducing the rate of unplanned readmissions and/or complications"))
+        flashCardList.add(FlashCard("What processes are included in discharge planning",
+            "The processes are identification, assessment, goal setting, planning, implementation, coordination, and evaluation"))
+        flashCardList.add(FlashCard("What is often involved in discharge process",
+            "Nurse mangers, particularly those tasked with bed management and patient flow"))
+        flashCardList.add(FlashCard("What determines the level of complexity involved in the process",
+            "It is determined by where the patient is being discharged to, be that home, community care or another institution"))
+        flashCardList.add(FlashCard("What can be used to highlights the key elements of engaging the patient and family in discharge planning",
+            "The \"IDEAL\" Discharge Planning strategy highlights the key elements"))
+        flashCardList.add(FlashCard("What does the \"I\" in \"IDEAL\" represent",
+            "Include the patient and family as full partners in the discharge planning process"))
+        flashCardList.add(FlashCard("What does the \"D\" in \"IDEAL\" mean",
+            "Discuss with the patient and family five key areas to prevent problems at home"))
+        flashCardList.add(FlashCard("What does the \"E\" in \"IDEAL\" represent",
+            "Educate the patient and family about the patient’s condition, the discharge process, and next steps at every opportunity throughout the hospital stay"))
+        flashCardList.add(FlashCard("What does the \"A\" in \"IDEAL\" mean",
+            "Assess how well doctors and nurses explain the diagnosis, condition, and next steps in the patient’s care to the patient and family and use teach back"))
+        flashCardList.add(FlashCard("What does the \"L\" in \"IDEAL\" mean",
+            "Listen to and honour the patient and family’s goals, preferences, observations, and concerns"))
+        return flashCardList
+    }
+
+    fun dischargeProcessFlashcard(): ArrayList<FlashCard> {
+        val flashCardList = arrayListOf<FlashCard>()
+        flashCardList.add(FlashCard("What the first process of discharge planning",
+            "Early identification and assessment of patients requiring assistance with planning for discharge"))
+        flashCardList.add(FlashCard("What the second process of discharge planning",
+            "Collaborating with the patient, family, and health-care team to facilitate planning for discharge"))
+        flashCardList.add(FlashCard("What the third process of discharge planning",
+            "Recommending options for the continuing care of the patient and referring to accommodations, programs, or services that meet the patient's needs and preferences"))
+        flashCardList.add(FlashCard("What the fourth process of discharge planning",
+            "Liaising with community agencies and care facilities to promote patient access and to address gaps in service"))
+        flashCardList.add(FlashCard("What the fifth process of discharge planning",
+            "Providing support and encouragement to patients and families during the stages of assessment from the hospital"))
+        return flashCardList
+    }
+
+    fun dischargeStructureFlashcard(): ArrayList<FlashCard> {
+        val flashCardList = arrayListOf<FlashCard>()
+        flashCardList.add(FlashCard("In 1985, Mckeehan and Coulton classified the structure of discharge planning into",
+            "Informal discharge planning, and Formal discharge planning"))
+        flashCardList.add(FlashCard("In 1990, Debraand Leah used different terms for informal and formal discharge planning. What are the terms",
+            "Ordinary discharge planning, and Specialized discharge planning"))
+        flashCardList.add(FlashCard("The structure of discharge planning was classified into the what models",
+            "Inpatient unit's nurse model; Discharge planner model; Hospital liaison nurse model; Bedside nurse model; Health-care team cooperation model; and Care coordinator (case management) model"))
+        return flashCardList
+    }
+
+    fun dischargeUsefulnessFlashcard(): ArrayList<FlashCard> {
+        val flashCardList = arrayListOf<FlashCard>()
+        flashCardList.add(FlashCard("In 1994, Marilyn explored what three common assumptions for discharge planning programs",
+            "Cost-effective; Allows for enhancement of patients' and families' quality of life; and To ensure continuity of care between the hospital and the community"))
+        flashCardList.add(FlashCard("One outcome measures includes",
+            "Length of stay in hospital"))
+        flashCardList.add(FlashCard("Another Outcome measures includes",
+            "Readmission rate to hospital"))
+        flashCardList.add(FlashCard("Another Outcome measures includes",
+            "Complication rate"))
+        flashCardList.add(FlashCard("Another Outcome measures includes",
+            "Place of discharge"))
+        flashCardList.add(FlashCard("Another Outcome measures includes",
+            "Patient health status"))
+        flashCardList.add(FlashCard("Another Outcome measures includes",
+            "Patient satisfaction"))
+        flashCardList.add(FlashCard("Another Outcome measures includes",
+            "Carer satisfaction, both professional and nonprofessional"))
+        flashCardList.add(FlashCard("Another Outcome measures includes",
+            "psychological health of patient"))
+        flashCardList.add(FlashCard("Another Outcome measures includes",
+            "Psychological health of carers"))
+        flashCardList.add(FlashCard("Another Outcome measures includes",
+            "Cost of discharge planning to the hospital and the community"))
+        flashCardList.add(FlashCard("Another Outcome measures includes",
+            "Use of medication"))
+        return flashCardList
+    }
+
+    fun communicationIntroFlashcard(): ArrayList<FlashCard> {
+        val flashCardList = arrayListOf<FlashCard>()
+        flashCardList.add(FlashCard("Why are strong communication skills essential",
+            "They help nurses deliver accurate and compassionate patient care"))
+        flashCardList.add(FlashCard("What are communication skills in nursing",
+            "Communication skills in nursing are nurses' ability to write and speak clearly and confidently when interacting with patients, families, doctors and clinic staff"))
+        flashCardList.add(FlashCard("How do nurses use their communication skills",
+            "They communicate life-saving information to doctors; They tell patients about diagnostics, treatments, prevention, prognosis and rehabilitation; They records patients' conditions"))
+        return flashCardList
+    }
+
+    fun communicationExamplesFlashcard(): ArrayList<FlashCard> {
+        val flashCardList = arrayListOf<FlashCard>()
+        flashCardList.add(FlashCard("What is one communication skill nurses should have",
+            "Speaking skills"))
+        flashCardList.add(FlashCard("What should nurses do to speak properly",
+            "Nurses should speak clearly, use complete sentences and a professional tone, and also enunciate and practice correct grammar"))
+        flashCardList.add(FlashCard("What is one communication skill nurses should have",
+            "Non verbal cues"))
+        flashCardList.add(FlashCard("What should nurses for proper non verbal cues",
+            "They should demonstrate calm and confident body language that reassures the patient"))
+        flashCardList.add(FlashCard("What is an example of non verbal communication skills",
+            "Maintaining eye contact when speaking or listening to someone"))
+        flashCardList.add(FlashCard("What is another example of non verbal communication skills",
+            "Having a relaxed facial expression"))
+        flashCardList.add(FlashCard("What is another example of non verbal communication skills",
+            "Smiling"))
+        flashCardList.add(FlashCard("What is another example of non verbal communication skills",
+            "Nodding"))
+        flashCardList.add(FlashCard("What is another example of non verbal communication skills",
+            "Keeping arms uncrossed"))
+        flashCardList.add(FlashCard("What is another example of non verbal communication skills",
+            "Crouching when interacting with a bedridden patient"))
+        flashCardList.add(FlashCard("What is another example of non verbal communication skills",
+            "Respecting the patient's personal space"))
+        flashCardList.add(FlashCard("What is another communication skill nurses should have",
+            "Active listening"))
+        flashCardList.add(FlashCard("What should nurses do to actively listen",
+            "Nurses should understand, rather than just listening to, what someone is trying to say"))
+        flashCardList.add(FlashCard("What are active listening techniques nurses can use",
+            "Repeating back to them their main point or message"))
+        flashCardList.add(FlashCard("What are other active listening techniques nurses can use",
+            "Observing the speaker's behaviour and body language"))
+        flashCardList.add(FlashCard("What are other active listening techniques nurses can use",
+            "Clarifying anything that's unclear"))
+        flashCardList.add(FlashCard("What are other active listening techniques nurses can use",
+            "Avoiding judgment"))
+        flashCardList.add(FlashCard("How does active listening help nurses",
+            "It helps nurses understand what patients are experiencing and empathize with their situation"))
+        flashCardList.add(FlashCard("What is another communication skill nurses should have",
+            "Compassion"))
+        flashCardList.add(FlashCard("How can nurses show compassion",
+            "Nurses should try to understand someone's feelings and experience"))
+        flashCardList.add(FlashCard("What is another communication skill nurses should have",
+            "Writing"))
+        flashCardList.add(FlashCard("How can nurses show good writing skill",
+            "Their writing should be clear and efficient to ensure they communicate important health information accurately"))
+        flashCardList.add(FlashCard("What is another communication skill nurses should have",
+            "Education"))
+        flashCardList.add(FlashCard("How can nurses show good education skill",
+            "They need to explain complex health topics in language anyone can understand, and they should ask questions to make sure patients understand what they are saying"))
+        flashCardList.add(FlashCard("What is another skill nurses should have",
+            "Honesty"))
+        flashCardList.add(FlashCard("How can nurses show honesty",
+            "They should be sincere and tell the truth when discussing test results, procedures or prognoses"))
+        return flashCardList
+    }
+
+    fun communicationImproveFlashcard(): ArrayList<FlashCard> {
+        val flashCardList = arrayListOf<FlashCard>()
+        flashCardList.add(FlashCard("What is the first step Nurses can take to improve their communication skills",
+            "Introduce yourself"))
+        flashCardList.add(FlashCard("What is the second step Nurses can take to improve their communication skills",
+            "Practice speaking"))
+        flashCardList.add(FlashCard("What is the third step Nurses can take to improve their communication skills",
+            "Use body language"))
+        flashCardList.add(FlashCard("What is the fourth step Nurses can take to improve their communication skills",
+            "They should practice speaking to the patient, and the patient family"))
+        flashCardList.add(FlashCard("What is the fifth step Nurses can take to improve their communication skills",
+            "Confirm details"))
+        flashCardList.add(FlashCard("What is the sixth step Nurses can take to improve their communication skills",
+            "Consider learning a foreign language"))
+        return flashCardList
+    }
+
+    fun communicationWorkspaceFlashcard(): ArrayList<FlashCard> {
+        val flashCardList = arrayListOf<FlashCard>()
+        flashCardList.add(FlashCard("What is one way nurses use their communication skills in the workplace",
+            "Nurses should make their patients feel comfortable"))
+        flashCardList.add(FlashCard("What is another way nurses use their communication skills in the workplace",
+            "Nurses should choose the right environment i.e not loud or busy to communicate with patients"))
+        flashCardList.add(FlashCard("What is another way nurses use their communication skills in the workplace",
+            "Nurses should stay off their phone i.e avoid texting and talking on the phone"))
+        flashCardList.add(FlashCard("What is another way nurses use their communication skills in the workplace",
+            "Nurses should be patient"))
+        flashCardList.add(FlashCard("How do nurses highlight communication skills when applying for nursing jobs",
+            "Emphasize your strongest communication skills and how they relate to your career"))
+        flashCardList.add(FlashCard("How do nurses highlight communication skills in resume and cover letter",
+            "Give details about how you have used them in previous jobs or can use them to benefit the employer in your cover letter"))
+        flashCardList.add(FlashCard("How do nurses highlight communication skills in a job interview",
+            "Give the hiring manager examples of situations when you have communicated effectively to achieve a positive result. Also show your communication skills with your body language"))
         return flashCardList
     }
 }

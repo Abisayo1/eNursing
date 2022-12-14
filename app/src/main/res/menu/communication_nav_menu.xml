@@ -22,31 +22,20 @@
 
             <item
                 android:id="@+id/introduction"
-                android:title="Introduction and Purpose"/>
+                android:title="Introduction"/>
 
             <item
-                android:id="@+id/types"
-                android:title="Types of Admission"/>
+                android:id="@+id/example"
+                android:title="Examples of communication skills in Nursing"/>
 
             <item
-                android:id="@+id/responsibilities"
-                android:title="Nursing Responsibilities"/>
+                android:id="@+id/improve"
+                android:title="How to improve communication skills in nursing"/>
 
             <item
-                android:id="@+id/equipment"
-                android:title="Admission Equipment"/>
+                android:id="@+id/workspace"
+                android:title="Communication skills in nursing in the workplace"/>
 
-            <item
-                android:id="@+id/pediatric"
-                android:title="Nursing Responsibilities in admitting the Pediatric Patient"/>
-
-            <item
-                android:id="@+id/special"
-                android:title="Special Considerations"/>
-
-            <item
-                android:id="@+id/legal"
-                android:title="Legal Aspects of Patient Admission"/>
 
 <!--            <item-->
 <!--                android:id="@+id/quiz"-->

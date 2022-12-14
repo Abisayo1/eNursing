@@ -51,10 +51,10 @@
                 android:id="@+id/manager"
                 android:title="Manager"/>
 
-            <item
-                android:id="@+id/quiz"
-                android:icon="@drawable/ic_baseline_assessment_24"
-                android:title="Take Quiz"/>
+<!--            <item-->
+<!--                android:id="@+id/quiz"-->
+<!--                android:icon="@drawable/ic_baseline_assessment_24"-->
+<!--                android:title="Take Quiz"/>-->
 
 
         </menu>

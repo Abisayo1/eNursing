@@ -10,12 +10,16 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.abisayo.computerize1.data.Constants.EXTRA_CLOSE_APP
 import com.abisayo.computerize1.admission.AdmissionSubTopicActivity
+import com.abisayo.computerize1.assessment.AssessmentSubTopicActivity
+import com.abisayo.computerize1.communication.CommunicationSubTopicActivity
 import com.abisayo.computerize1.data.Topic
 import com.abisayo.computerize1.databinding.ActivityTopics1Binding
+import com.abisayo.computerize1.discharge.DischargeSubTopicActivity
 import com.abisayo.computerize1.historyOfNursing.HistorySubTopicActivity
 import com.abisayo.computerize1.roles.RolesSubTopicActivity
 import com.abisayo.computerize1.standards.StandardsActivity
 import com.abisayo.computerize1.trendsInNursing.TrendsSubTopicActivity
+import kotlin.system.exitProcess
 
 
 class TopicsActivity : AppCompatActivity() {
@@ -45,13 +49,14 @@ class TopicsActivity : AppCompatActivity() {
 
         topicList = ArrayList()
 
-//        topicList.add(Topic(0, "FlowChart", "" ))
         topicList.add(Topic(0, "History of Nursing", ""))
         topicList.add(Topic(0, "Trends in Nursing", ""))
         topicList.add(Topic(0, "Professional Standards in Nursing Practice", ""))
         topicList.add(Topic(0, "Roles and Functions of a Nurse", ""))
         topicList.add(Topic(0, "Health Assessment", ""))
         topicList.add(Topic(0, "Admission process", ""))
+        topicList.add(Topic(0, "Discharge process", ""))
+        topicList.add(Topic(0, "Communication skills", ""))
 
 
 
@@ -80,10 +85,6 @@ class TopicsActivity : AppCompatActivity() {
             override fun onItemClick(position: Int) {
 
                 when (position) {
-//                    0 -> {
-//                        val intent = Intent(this@TopicsActivity, FlowSubTopicsActivity::class.java)
-//                        startActivity(intent)
-//                    }
                     0 -> {
                         val intent =
                             Intent(this@TopicsActivity, HistorySubTopicActivity::class.java)
@@ -108,13 +109,25 @@ class TopicsActivity : AppCompatActivity() {
 
                     }
                     4 -> {
-//                        val intent = Intent(this@TopicsActivity, ::class.java)
-//                        startActivity(intent)
+                        val intent = Intent(this@TopicsActivity, AssessmentSubTopicActivity::class.java)
+                        startActivity(intent)
 
                     }
                     5 -> {
                         val intent =
                             Intent(this@TopicsActivity, AdmissionSubTopicActivity::class.java)
+                        startActivity(intent)
+
+                    }
+                    6 -> {
+                        val intent =
+                            Intent(this@TopicsActivity, DischargeSubTopicActivity::class.java)
+                        startActivity(intent)
+
+                    }
+                    7 -> {
+                        val intent =
+                            Intent(this@TopicsActivity, CommunicationSubTopicActivity::class.java)
                         startActivity(intent)
 
                     }

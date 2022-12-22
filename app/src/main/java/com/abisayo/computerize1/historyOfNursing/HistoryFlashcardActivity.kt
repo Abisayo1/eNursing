@@ -110,7 +110,7 @@ class HistoryFlashcardActivity : AppCompatActivity() {
                     startActivity(Intent(this,
                         PuzzleActivity::class.java))
                 }
-                
+
                 R.id.videos -> {
                     startActivity(Intent(this,
                         HistoryYoutubeActivity::class.java))

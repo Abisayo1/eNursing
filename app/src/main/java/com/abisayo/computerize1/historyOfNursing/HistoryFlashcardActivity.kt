@@ -105,6 +105,12 @@ class HistoryFlashcardActivity : AppCompatActivity() {
                 R.id.men -> {
                     this.startHistoryFlashcardActivity(Flashcards.menFlashcard())
                 }
+
+                R.id.puzzles_games -> {
+                    startActivity(Intent(this,
+                        PuzzleActivity::class.java))
+                }
+                
                 R.id.videos -> {
                     startActivity(Intent(this,
                         HistoryYoutubeActivity::class.java))

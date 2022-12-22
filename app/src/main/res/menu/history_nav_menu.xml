@@ -75,6 +75,11 @@
                 android:id="@+id/videos"
                 android:title="Videos To Watch"/>
 
+            <item
+                android:id="@+id/puzzles_games"
+                android:title="Puzzles &amp; games"/>
+
+
 <!--            <item-->
 <!--                android:id="@+id/quiz"-->
 <!--                android:icon="@drawable/ic_baseline_assessment_24"-->

@@ -1,38 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/parentCoordinatorLayout"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tt"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+
     <LinearLayout
         android:id="@+id/llTop"
-        android:layout_width = "match_parent"
-        android:layout_height ="match_parent"
-        android:orientation="horizontal"
-        android:background="#00FF00"
-        android:gravity = "center"
-        android:layout_weight ="1">
-    </LinearLayout>
-
-    <View
-        android:id="@+id/dragView"
-        android:layout_width = "100dp"
-        android:layout_height="100dp"
+        android:layout_width="409dp"
+        android:layout_height="200dp"
         android:background="#000000"
-        android:layout_gravity="center"/>
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:text="Okay"/>
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/llBottom"
-        android:layout_width = "match_parent"
-        android:layout_height ="match_parent"
+        android:layout_width="409dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="80dp"
+        android:background="#00FF00"
+        android:gravity="center"
         android:orientation="horizontal"
-        android:background="#0000FF"
-        android:gravity = "center"
-        android:layout_weight ="1"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llTop" />
+
+    <TextView
+        android:id="@+id/dragView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="#A020F0"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="Change"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/llBottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llTop" />
 
 
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

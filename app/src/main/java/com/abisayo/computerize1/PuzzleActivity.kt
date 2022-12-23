@@ -2,6 +2,7 @@ package com.abisayo.computerize1
 
 import android.content.ClipData
 import android.content.ClipDescription
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.view.*
@@ -9,8 +10,11 @@ import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.customview.widget.ViewDragHelper
+import com.abisayo.computerize1.data.Constants
 import com.abisayo.computerize1.databinding.ActivityAdmissionFlashcardBinding
+import com.abisayo.computerize1.databinding.ActivityMainBinding
 import com.abisayo.computerize1.databinding.ActivityPuzzleBinding
 import com.google.android.material.card.MaterialCardView
 import com.google.android.material.snackbar.Snackbar
@@ -19,7 +23,7 @@ import com.google.android.material.snackbar.Snackbar
 
 class PuzzleActivity : AppCompatActivity() {
     private lateinit var binding: ActivityPuzzleBinding
-    var i = 0
+    private var i = 0
 
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,9 +35,25 @@ class PuzzleActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
-
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         binding = ActivityPuzzleBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
+        var j = intent.getIntExtra("i", 0)
+        Toast.makeText(this, "$j", Toast.LENGTH_SHORT).show()
+
+        binding.dragView.setOnClickListener {
+             j++
+        }
+
+        binding.button.setOnClickListener {
+            val intent = Intent(this, PuzzleActivity::class.java)
+            intent.putExtra("i", j)
+            startActivity(intent)
+            finish()
+        }
+
 
         binding.llTop.setOnDragListener(dragListener)
         binding.llBottom.setOnDragListener(dragListener)

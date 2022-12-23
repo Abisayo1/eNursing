@@ -11,36 +11,93 @@
 
     <LinearLayout
         android:id="@+id/llTop"
-        android:layout_width="409dp"
+        android:layout_width="200dp"
         android:layout_height="200dp"
+        android:layout_marginTop="4dp"
         android:background="#000000"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintHorizontal_bias="0.004"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txtTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Okay"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llRight"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="4dp"
+        android:background="#0000FF"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintStart_toEndOf="@+id/llTop"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            android:id="@+id/txtRight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:textStyle="bold"
+            android:text="Okay"
             android:textColor="#FFFFFF"
-            android:text="Okay"/>
+            android:textSize="20sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/llBottom"
-        android:layout_width="409dp"
+        android:layout_width="200dp"
         android:layout_height="200dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="100dp"
         android:background="#00FF00"
         android:gravity="center"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.004"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/llTop" />
+        app:layout_constraintTop_toBottomOf="@+id/llTop">
+
+        <TextView
+            android:id="@+id/txtBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Okay"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llBottomRight"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="100dp"
+        android:background="#FFA500"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/llBottom"
+        app:layout_constraintTop_toBottomOf="@+id/llTop">
+
+        <TextView
+            android:id="@+id/txtBottomRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Okay"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/dragView"
@@ -49,7 +106,7 @@
         android:layout_marginTop="12dp"
         android:background="#A020F0"
         android:gravity="center"
-        android:padding="20dp"
+        android:padding="45dp"
         android:text="Change"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/llBottom"
@@ -62,12 +119,24 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="do"
+        android:text="Next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/llBottom" />
 
+    <TextView
+        android:id="@+id/nxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Correct .."
+        android:visibility="invisible"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

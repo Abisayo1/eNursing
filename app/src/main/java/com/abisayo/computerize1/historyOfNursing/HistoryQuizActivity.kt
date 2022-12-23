@@ -36,7 +36,7 @@ class HistoryQuizActivity : AppCompatActivity(), View.OnClickListener {
         binding = ActivityHistoryQuizBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        mQuestionsList = Constants.getHistoryQuestions()
+        mQuestionsList = Constants.getQuestions()
         setQuestion()
 
         binding.option1.setOnClickListener(this)

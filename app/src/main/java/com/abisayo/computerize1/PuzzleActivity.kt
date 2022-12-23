@@ -7,12 +7,16 @@ import android.os.Build
 import android.os.Bundle
 import android.view.*
 import android.widget.LinearLayout
+import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.content.ContextCompat
 import androidx.customview.widget.ViewDragHelper
 import com.abisayo.computerize1.data.Constants
+import com.abisayo.computerize1.data.Question
 import com.abisayo.computerize1.databinding.ActivityAdmissionFlashcardBinding
 import com.abisayo.computerize1.databinding.ActivityMainBinding
 import com.abisayo.computerize1.databinding.ActivityPuzzleBinding
@@ -23,7 +27,12 @@ import com.google.android.material.snackbar.Snackbar
 
 class PuzzleActivity : AppCompatActivity() {
     private lateinit var binding: ActivityPuzzleBinding
+    private lateinit var builder: AlertDialog.Builder
     private var i = 0
+    private var mCurrentPosition: Int = 1
+    private var mQuestionsList: ArrayList<Question>? = null
+    private var mSelectedOptionPosition: Int = 0
+    private var mCorrectAnswers = 0
 
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,7 +53,7 @@ class PuzzleActivity : AppCompatActivity() {
         Toast.makeText(this, "$j", Toast.LENGTH_SHORT).show()
 
         binding.dragView.setOnClickListener {
-             j++
+            j++
         }
 
         binding.button.setOnClickListener {
@@ -57,7 +66,10 @@ class PuzzleActivity : AppCompatActivity() {
 
         binding.llTop.setOnDragListener(dragListener)
         binding.llBottom.setOnDragListener(dragListener)
+        binding.llRight.setOnDragListener(dragListener)
         binding.tt.setOnDragListener(dragListeners)
+        binding.llBottomRight.setOnDragListener(dragListener)
+        binding.llBottom.setOnDragListener(dragListener)
 
 
         binding.dragView.setOnLongClickListener {
@@ -77,31 +89,53 @@ class PuzzleActivity : AppCompatActivity() {
 
     }
 
+
+    override fun onBackPressed() {
+        builder.setTitle("Alert!")
+            .setMessage("Do you want to leave puzzle?")
+            .setCancelable(true)
+            .setPositiveButton("Yes") { dialogInterface, it ->
+                finish()
+            }
+            .setNegativeButton("No") { dialogInterface, it ->
+                dialogInterface.cancel()
+            }
+
+            .show()
+    }
+
+
     val dragListener = View.OnDragListener { view, event ->
         binding.dragView.visibility = View.INVISIBLE
-        when(event.action) {
+        when (event.action) {
             DragEvent.ACTION_DRAG_STARTED -> {
+                binding.txtBottom.visibility = View.VISIBLE
+                binding.txtTop.visibility = View.VISIBLE
+                binding.txtBottomRight.visibility = View.VISIBLE
+                binding.txtRight.visibility = View.VISIBLE
                 event.clipDescription.hasMimeType(ClipDescription.MIMETYPE_TEXT_PLAIN)
+
             }
             DragEvent.ACTION_DRAG_ENTERED -> {
                 view.invalidate()
                 true
             }
             DragEvent.ACTION_DRAG_LOCATION -> true
-                DragEvent.ACTION_DRAG_EXITED ->{
-                    view.invalidate()
-                    true
-                }
+            DragEvent.ACTION_DRAG_EXITED -> {
+                view.invalidate()
+                true
+            }
             DragEvent.ACTION_DROP -> {
                 val item = event.clipData.getItemAt(0)
                 val dragData = item.text
-                if (view == binding.llBottom){
-                    Toast.makeText(this, "bottom", Toast.LENGTH_SHORT).show()
-                } else if (view == binding.tt) {
-                    false
-                }
-                else  {
-
+                if (view == binding.llBottom) {
+                    binding.txtBottom.visibility = View.GONE
+                } else if (view == binding.llTop) {
+                    binding.txtTop.visibility = View.GONE
+                } else if (view == binding.llRight) {
+                    binding.txtRight.visibility = View.GONE
+                } else if (view == binding.llBottomRight) {
+                    binding.txtBottomRight.visibility = View.GONE
                 }
 
                 view.invalidate()
@@ -127,7 +161,7 @@ class PuzzleActivity : AppCompatActivity() {
 
     val dragListeners = View.OnDragListener { view, event ->
         binding.dragView.visibility = View.VISIBLE
-        when(event.action) {
+        when (event.action) {
 
             DragEvent.ACTION_DRAG_STARTED -> {
                 event.clipDescription.hasMimeType(ClipDescription.MIMETYPE_TEXT_PLAIN)
@@ -137,7 +171,7 @@ class PuzzleActivity : AppCompatActivity() {
                 false
             }
             DragEvent.ACTION_DRAG_LOCATION -> true
-            DragEvent.ACTION_DRAG_EXITED ->{
+            DragEvent.ACTION_DRAG_EXITED -> {
 
                 false
             }
@@ -153,10 +187,16 @@ class PuzzleActivity : AppCompatActivity() {
         }
 
 
-
     }
 
 
-    
+
+
+
 }
+
+
+
+    
+
 

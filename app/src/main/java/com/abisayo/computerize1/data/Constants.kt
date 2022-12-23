@@ -10,7 +10,7 @@ object Constants {
     const val TOTAL_QUESTIONS = "total_questions"
     const val CORRECT_ANSWERS = "correct_answers"
 
-    fun getHistoryQuestions(): ArrayList<Question> {
+    fun getQuestions(): ArrayList<Question> {
         val questionsList = ArrayList<Question>()
 
         val que1 = Question(

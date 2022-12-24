@@ -53,6 +53,7 @@ class PuzzleActivity : AppCompatActivity() {
 
 
         j = intent.getIntExtra("i", 0)
+        mCorrectAnswers = intent.getIntExtra("k", 0)
         Toast.makeText(this, "$j", Toast.LENGTH_SHORT).show()
 
         setQuestion(j)
@@ -151,6 +152,9 @@ class PuzzleActivity : AppCompatActivity() {
                     val question = mQuestionsList?.get(j -1)
                     if (question!!.correctAnswer != mSelectedOptionPosition) {
                         answerView(mSelectedOptionPosition, R.drawable.wrong_option_border)
+                    } else {
+                        mCorrectAnswers++
+                        Toast.makeText(this, "$mCorrectAnswers", Toast.LENGTH_SHORT).show()
                     }
                     answerView(question.correctAnswer, R.drawable.correct_option_border)
                     if (j == mQuestionsList!!.size) {
@@ -234,6 +238,7 @@ class PuzzleActivity : AppCompatActivity() {
     private fun defaultView(p: Int) {
         val intent = Intent(this, PuzzleActivity::class.java)
         intent.putExtra("i", p)
+        intent.putExtra("k", mCorrectAnswers)
         startActivity(intent)
         finish()
     }

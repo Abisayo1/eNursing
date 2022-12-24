@@ -165,6 +165,8 @@ class PuzzleActivity : AppCompatActivity() {
 
                                view.invalidate()
 
+                binding.dragView.isLongClickable = false
+
                 val v = event.localState as View
                 val owner = v.parent as ViewGroup
                 owner.removeView(v)
@@ -175,7 +177,6 @@ class PuzzleActivity : AppCompatActivity() {
             }
             DragEvent.ACTION_DRAG_ENDED -> {
                 view.invalidate()
-                binding.dragView.isLongClickable = false
                 true
             }
             else -> false

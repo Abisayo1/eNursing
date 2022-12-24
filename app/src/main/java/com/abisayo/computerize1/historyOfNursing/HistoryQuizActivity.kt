@@ -1,5 +1,6 @@
 package com.abisayo.computerize1.historyOfNursing
 
+import android.app.AlertDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,7 +8,6 @@ import android.view.View
 import android.view.Window
 import android.view.WindowManager
 import android.widget.TextView
-import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import com.abisayo.computerize1.data.Constants

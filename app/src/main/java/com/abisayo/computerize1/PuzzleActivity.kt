@@ -29,7 +29,7 @@ class PuzzleActivity : AppCompatActivity() {
     private lateinit var binding: ActivityPuzzleBinding
     private lateinit var builder: AlertDialog.Builder
     private var i = 0
-    private var mCurrentPosition: Int = 1
+    private var j: Int = 1
     private var mQuestionsList: ArrayList<Question>? = null
     private var mSelectedOptionPosition: Int = 0
     private var mCorrectAnswers = 0
@@ -48,20 +48,26 @@ class PuzzleActivity : AppCompatActivity() {
         binding = ActivityPuzzleBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        mQuestionsList = Constants.getQuestions()
 
-        var j = intent.getIntExtra("i", 0)
+
+
+        j = intent.getIntExtra("i", 0)
         Toast.makeText(this, "$j", Toast.LENGTH_SHORT).show()
 
-        binding.dragView.setOnClickListener {
-            j++
-        }
+        setQuestion(j)
+        j++
 
         binding.button.setOnClickListener {
-            val intent = Intent(this, PuzzleActivity::class.java)
-            intent.putExtra("i", j)
-            startActivity(intent)
-            finish()
+
+            defaultView(j)
+            j = j
+            setQuestion(j)
+
+
         }
+
+        builder = AlertDialog.Builder(this)
 
 
         binding.llTop.setOnDragListener(dragListener)
@@ -126,19 +132,34 @@ class PuzzleActivity : AppCompatActivity() {
                 true
             }
             DragEvent.ACTION_DROP -> {
-                val item = event.clipData.getItemAt(0)
-                val dragData = item.text
                 if (view == binding.llBottom) {
+                    mSelectedOptionPosition = 3
                     binding.txtBottom.visibility = View.GONE
                 } else if (view == binding.llTop) {
+                    mSelectedOptionPosition = 1
                     binding.txtTop.visibility = View.GONE
                 } else if (view == binding.llRight) {
+                    mSelectedOptionPosition = 2
                     binding.txtRight.visibility = View.GONE
                 } else if (view == binding.llBottomRight) {
+                    mSelectedOptionPosition = 4
                     binding.txtBottomRight.visibility = View.GONE
                 }
 
-                view.invalidate()
+                val item = event.clipData.getItemAt(0)
+                val dragData = item.text
+                    val question = mQuestionsList?.get(j -1)
+                    if (question!!.correctAnswer != mSelectedOptionPosition) {
+                        answerView(mSelectedOptionPosition, R.drawable.wrong_option_border)
+                    }
+                    answerView(question.correctAnswer, R.drawable.correct_option_border)
+                    if (j == mQuestionsList!!.size) {
+                        binding.button.text = "FINISH"
+                    } else {
+                        binding.button.text = "Next"
+                    }
+
+                               view.invalidate()
 
                 val v = event.localState as View
                 val owner = v.parent as ViewGroup
@@ -150,6 +171,7 @@ class PuzzleActivity : AppCompatActivity() {
             }
             DragEvent.ACTION_DRAG_ENDED -> {
                 view.invalidate()
+                binding.dragView.isLongClickable = false
                 true
             }
             else -> false
@@ -189,6 +211,61 @@ class PuzzleActivity : AppCompatActivity() {
 
     }
 
+    private fun setQuestion(u: Int) {
+        val question = mQuestionsList!![u]
+
+        if (u == mQuestionsList!!.size) {
+            binding.button.isClickable = false
+            binding.button.text = "Finish"
+        } else{
+            binding.button.text = "Next"
+        }
+
+        binding.dragView.text = question!!.question
+        binding.txtTop.text = question.optionOne
+        binding.txtRight.text = question.optionTwo
+        binding.txtBottom.text = question.optionThree
+        binding.txtBottomRight.text = question.optionFour
+
+
+
+    }
+
+    private fun defaultView(p: Int) {
+        val intent = Intent(this, PuzzleActivity::class.java)
+        intent.putExtra("i", p)
+        startActivity(intent)
+        finish()
+    }
+
+    private fun answerView(answer: Int, drawableView: Int) {
+        when(answer){
+            1 -> {
+                binding.llTop.background = ContextCompat.getDrawable(
+                    this, drawableView
+                )
+            }
+
+            2 -> {
+                binding.llRight.background = ContextCompat.getDrawable(
+                    this, drawableView
+                )
+            }
+
+            3 -> {
+                binding.llBottom.background = ContextCompat.getDrawable(
+                    this, drawableView
+                )
+            }
+
+            4 -> {
+                binding.llBottomRight.background = ContextCompat.getDrawable(
+                    this, drawableView
+                )
+            }
+
+        }
+    }
 
 
 

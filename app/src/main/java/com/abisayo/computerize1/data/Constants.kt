@@ -16,8 +16,8 @@ object Constants {
         val que1 = Question(
             1,"What is flowchart?",
             0,
-            "It is a graphical representation of an algorithm",
-            "It is also known as an algorithm",
+            "It is a  algorithm",
+            "It is algorithm",
             "It is a barchart ",
             "It is an input device",
             1

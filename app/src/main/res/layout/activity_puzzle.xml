@@ -12,9 +12,10 @@
 
     <LinearLayout
         android:id="@+id/llTop"
-        android:layout_width="200dp"
+        android:layout_width="160dp"
         android:layout_height="200dp"
         android:layout_marginTop="4dp"
+        android:layout_marginLeft="10dp"
         android:background="@drawable/default_option_border_bg"
         android:gravity="center"
         android:orientation="horizontal"
@@ -26,18 +27,21 @@
             android:id="@+id/txtTop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Okay"
+            android:text="Traditional male"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:gravity="center_horizontal" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/llRight"
-        android:layout_width="200dp"
+        android:layout_width="160dp"
         android:layout_height="200dp"
         android:layout_marginTop="4dp"
         android:gravity="center"
+        android:layout_marginRight="10dp"
         android:background="@drawable/default_option_border_bg"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,6 +54,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Okay"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -57,9 +63,10 @@
 
     <LinearLayout
         android:id="@+id/llBottom"
-        android:layout_width="200dp"
+        android:layout_width="160dp"
         android:layout_height="200dp"
         android:layout_marginTop="100dp"
+        android:layout_marginLeft="10dp"
         android:background="@drawable/default_option_border_bg"
         android:gravity="center"
         android:orientation="horizontal"
@@ -72,6 +79,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Okay"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -79,22 +88,26 @@
 
     <LinearLayout
         android:id="@+id/llBottomRight"
-        android:layout_width="200dp"
+        android:layout_width="160dp"
         android:layout_height="200dp"
         android:layout_marginTop="100dp"
+        android:layout_marginRight="10dp"
         android:background="@drawable/default_option_border_bg"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/llBottom"
-        app:layout_constraintTop_toBottomOf="@+id/llTop">
+        app:layout_constraintTop_toBottomOf="@+id/llTop"
+        android:layout_marginEnd="10dp">
 
         <TextView
             android:id="@+id/txtBottomRight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Okay"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:textStyle="bold" />

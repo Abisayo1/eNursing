@@ -29,7 +29,7 @@ class PuzzleActivity : AppCompatActivity() {
     private lateinit var binding: ActivityPuzzleBinding
     private lateinit var builder: AlertDialog.Builder
     private var i = 0
-    private var j: Int = 1
+    private var j: Int = 0
     private var mQuestionsList: ArrayList<Question>? = null
     private var mSelectedOptionPosition: Int = 0
     private var mCorrectAnswers = 0
@@ -52,6 +52,7 @@ class PuzzleActivity : AppCompatActivity() {
 
 
 
+
         j = intent.getIntExtra("i", 0)
         mCorrectAnswers = intent.getIntExtra("k", 0)
         Toast.makeText(this, "$j", Toast.LENGTH_SHORT).show()
@@ -59,13 +60,16 @@ class PuzzleActivity : AppCompatActivity() {
         setQuestion(j)
         j++
 
+        if (j == 9) {
+            binding.button.text = "Finish"
+        }
+
+
         binding.button.setOnClickListener {
 
             defaultView(j)
             j = j
-            setQuestion(j)
-
-
+            
         }
 
         builder = AlertDialog.Builder(this)
@@ -237,11 +241,18 @@ class PuzzleActivity : AppCompatActivity() {
     }
 
     private fun defaultView(p: Int) {
-        val intent = Intent(this, PuzzleActivity::class.java)
-        intent.putExtra("i", p)
-        intent.putExtra("k", mCorrectAnswers)
-        startActivity(intent)
-        finish()
+        if (j == 9) {
+            val intent = Intent(this, ResultActivity::class.java)
+            intent.putExtra(Constants.CORRECT_ANSWERS, mCorrectAnswers)
+            startActivity(intent)
+            finish()
+        } else {
+            val intent = Intent(this, PuzzleActivity::class.java)
+            intent.putExtra("i", p)
+            intent.putExtra("k", mCorrectAnswers)
+            startActivity(intent)
+            finish()
+        }
     }
 
     private fun answerView(answer: Int, drawableView: Int) {

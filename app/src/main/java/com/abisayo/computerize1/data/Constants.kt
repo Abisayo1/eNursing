@@ -14,12 +14,12 @@ object Constants {
         val questionsList = ArrayList<Question>()
 
         val que1 = Question(
-            1,"What is flowchart?",
+            1,"One perspective history of nursing can be viewed is?",
             0,
-            "It is a  algorithm",
-            "It is algorithm",
-            "It is a barchart ",
-            "It is an input device",
+            "War",
+            "Peace",
+            "Turbulence",
+            "Calmness",
             1
         )
 
@@ -27,12 +27,12 @@ object Constants {
 
 
         val que2 = Question(
-            2,"Flowcharts make use of _____ to indicate the flow of information",
+            2,"Care an nurturing of family members and infants are what role?",
             0,
-            "code",
-            "cards",
-            "RAM",
-            "symbols",
+            "traditional male",
+            "traditional baby",
+            "traditional animal",
+            "traditional female",
             4
         )
 
@@ -40,12 +40,12 @@ object Constants {
 
 
         val que3 = Question(
-            3,"The oval symbol indicates _____",
+            3,"Subservient and dependent are nursing _",
             0,
-            "inout/output",
-            "processing",
-            "terminal",
-            "screen",
+            "branches",
+            "tree",
+            "roots",
+            "stem",
             3
         )
 
@@ -53,12 +53,12 @@ object Constants {
 
 
         val que4 = Question(
-            4,"The diamond symbol represents?",
+            4,"An example of traditional nursing roles include?",
             0,
-            "decision",
-            "connectors",
-            "terminal?",
-            "jewelry",
+            "caring",
+            "sewing",
+            "teaching",
+            "breast-feeding",
             1
         )
 
@@ -66,76 +66,77 @@ object Constants {
 
 
         val que5 = Question(
-            5,"The flowchart in the diagram above is used to?",
+            5,"one thing that necessitated the need for nurses is?",
             (R.drawable.flow_eample2),
-            "Find the even number among three integers",
-            "Find the odd number among three integers",
-            "Solve quadratic equation",
-            "Find the largest among three numbers",
+            "peace",
+            "wealth",
+            "life",
+            "war",
             4
         )
 
         questionsList.add(que5)
 
         val que6 = Question(
-            6,"The flowchart in the diagram above is used to?",
+            6,"An example of a war that necessitated the need for nurses is?",
             (R.drawable.flow_qeu6),
-            "Determine Whether a Temperature is Below or Above the Freezing Point",
-            "Determine the scale a temperature is calculated in",
-            "Order for a temperature using e-commerce app",
-            "Convert from Kelvin to Celsius scale",
+            "The Crimean war of 1854-1856",
+            "The jundice attack of 1240",
+            "World war 2",
+            "The Biaffran war",
             1
         )
 
         questionsList.add(que6)
 
         val que7 = Question(
-            7,"What symbol is used to show the flow of data around the systems flow chart?",
+            7,"On whose delegation did Florence Nightingale provide care to the sick and injured?",
             (R.drawable.flow_eample2),
-            "square",
-            "rectangle",
-            "arrow",
-            "diamond",
+            "George Bush",
+            "Mary Sclessor",
+            "Sir Sydney Herbert",
+            "Herbert Astern",
             3
         )
 
         questionsList.add(que7)
 
         val que8 = Question(
-            8,"Which of the following words is typically used to end flowchart diagrams?",
+            8,"How were the military hospitals transformed?",
             (R.drawable.flow_eample2),
-            "stop",
-            "start",
-            "almost",
-            "terminate",
+            "By setting up sanitation practices",
+            "by loitering",
+            "by fighting civil wars",
+            "by issuing commands",
             1
         )
 
         questionsList.add(que8)
 
         val que9 = Question(
-            9,"What is the major reason why flowcharts are often bypassed by developers?",
+            9,"Who cared for the wounded and dying soldiers on the battlefield?",
             (R.drawable.flow_eample2),
-            "Experts don't need flowcharts",
-            "Flowcharts requires expensive equipments to draw",
-            "Complex programs make flowcharts difficult to draw",
-            "It is not necessary",
+            "Mother Theresa",
+            "George Washington",
+            "Mother Biekerdyke",
+            "Mother nature",
             3
         )
+        questionsList.add(que9)
 
         val que10 = Question(
-            10,"Which of the following words is typically used to start flowchart diagrams?",
+            10,"Which of the following volunteered to give care to the injured soldiers in military hospitals?",
             (R.drawable.flow_eample2),
-            "stop",
-            "start",
-            "almost",
-            "terminate",
+            "Isaac Newton",
+            "Walt Whitman",
+            "James Edward",
+            "John Mason",
             2
         )
 
         questionsList.add(que10)
 
-        questionsList.add(que9)
+
 
         return questionsList
     }

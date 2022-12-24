@@ -59,7 +59,7 @@ class PuzzleActivity : AppCompatActivity() {
         setQuestion(j)
         j++
 
-        if (j == 9) {
+        if (j == 10) {
             binding.button.text = "Finish"
         }
 
@@ -240,7 +240,7 @@ class PuzzleActivity : AppCompatActivity() {
     }
 
     private fun defaultView(p: Int) {
-        if (j == 9) {
+        if (j == 10) {
             val intent = Intent(this, ResultActivity::class.java)
             intent.putExtra(Constants.TOTAL_QUESTIONS, mQuestionsList!!.size)
             intent.putExtra(Constants.CORRECT_ANSWERS, mCorrectAnswers)

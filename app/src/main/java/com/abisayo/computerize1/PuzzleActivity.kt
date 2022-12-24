@@ -55,7 +55,6 @@ class PuzzleActivity : AppCompatActivity() {
 
         j = intent.getIntExtra("i", 0)
         mCorrectAnswers = intent.getIntExtra("k", 0)
-        Toast.makeText(this, "$j", Toast.LENGTH_SHORT).show()
 
         setQuestion(j)
         j++
@@ -69,7 +68,7 @@ class PuzzleActivity : AppCompatActivity() {
 
             defaultView(j)
             j = j
-            
+
         }
 
         builder = AlertDialog.Builder(this)
@@ -243,6 +242,7 @@ class PuzzleActivity : AppCompatActivity() {
     private fun defaultView(p: Int) {
         if (j == 9) {
             val intent = Intent(this, ResultActivity::class.java)
+            intent.putExtra(Constants.TOTAL_QUESTIONS, mQuestionsList!!.size)
             intent.putExtra(Constants.CORRECT_ANSWERS, mCorrectAnswers)
             startActivity(intent)
             finish()

@@ -121,6 +121,11 @@ class HistoryFlashcardActivity : AppCompatActivity() {
                         HistoryQuizActivity::class.java))
                 }
 
+                R.id.clara_game -> {
+                    startActivity(Intent(this,
+                        GameClaraActivity::class.java))
+                }
+
             }
             true
         }

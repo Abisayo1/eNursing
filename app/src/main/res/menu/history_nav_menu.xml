@@ -79,6 +79,10 @@
                 android:id="@+id/puzzles_games"
                 android:title="Puzzles &amp; games"/>
 
+            <item
+                android:id="@+id/clara_game"
+                android:title="Play Game"/>
+
 
 <!--            <item-->
 <!--                android:id="@+id/quiz"-->

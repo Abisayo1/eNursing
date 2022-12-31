@@ -21,15 +21,77 @@
         android:id="@+id/score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="invisible"
         android:text="1"
-        android:textColor="#9C27B0"
+        android:textColor="#51125C"
         android:textSize="80sp"
         android:textStyle="bold"
-        app:fontFamily="@font/comfortaa_light"
+
+        app:fontFamily="sans-serif"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.905" />
+
+    <Button
+        android:id="@+id/btnTable"
+        android:layout_width="95dp"
+        android:layout_height="231dp"
+        android:layout_marginTop="48dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+    <Button
+        android:id="@+id/btnHead"
+        android:layout_width="88dp"
+        android:layout_height="167dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/button3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnChair"
+        android:layout_width="82dp"
+        android:layout_height="146dp"
+        android:layout_marginStart="184dp"
+        android:layout_marginLeft="184dp"
+        android:layout_marginTop="72dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/btnTable"
+        app:layout_constraintTop_toBottomOf="@+id/btnHead" />
+
+    <Button
+        android:id="@+id/btnLefthand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="244dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/btnTable"
+        app:layout_constraintTop_toBottomOf="@+id/btnHead" />
+
+    <Button
+        android:id="@+id/btnRighthand"
+        android:layout_width="95dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="132dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/btnTable"
+        app:layout_constraintTop_toBottomOf="@+id/btnHead" />
+
+    <Button
+        android:id="@+id/btnGown"
+        android:layout_width="161dp"
+        android:layout_height="256dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.857"
+        app:layout_constraintStart_toEndOf="@+id/score"
+        app:layout_constraintTop_toBottomOf="@+id/btnChair" />
 </androidx.constraintlayout.widget.ConstraintLayout>

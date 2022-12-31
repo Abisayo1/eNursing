@@ -1,22 +1,27 @@
 package com.abisayo.computerize1
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.Window
 import android.view.WindowManager
 import android.view.animation.AnimationUtils
+import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
 import com.abisayo.computerize1.databinding.ActivityGameClaraBinding
 import com.abisayo.computerize1.databinding.ActivityHistoryQuizBinding
 import com.abisayo.computerize1.databinding.ActivityPuzzleBinding
+import com.abisayo.computerize1.databinding.DialogLayoutBinding
 
 class GameClaraActivity : AppCompatActivity() {
     private lateinit var binding: ActivityGameClaraBinding
+    var i = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        val sharedPreferences = getSharedPreferences("ww", Context.MODE_PRIVATE)
+        val savedInt = sharedPreferences?.getInt("m", 9)
         requestWindowFeature(Window.FEATURE_NO_TITLE); //will hide the title
         supportActionBar?.hide(); // hide the title bar
         this.window.setFlags(
@@ -27,7 +32,16 @@ class GameClaraActivity : AppCompatActivity() {
         binding = ActivityGameClaraBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
+       binding.btnHead.setOnClickListener {
+           Toast.makeText(this, "$savedInt", Toast.LENGTH_SHORT).show()
+       }
+
+
+
         binding.button3.setOnClickListener {
+
+            onLogin(binding.button3)
             binding.score.visibility = View.VISIBLE
 
 //            Toast.makeText(this, "mCorrectAnswers", Toast.LENGTH_SHORT).show()
@@ -40,6 +54,11 @@ class GameClaraActivity : AppCompatActivity() {
 
 
 
+
+    }
+    fun onLogin(view: View) {
+        MyCustomDialog().show(supportFragmentManager, "MyCustomFragment")
+        MyCustomDialog().mCorrectAnswers
 
     }
 }

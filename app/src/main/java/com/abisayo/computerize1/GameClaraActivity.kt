@@ -1,6 +1,9 @@
 package com.abisayo.computerize1
 
+import android.app.Dialog
 import android.content.Context
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -34,17 +37,28 @@ class GameClaraActivity : AppCompatActivity() {
 
 
        binding.btnHead.setOnClickListener {
-           Toast.makeText(this, "$savedInt", Toast.LENGTH_SHORT).show()
+           val dialogLayoutBinding = layoutInflater.inflate(R.layout.dialog_layout, null)
+
+           val mydialog = Dialog(this)
+           mydialog.setContentView(dialogLayoutBinding)
+
+           mydialog.setCancelable(true)
+           mydialog.show()
+
+           val btn = dialogLayoutBinding.findViewById<Button>(R.id.btn_login)
+           btn.setOnClickListener {
+               Toast.makeText(this, "$i", Toast.LENGTH_SHORT).show()
+               mydialog.dismiss()
+           }
        }
 
 
 
         binding.button3.setOnClickListener {
-
-            onLogin(binding.button3)
             binding.score.visibility = View.VISIBLE
 
-//            Toast.makeText(this, "mCorrectAnswers", Toast.LENGTH_SHORT).show()
+            i++
+            binding.score.text = "$i"
             val animationSlideUp = AnimationUtils.loadAnimation(this, R.anim.slide_up)
             binding.score.startAnimation(animationSlideUp)
 
@@ -56,9 +70,5 @@ class GameClaraActivity : AppCompatActivity() {
 
 
     }
-    fun onLogin(view: View) {
-        MyCustomDialog().show(supportFragmentManager, "MyCustomFragment")
-        MyCustomDialog().mCorrectAnswers
 
-    }
 }

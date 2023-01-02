@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -20,6 +21,7 @@ import com.abisayo.computerize1.data.Constants
 import com.abisayo.computerize1.databinding.ActivityGameClaraBinding
 
 class GameClaraActivity : AppCompatActivity() {
+    var mMediaPlayer: MediaPlayer? = null
     private lateinit var binding: ActivityGameClaraBinding
     var i = 0
     var trialNum = 0
@@ -84,6 +86,9 @@ class GameClaraActivity : AppCompatActivity() {
 
     @SuppressLint("SetTextI18n", "InflateParams")
     fun openDialog(a: Int, que:Button) {
+        stopSound()
+        playSound(R.raw.click)
+        trialNum++
         val dialogLayoutBinding = layoutInflater.inflate(R.layout.dialog_layout, null)
         val question = dialogLayoutBinding.findViewById<TextView>(R.id.tv_login)
         val secondBtn = dialogLayoutBinding.findViewById<TextView>(R.id.nursebtn)
@@ -115,15 +120,18 @@ class GameClaraActivity : AppCompatActivity() {
 
             secondBtn.setOnClickListener {
                 binding.scoreV.text = "$i"
-                trialNum++
                 if (a == 0) {
                     i++
                     binding.scoreV.text = "$i"
                     secondBtn.setBackgroundResource(R.drawable.correct_option_border)
                     firstBtn.setBackgroundResource(R.drawable.wrong_option_border)
+                    stopSound()
+                    playSound(R.raw.winning)
                 } else {
                     firstBtn.setBackgroundResource(R.drawable.correct_option_border)
                     secondBtn.setBackgroundResource(R.drawable.wrong_option_border)
+                    stopSound()
+                    playSound(R.raw.losing)
                 }
 
                 firstBtn.isClickable = false
@@ -142,15 +150,18 @@ class GameClaraActivity : AppCompatActivity() {
             }
 
             firstBtn.setOnClickListener {
-                trialNum++
                 binding.scoreV.text = "$i"
                 if (a == 1) {
                     i++
                     firstBtn.setBackgroundResource(R.drawable.correct_option_border)
                     secondBtn.setBackgroundResource(R.drawable.wrong_option_border)
+                    stopSound()
+                    playSound(R.raw.winning)
                 } else {
                     secondBtn.setBackgroundResource(R.drawable.correct_option_border)
                     firstBtn.setBackgroundResource(R.drawable.wrong_option_border)
+                    stopSound()
+                    playSound(R.raw.losing)
                 }
 
                 firstBtn.isClickable = false
@@ -163,11 +174,44 @@ class GameClaraActivity : AppCompatActivity() {
                 binding.score.text = "$i"
                 val animationSlideUp = AnimationUtils.loadAnimation(this, R.anim.slide_up)
                 binding.score.startAnimation(animationSlideUp)
-
                 binding.score.visibility = View.INVISIBLE
                 binding.scoreV.text = "$i"
             }
+
         }
+
+    // 1. Plays the water sound
+    fun playSound(sound: Int) {
+        if (mMediaPlayer == null) {
+            mMediaPlayer = MediaPlayer.create(this, sound)
+            mMediaPlayer!!.isLooping = false
+            mMediaPlayer!!.start()
+        } else mMediaPlayer!!.start()
+
+    }
+
+    // 2. Pause playback
+    fun pauseSound() {
+        if (mMediaPlayer?.isPlaying == true) mMediaPlayer?.pause()
+    }
+
+    // 3. Stops playback
+    fun stopSound() {
+        if (mMediaPlayer != null) {
+            mMediaPlayer!!.stop()
+            mMediaPlayer!!.release()
+            mMediaPlayer = null
+        }
+    }
+
+    // 4. Destroys the MediaPlayer instance when the app is closed
+    override fun onStop() {
+        super.onStop()
+        if (mMediaPlayer != null) {
+            mMediaPlayer!!.release()
+            mMediaPlayer = null
+        }
+    }
 
 
     fun deactivate(button: Button) {

@@ -5,10 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/clara"
+    android:id="@+id/constraint"
     tools:context=".GameClaraActivity">
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/clockBtn"
         android:layout_width="91dp"
         android:layout_height="237dp"
         android:layout_marginTop="76dp"
@@ -25,7 +26,7 @@
         android:textColor="#51125C"
         android:textSize="80sp"
         android:textStyle="bold"
-
+        android:visibility="invisible"
         app:fontFamily="sans-serif"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,14 +34,22 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.905" />
 
-    <Button
-        android:id="@+id/btnTable"
-        android:layout_width="95dp"
-        android:layout_height="231dp"
-        android:layout_marginTop="48dp"
-        android:backgroundTint="#00FFFFFF"
+
+    <TextView
+        android:id="@+id/scoreV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="0"
+        android:textColor="#51125C"
+        android:textSize="80sp"
+        android:textStyle="bold"
+
+        app:fontFamily="sans-serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.895"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnHead"
@@ -50,48 +59,39 @@
         android:layout_marginLeft="68dp"
         android:layout_marginTop="40dp"
         android:backgroundTint="#00FFFFFF"
-        app:layout_constraintStart_toEndOf="@+id/button3"
+        app:layout_constraintStart_toEndOf="@+id/clockBtn"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnChair"
         android:layout_width="82dp"
         android:layout_height="146dp"
-        android:layout_marginStart="184dp"
-        android:layout_marginLeft="184dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="56dp"
         android:backgroundTint="#00FFFFFF"
-        app:layout_constraintStart_toEndOf="@+id/btnTable"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnHead" />
 
     <Button
         android:id="@+id/btnLefthand"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="244dp"
+        android:layout_marginTop="248dp"
+        android:layout_marginEnd="196dp"
+        android:layout_marginRight="196dp"
         android:backgroundTint="#00FFFFFF"
-        app:layout_constraintStart_toEndOf="@+id/btnTable"
-        app:layout_constraintTop_toBottomOf="@+id/btnHead" />
-
-    <Button
-        android:id="@+id/btnRighthand"
-        android:layout_width="95dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="132dp"
-        android:backgroundTint="#00FFFFFF"
-        app:layout_constraintStart_toEndOf="@+id/btnTable"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnHead" />
 
     <Button
         android:id="@+id/btnGown"
         android:layout_width="161dp"
         android:layout_height="256dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="56dp"
         android:backgroundTint="#00FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.857"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/score"
         app:layout_constraintTop_toBottomOf="@+id/btnChair" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Computerize1">
         <activity
+            android:name=".MenInNursingGameActivity"
+            android:exported="false" />
+        <activity
             android:name=".GameClaraActivity"
             android:exported="false" />
         <activity

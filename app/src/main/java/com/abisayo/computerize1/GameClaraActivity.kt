@@ -27,8 +27,6 @@ class GameClaraActivity : AppCompatActivity() {
     var trialNum = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val sharedPreferences = getSharedPreferences("ww", Context.MODE_PRIVATE)
-        val savedInt = sharedPreferences?.getInt("m", 9)
         requestWindowFeature(Window.FEATURE_NO_TITLE); //will hide the title
         supportActionBar?.hide(); // hide the title bar
         this.window.setFlags(
@@ -42,7 +40,7 @@ class GameClaraActivity : AppCompatActivity() {
 
         binding.constraint.setOnClickListener {
             if (trialNum == 5) {
-                val intent = Intent(this, ResultActivity::class.java)
+                val intent = Intent(this, MenInNursingGameActivity::class.java)
                 intent.putExtra(Constants.TOTAL_QUESTIONS, trialNum)
                 intent.putExtra(Constants.CORRECT_ANSWERS, i)
                 startActivity(intent)
@@ -153,6 +151,7 @@ class GameClaraActivity : AppCompatActivity() {
                 binding.scoreV.text = "$i"
                 if (a == 1) {
                     i++
+                    binding.scoreV.text = "$i"
                     firstBtn.setBackgroundResource(R.drawable.correct_option_border)
                     secondBtn.setBackgroundResource(R.drawable.wrong_option_border)
                     stopSound()
@@ -167,7 +166,7 @@ class GameClaraActivity : AppCompatActivity() {
                 firstBtn.isClickable = false
                 secondBtn.isClickable = false
 
-                Toast.makeText(this, "$i", Toast.LENGTH_SHORT).show()
+//                Toast.makeText(this, "$i", Toast.LENGTH_SHORT).show()
 
 
                 binding.score.visibility = View.VISIBLE

@@ -21,6 +21,7 @@ import com.abisayo.computerize1.data.Constants
 import com.abisayo.computerize1.databinding.ActivityGameClaraBinding
 
 class GameClaraActivity : AppCompatActivity() {
+    val NextLevel = 2
     var mMediaPlayer: MediaPlayer? = null
     private lateinit var binding: ActivityGameClaraBinding
     var i = 0
@@ -40,9 +41,10 @@ class GameClaraActivity : AppCompatActivity() {
 
         binding.constraint.setOnClickListener {
             if (trialNum == 5) {
-                val intent = Intent(this, MenInNursingGameActivity::class.java)
+                val intent = Intent(this, NextLevelActivity::class.java)
                 intent.putExtra(Constants.TOTAL_QUESTIONS, trialNum)
                 intent.putExtra(Constants.CORRECT_ANSWERS, i)
+                intent.putExtra(Constants.NEXT_LEVEL, NextLevel)
                 startActivity(intent)
                 finish()
             }

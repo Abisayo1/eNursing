@@ -9,6 +9,7 @@ object Constants {
     const val TOPIC: String = "topic"
     const val TOTAL_QUESTIONS = "total_questions"
     const val CORRECT_ANSWERS = "correct_answers"
+    const val NEXT_LEVEL = "next_level"
 
     fun getQuestions(): ArrayList<Question> {
         val questionsList = ArrayList<Question>()

@@ -45,6 +45,7 @@ class GameClaraActivity : AppCompatActivity() {
                 intent.putExtra(Constants.TOTAL_QUESTIONS, trialNum)
                 intent.putExtra(Constants.CORRECT_ANSWERS, i)
                 intent.putExtra(Constants.NEXT_LEVEL, NextLevel)
+                intent.putExtra(Constants.ACTIVITY,  "GameClaraActivity")
                 startActivity(intent)
                 finish()
             }

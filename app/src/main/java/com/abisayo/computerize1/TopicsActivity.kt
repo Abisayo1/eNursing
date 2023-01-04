@@ -70,7 +70,7 @@ class TopicsActivity : AppCompatActivity() {
             .addCallback(this,
                 object : OnBackPressedCallback(true) {
                     override fun handleOnBackPressed() {
-                        Intent(this@TopicsActivity, MainActivity::class.java).also { intent ->
+                        Intent(this@TopicsActivity, FirstActivity::class.java).also { intent ->
                             intent.flags =
                                 Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                             intent.putExtra(EXTRA_CLOSE_APP, true)

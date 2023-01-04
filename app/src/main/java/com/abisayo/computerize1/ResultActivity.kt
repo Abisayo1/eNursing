@@ -7,6 +7,7 @@ import android.os.Handler
 import android.view.Window
 import android.view.WindowManager
 import android.widget.TextView
+import android.widget.Toast
 import com.abisayo.computerize1.data.Constants
 import com.abisayo.computerize1.databinding.ActivityResultBinding
 import com.abisayo.computerize1.historyOfNursing.HistoryQuizActivity
@@ -40,9 +41,35 @@ class ResultActivity : AppCompatActivity() {
 
         val  totalQuestions = intent.getIntExtra(Constants.TOTAL_QUESTIONS, 0)
         val correctAnswers = intent.getIntExtra(Constants.CORRECT_ANSWERS, 0)
-        val topic = intent.getStringExtra(Constants.TOPIC,)
+        val activity = intent.getStringExtra(Constants.ACTIVITY)
+        val topic = intent.getStringExtra(Constants.TOPIC)
+
+        Toast.makeText(this, "$activity", Toast.LENGTH_SHORT).show()
 
         binding.tryAgain.setOnClickListener {
+            if (activity == "MenInNursingGameActivity") {
+                val intent = Intent(this, GameClaraActivity::class.java)
+                startActivity(intent)
+                finish()
+            } else if (activity == "GameClaraActivity"){
+                val intent = Intent(this, GameClaraActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
+
+            when (activity) {
+                "MenInNursingGameActivity" -> {
+                    val intent = Intent(this, GameClaraActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }
+
+                "GameClaraActivity" -> {
+                    val intent = Intent(this, GameClaraActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }
+            }
             when (topic) {
                 "History" -> {
                     val intent = Intent(this, HistoryQuizActivity::class.java)

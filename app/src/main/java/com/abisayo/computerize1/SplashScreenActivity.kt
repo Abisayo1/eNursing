@@ -23,7 +23,7 @@ class SplashScreenActivity : AppCompatActivity() {
 
         binding.splash.alpha = 0f
         binding.splash.animate().setDuration(1500).alpha(1f).withEndAction {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, FirstActivity::class.java)
             startActivity(intent)
             overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
             finish()

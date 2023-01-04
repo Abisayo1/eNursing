@@ -33,6 +33,7 @@ class NextLevelActivity : AppCompatActivity() {
         val  totalQuestions = intent.getIntExtra(Constants.TOTAL_QUESTIONS, 0)
         val correctAnswers = intent.getIntExtra(Constants.CORRECT_ANSWERS, 0)
         val nextLevel = intent.getIntExtra(Constants.NEXT_LEVEL, 0)
+        val activity = intent.getStringExtra(Constants.ACTIVITY)
 
         playSound(R.raw.upbeat)
 
@@ -43,6 +44,7 @@ class NextLevelActivity : AppCompatActivity() {
                     val intent = Intent(this, ResultActivity::class.java)
                     intent.putExtra(Constants.TOTAL_QUESTIONS, totalQuestions)
                     intent.putExtra(Constants.CORRECT_ANSWERS, correctAnswers)
+                    intent.putExtra(Constants.ACTIVITY,  activity)
                     startActivity(intent)
                     finish()
 

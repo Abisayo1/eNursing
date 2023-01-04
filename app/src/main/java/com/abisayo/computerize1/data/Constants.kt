@@ -16,7 +16,7 @@ object Constants {
         val questionsList = ArrayList<Question>()
 
         val que1 = Question(
-            1,"One perspective history of nursing can be viewed is?",
+            1,"One perspective for consideration in the history of nursing is?",
             0,
             "War",
             "Peace",
@@ -29,12 +29,12 @@ object Constants {
 
 
         val que2 = Question(
-            2,"Care an nurturing of family members and infants are what role?",
+            2,"The care and nurture of family members and infants are primarily whose role?",
             0,
-            "traditional male",
-            "traditional baby",
-            "traditional animal",
-            "traditional female",
+            "male",
+            "baby",
+            "animal",
+            "female",
             4
         )
 
@@ -42,12 +42,12 @@ object Constants {
 
 
         val que3 = Question(
-            3,"Subservient and dependent are nursing _",
+            3,"What is the nation's largest health care profession?",
             0,
-            "branches",
-            "tree",
-            "roots",
-            "stem",
+            "teaching",
+            "surgery",
+            "nursing",
+            "red cross",
             3
         )
 
@@ -55,7 +55,7 @@ object Constants {
 
 
         val que4 = Question(
-            4,"An example of traditional nursing roles include?",
+            4,"An example of nursing role include?",
             0,
             "caring",
             "sewing",
@@ -68,7 +68,7 @@ object Constants {
 
 
         val que5 = Question(
-            5,"one thing that necessitated the need for nurses is?",
+            5,"One thing that necessitated the need for nurses is?",
             (R.drawable.flow_eample2),
             "peace",
             "wealth",
@@ -83,9 +83,9 @@ object Constants {
             6,"An example of a war that necessitated the need for nurses is?",
             (R.drawable.flow_qeu6),
             "The Crimean war of 1854-1856",
-            "The jundice attack of 1240",
+            "The jaundice attack of 1240",
             "World war 2",
-            "The Biaffran war",
+            "The Biafran war",
             1
         )
 
@@ -95,7 +95,7 @@ object Constants {
             7,"On whose delegation did Florence Nightingale provide care to the sick and injured?",
             (R.drawable.flow_eample2),
             "George Bush",
-            "Mary Sclessor",
+            "Mary Slessor",
             "Sir Sydney Herbert",
             "Herbert Astern",
             3
@@ -107,16 +107,16 @@ object Constants {
             8,"How were the military hospitals transformed?",
             (R.drawable.flow_eample2),
             "By setting up sanitation practices",
-            "by loitering",
-            "by fighting civil wars",
-            "by issuing commands",
+            "By loitering",
+            "By fighting civil wars",
+            "By issuing commands",
             1
         )
 
         questionsList.add(que8)
 
         val que9 = Question(
-            9,"Who cared for the wounded and dying soldiers on the battlefield?",
+            9,"Who cared for the wounded and dying soldiers on the battlefield of the American civil war?",
             (R.drawable.flow_eample2),
             "Mother Theresa",
             "George Washington",

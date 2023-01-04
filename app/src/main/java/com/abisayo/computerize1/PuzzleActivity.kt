@@ -59,7 +59,7 @@ class PuzzleActivity : AppCompatActivity() {
         )
 
         dialogOpen = intent.getIntExtra("a", 0)
-        
+
         if (dialogOpen == 0) {
             openDialog()
             dialogOpen++
@@ -267,6 +267,7 @@ class PuzzleActivity : AppCompatActivity() {
             val intent = Intent(this, ResultActivity::class.java)
             intent.putExtra(Constants.TOTAL_QUESTIONS, mQuestionsList!!.size)
             intent.putExtra(Constants.CORRECT_ANSWERS, mCorrectAnswers)
+            intent.putExtra(Constants.ACTIVITY, "PuzzleActivity")
             startActivity(intent)
             finish()
         } else {
@@ -342,7 +343,7 @@ class PuzzleActivity : AppCompatActivity() {
     fun playSound(sound: Int) {
         if (mMediaPlayer == null) {
             mMediaPlayer = MediaPlayer.create(this, sound)
-            mMediaPlayer!!.isLooping = false
+            mMediaPlayer!!.isLooping = true
             mMediaPlayer!!.start()
         } else mMediaPlayer!!.start()
 
@@ -387,6 +388,7 @@ class PuzzleActivity : AppCompatActivity() {
             val intent = Intent(this, ResultActivity::class.java)
             intent.putExtra(Constants.TOTAL_QUESTIONS, mQuestionsList!!.size)
             intent.putExtra(Constants.CORRECT_ANSWERS, mCorrectAnswers)
+            intent.putExtra(Constants.ACTIVITY, "PuzzleActivity")
             startActivity(intent)
             finish()
         }

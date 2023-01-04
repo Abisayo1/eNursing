@@ -9,9 +9,9 @@ import android.view.Window
 import android.view.WindowManager
 import android.widget.Button
 import androidx.appcompat.app.AppCompatDelegate
+import com.abisayo.computerize1.Games.FlorenceGameActivity
+import com.abisayo.computerize1.Games.MenInNursingGameActivity
 import com.abisayo.computerize1.data.Constants
-import com.abisayo.computerize1.databinding.ActivityGameClaraBinding
-import com.abisayo.computerize1.databinding.ActivityMenInNursingGameBinding
 import com.abisayo.computerize1.databinding.ActivityNextLevelBinding
 
 class NextLevelActivity : AppCompatActivity() {
@@ -51,11 +51,19 @@ class NextLevelActivity : AppCompatActivity() {
         }
 
         binding.nextLevelBtn.setOnClickListener {
-                    val intent = Intent(this, MenInNursingGameActivity::class.java)
-                    intent.putExtra(Constants.TOTAL_QUESTIONS, totalQuestions)
-                    intent.putExtra(Constants.CORRECT_ANSWERS, correctAnswers)
-                    startActivity(intent)
-                    finish()
+            if (nextLevel == 3) {
+                val intent = Intent(this, FlorenceGameActivity::class.java)
+                intent.putExtra(Constants.TOTAL_QUESTIONS, totalQuestions)
+                intent.putExtra(Constants.CORRECT_ANSWERS, correctAnswers)
+                startActivity(intent)
+                finish()
+            } else if (nextLevel == 2) {
+                val intent = Intent(this, MenInNursingGameActivity::class.java)
+                intent.putExtra(Constants.TOTAL_QUESTIONS, totalQuestions)
+                intent.putExtra(Constants.CORRECT_ANSWERS, correctAnswers)
+                startActivity(intent)
+                finish()
+            }
 
 
         }

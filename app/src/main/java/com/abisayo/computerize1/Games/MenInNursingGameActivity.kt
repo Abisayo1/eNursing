@@ -1,4 +1,4 @@
-package com.abisayo.computerize1
+package com.abisayo.computerize1.Games
 
 import android.annotation.SuppressLint
 import android.app.Dialog
@@ -16,13 +16,15 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
+import com.abisayo.computerize1.NextLevelActivity
+import com.abisayo.computerize1.R
 import com.abisayo.computerize1.data.Constants
-import com.abisayo.computerize1.databinding.ActivityFlorenceGameBinding
+import com.abisayo.computerize1.databinding.ActivityMenInNursingGameBinding
 
-
-class FlorenceGameActivity : AppCompatActivity() {
+class MenInNursingGameActivity : AppCompatActivity() {
+    val nextLevel = 3
     var mMediaPlayer: MediaPlayer? = null
-    private lateinit var binding: ActivityFlorenceGameBinding
+    private lateinit var binding: ActivityMenInNursingGameBinding
     private var i = 0
     var previousScore = 0
     private var trialNum = 0
@@ -35,83 +37,71 @@ class FlorenceGameActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-        binding = ActivityFlorenceGameBinding
-            .inflate(layoutInflater)
+        binding = ActivityMenInNursingGameBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val  totalQuestions = intent.getIntExtra(Constants.TOTAL_QUESTIONS, 0)
         previousScore = intent.getIntExtra(Constants.CORRECT_ANSWERS, 0)
 
+        binding.scoreV.text = "$previousScore"
+
 
 
 
         binding.constraint.setOnClickListener {
+            var w = i + previousScore
+            binding.scoreV.text = "$w"
             if (trialNum == 7) {
-                val intent = Intent(this, ResultActivity::class.java)
+                val intent = Intent(this, NextLevelActivity::class.java)
                 intent.putExtra(Constants.TOTAL_QUESTIONS, totalQuestions + trialNum)
                 intent.putExtra(Constants.CORRECT_ANSWERS, i + previousScore)
                 intent.putExtra(Constants.ACTIVITY,  "MenInNursingGameActivity")
+                intent.putExtra(Constants.NEXT_LEVEL, nextLevel)
                 startActivity(intent)
                 finish()
             }
         }
 
 
-        binding.florenceHead.setOnClickListener {
-            openDialog(0, binding.florenceHead)
-            deactivate(binding.florenceHead)
+        binding.nurseHead.setOnClickListener {
+            openDialog(0, binding.nurseHead)
+            deactivate(binding.nurseHead)
         }
 
-        binding.florenceCloth.setOnClickListener {
-            openDialog(0, binding.florenceCloth)
-            deactivate(binding.florenceCloth)
-
-        }
-
-        binding.florenceLamp.setOnClickListener {
-            openDialog(1, binding.florenceLamp)
-            deactivate(binding.florenceLamp)
+        binding.patientLeftChest.setOnClickListener {
+            openDialog(1, binding.patientLeftChest)
+            deactivate(binding.patientLeftChest)
 
         }
 
-        binding.florenceLeftArm.setOnClickListener {
-            openDialog(1, binding.florenceLeftArm)
-            deactivate(binding.florenceLeftArm)
+        binding.nurseLeftArm.setOnClickListener {
+            openDialog(0, binding.nurseLeftArm)
+            deactivate(binding.nurseLeftArm)
 
         }
 
-        binding.florenceLowerDress.setOnClickListener {
-            openDialog(1, binding.florenceLowerDress)
-            deactivate(binding.florenceLowerDress)
+        binding.patientCloth.setOnClickListener {
+            openDialog(1, binding.patientCloth)
+            deactivate(binding.patientCloth)
 
         }
 
-        binding.florencePatientHead.setOnClickListener {
-            openDialog(1, binding.florencePatientHead)
-            deactivate(binding.florencePatientHead)
+        binding.patientHead.setOnClickListener {
+            openDialog(1, binding.patientHead)
+            deactivate(binding.patientHead)
 
         }
 
-        binding.stool.setOnClickListener {
-            openDialog(1, binding.stool)
-            deactivate(binding.stool)
+        binding.patientRightArm.setOnClickListener {
+            openDialog(1, binding.patientRightArm)
+            deactivate(binding.patientRightArm)
 
         }
 
-        binding.stool2.setOnClickListener {
-            openDialog(0, binding.stool2)
-            deactivate(binding.stool2)
+        binding.sScope.setOnClickListener {
+            openDialog(1, binding.sScope)
+            deactivate(binding.sScope)
 
-        }
-
-        binding.arch.setOnClickListener {
-            openDialog(0, binding.arch)
-            deactivate(binding.arch)
-        }
-
-        binding.leftArch.setOnClickListener {
-            openDialog(1, binding.leftArch)
-            deactivate(binding.leftArch)
         }
 
 
@@ -136,48 +126,35 @@ class FlorenceGameActivity : AppCompatActivity() {
         mydialog.setCancelable(true)
         mydialog.show()
 
-        if (que == binding.florenceHead) {
-            question.text = "Florence was born into a what wealthy and what family?"
-            secondBtn.text = "intellectual"
-            firstBtn.text = "merciful"
-        } else if (que == binding.florenceCloth) {
-            question.text = "Florence believed that she was called byv God to help?"
-            secondBtn.text = "mankind"
-            firstBtn.text = "animals"
-        } else if (que == binding.florenceLamp) {
-            question.text = "What was her family's reaction to becoming a nurse?"
-            firstBtn.text = "opposition"
-            secondBtn.text = "support"
-        } else if (que == binding.florenceLeftArm) {
-            question.text = "Where did Florence recieve nurse training?"
-            firstBtn.text = "Kaiserswerth"
-            secondBtn.text = "Chicago"
-        } else if (que == binding.florenceLowerDress) {
-            question.text = "In what year did Florence recieve nurse training?"
-            firstBtn.text = "1847"
-            secondBtn.text = "1971"
-        } else if (que == binding.florencePatientHead) {
-            question.text = "Where did Florence study?"
-            firstBtn.text = "Paris"
-            secondBtn.text = "Canada"
-        } else if (que == binding.stool) {
-            question.text = "What was Florence's position in a charity hospital in England?"
-            firstBtn.text = "Superintendent"
-            secondBtn.text = "Doctor"
-        } else if (que == binding.stool2) {
-            question.text = "She earned the title, 'Lady of the Lamp' during what?"
-            firstBtn.text = "her studies"
-            secondBtn.text = "the war"
-        } else if (que == binding.arch) {
-            question.text = "Following her return from war, Florence earned what honorarium from the English public?"
-            firstBtn.text = "4000 pounds"
-            secondBtn.text = "4500 pounds"
-        } else if (que == binding.leftArch) {
-            question.text = "The Nightingale Training School for Nurses was set up in what year?"
-            firstBtn.text = "1860"
-            secondBtn.text = "1980"
+        if (que == binding.nurseHead) {
+            question.text = "Men experienced discrimination due to?"
+            secondBtn.text = "Gender"
+            firstBtn.text = "Age"
+        } else if (que == binding.nurseLeftArm) {
+            question.text = "Most men were denied admission ton nursing programs in what century?"
+            secondBtn.text = "20th"
+            firstBtn.text = "19th"
+        } else if (que == binding.patientCloth) {
+            question.text = "Men in Nursing Organisation was founded in what year?"
+            firstBtn.text = "1971"
+            secondBtn.text = "1988"
+        } else if (que == binding.patientHead) {
+            question.text = "Who organised the group of male nurses in Chigago?"
+            firstBtn.text = "Luther Christman"
+            secondBtn.text = "Martin Luther"
+        } else if (que == binding.patientLeftChest) {
+            question.text = "The aim of the National Male Nurses Association was to recruit more what in nursing?"
+            firstBtn.text = "Men"
+            secondBtn.text = "Women"
+        } else if (que == binding.patientRightArm) {
+            question.text = "The organisation was renamed American Assembly for Men in Nursing when?"
+            firstBtn.text = "1981"
+            secondBtn.text = "1988"
+        } else if (que == binding.sScope) {
+            question.text = "The National Male Nurses Association was formed by how many groups?"
+            firstBtn.text = "two"
+            secondBtn.text = "three"
         }
-
 
 
         secondBtn.setOnClickListener {

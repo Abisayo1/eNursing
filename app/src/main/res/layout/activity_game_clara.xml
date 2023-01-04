@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/clara"
     android:id="@+id/constraint"
-    tools:context=".GameClaraActivity">
+    tools:context=".Games.GameClaraActivity">
 
     <Button
         android:id="@+id/clockBtn"

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/men_in_nursing"
     android:id="@+id/constraint"
-    tools:context=".GameClaraActivity">
+    tools:context=".Games.GameClaraActivity">
 
 
     <TextView

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Window
 import android.view.WindowManager
+import com.abisayo.computerize1.Games.GameClaraActivity
 import com.abisayo.computerize1.databinding.ActivityFirstBinding
 
 class FirstActivity : AppCompatActivity() {

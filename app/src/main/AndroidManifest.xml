@@ -16,16 +16,16 @@
             android:name=".FirstActivity"
             android:exported="false" />
         <activity
-            android:name=".FlorenceGameActivity"
+            android:name=".Games.FlorenceGameActivity"
             android:exported="false" />
         <activity
             android:name=".NextLevelActivity"
             android:exported="false" />
         <activity
-            android:name=".MenInNursingGameActivity"
+            android:name=".Games.MenInNursingGameActivity"
             android:exported="false" />
         <activity
-            android:name=".GameClaraActivity"
+            android:name=".Games.GameClaraActivity"
             android:exported="false" />
         <activity
             android:name=".PuzzleActivity"

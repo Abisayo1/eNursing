@@ -1,8 +1,7 @@
-package com.abisayo.computerize1
+package com.abisayo.computerize1.Games
 
 import android.annotation.SuppressLint
 import android.app.Dialog
-import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -17,11 +16,13 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
+import com.abisayo.computerize1.NextLevelActivity
+import com.abisayo.computerize1.R
 import com.abisayo.computerize1.data.Constants
 import com.abisayo.computerize1.databinding.ActivityGameClaraBinding
 
 class GameClaraActivity : AppCompatActivity() {
-    val NextLevel = 2
+    private val NextLevel = 2
     var mMediaPlayer: MediaPlayer? = null
     private lateinit var binding: ActivityGameClaraBinding
     var i = 0

@@ -38,6 +38,8 @@ class GameClaraActivity : AppCompatActivity() {
         binding = ActivityGameClaraBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        openDialog()
+
 
         binding.constraint.setOnClickListener {
             if (trialNum == 5) {
@@ -218,6 +220,35 @@ class GameClaraActivity : AppCompatActivity() {
 
     fun deactivate(button: Button) {
         button.isClickable = false
+
+    }
+
+    @SuppressLint("SetTextI18n")
+    fun openDialog() {
+        val dialogLayoutBinding = layoutInflater.inflate(R.layout.dialog_layout, null)
+        val question = dialogLayoutBinding.findViewById<TextView>(R.id.tv_login)
+        val secondBtn = dialogLayoutBinding.findViewById<TextView>(R.id.nursebtn)
+        val firstBtn = dialogLayoutBinding.findViewById<TextView>(R.id.teacherbtn)
+        val mydialog = Dialog(this)
+        mydialog.setContentView(dialogLayoutBinding)
+        mydialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+
+        mydialog.setCancelable(true)
+        mydialog.show()
+
+        question.text ="Questions are hidden in various parts of the pictures. Tap around the pictures to discover them. Answer correctly to score points!"
+        secondBtn.text = "Go back"
+        firstBtn.text = "Got it"
+
+        firstBtn.setOnClickListener {
+            mydialog.dismiss()
+        }
+
+        secondBtn.setOnClickListener {
+            onBackPressed()
+        }
+
+
 
     }
 

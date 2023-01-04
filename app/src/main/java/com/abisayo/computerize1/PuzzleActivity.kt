@@ -1,31 +1,44 @@
 package com.abisayo.computerize1
 
+import android.annotation.SuppressLint
+import android.app.Dialog
 import android.content.ClipData
 import android.content.ClipDescription
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
+import android.media.MediaPlayer
 import android.os.Build
 import android.os.Bundle
 import android.view.*
+import android.view.animation.AnimationUtils
+import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
 import androidx.customview.widget.ViewDragHelper
+import androidx.drawerlayout.widget.DrawerLayout
 import com.abisayo.computerize1.data.Constants
 import com.abisayo.computerize1.data.Question
 import com.abisayo.computerize1.databinding.ActivityAdmissionFlashcardBinding
 import com.abisayo.computerize1.databinding.ActivityMainBinding
 import com.abisayo.computerize1.databinding.ActivityPuzzleBinding
 import com.google.android.material.card.MaterialCardView
+import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
 
 
 
 class PuzzleActivity : AppCompatActivity() {
+    var dialogOpen = 0
+    private lateinit var toggle: ActionBarDrawerToggle
+    var mMediaPlayer: MediaPlayer? = null
     private lateinit var binding: ActivityPuzzleBinding
     private lateinit var builder: AlertDialog.Builder
     private var i = 0
@@ -44,12 +57,21 @@ class PuzzleActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
+
+        dialogOpen = intent.getIntExtra("a", 0)
+        
+        if (dialogOpen == 0) {
+            openDialog()
+            dialogOpen++
+        }
+
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         binding = ActivityPuzzleBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         mQuestionsList = Constants.getQuestions()
 
+        playSound(R.raw.upbeat)
 
 
 
@@ -241,15 +263,18 @@ class PuzzleActivity : AppCompatActivity() {
 
     private fun defaultView(p: Int) {
         if (j == 10) {
+            stopSound()
             val intent = Intent(this, ResultActivity::class.java)
             intent.putExtra(Constants.TOTAL_QUESTIONS, mQuestionsList!!.size)
             intent.putExtra(Constants.CORRECT_ANSWERS, mCorrectAnswers)
             startActivity(intent)
             finish()
         } else {
+            stopSound()
             val intent = Intent(this, PuzzleActivity::class.java)
             intent.putExtra("i", p)
             intent.putExtra("k", mCorrectAnswers)
+            intent.putExtra("a", dialogOpen)
             startActivity(intent)
             finish()
         }
@@ -284,7 +309,91 @@ class PuzzleActivity : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("SetTextI18n")
+    fun openDialog() {
+        val dialogLayoutBinding = layoutInflater.inflate(R.layout.dialog_layout, null)
+        val question = dialogLayoutBinding.findViewById<TextView>(R.id.tv_login)
+        val secondBtn = dialogLayoutBinding.findViewById<TextView>(R.id.nursebtn)
+        val firstBtn = dialogLayoutBinding.findViewById<TextView>(R.id.teacherbtn)
+        val mydialog = Dialog(this)
+        mydialog.setContentView(dialogLayoutBinding)
+        mydialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
 
+        mydialog.setCancelable(true)
+        mydialog.show()
+
+        question.text ="Drag the questions to the right square provided!"
+        secondBtn.text = "Go back"
+        firstBtn.text = "Got it"
+
+        firstBtn.setOnClickListener {
+            mydialog.dismiss()
+        }
+
+        secondBtn.setOnClickListener {
+            onBackPressed()
+        }
+
+
+
+    }
+
+    // 1. Plays the water sound
+    fun playSound(sound: Int) {
+        if (mMediaPlayer == null) {
+            mMediaPlayer = MediaPlayer.create(this, sound)
+            mMediaPlayer!!.isLooping = false
+            mMediaPlayer!!.start()
+        } else mMediaPlayer!!.start()
+
+    }
+
+    // 2. Pause playback
+    fun pauseSound() {
+        if (mMediaPlayer?.isPlaying == true) mMediaPlayer?.pause()
+    }
+
+    // 3. Stops playback
+    fun stopSound() {
+        if (mMediaPlayer != null) {
+            mMediaPlayer!!.stop()
+            mMediaPlayer!!.release()
+            mMediaPlayer = null
+        }
+    }
+
+    // 4. Destroys the MediaPlayer instance when the app is closed
+    override fun onStop() {
+        super.onStop()
+        if (mMediaPlayer != null) {
+            mMediaPlayer!!.release()
+            mMediaPlayer = null
+        }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        menuInflater.inflate(R.menu.main2, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == R.id.action_item_one) {
+            val intent = Intent(this, FirstActivity::class.java)
+            startActivity(intent)
+            finish()
+        } else if (item.itemId == R.id.check_score) {
+            stopSound()
+            val intent = Intent(this, ResultActivity::class.java)
+            intent.putExtra(Constants.TOTAL_QUESTIONS, mQuestionsList!!.size)
+            intent.putExtra(Constants.CORRECT_ANSWERS, mCorrectAnswers)
+            startActivity(intent)
+            finish()
+        }
+        return super.onOptionsItemSelected(item)
+
+
+    }
 
 
 }

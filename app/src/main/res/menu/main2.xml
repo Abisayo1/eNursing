@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/check_score"
+        android:icon="@drawable/ic_baseline_assessment_24"
+        android:title="Home"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_item_one"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Check Score"
+        app:showAsAction="always" />
+
+
+
+</menu>

@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Computerize1">
         <activity
+            android:name=".oxygenation.OxygenationFlashCardActivity"
+            android:exported="false" />
+        <activity
             android:name=".FirstActivity"
             android:exported="false" />
         <activity
@@ -154,6 +157,14 @@
         </activity>
         <activity
             android:name=".admission.AdmissionFlashcardActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity
+            android:name=".oxygenation.OxygenationSubTopicActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

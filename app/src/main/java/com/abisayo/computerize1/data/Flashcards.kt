@@ -935,4 +935,80 @@ object Flashcards {
             "Give the hiring manager examples of situations when you have communicated effectively to achieve a positive result. Also show your communication skills with your body language"))
         return flashCardList
     }
+
+
+    fun oxygenationIntroFlashcard() : ArrayList<FlashCard> {
+        val flashCardList = arrayListOf<FlashCard>()
+        flashCardList.add(FlashCard("Oxygen constitutes approximately what percent of the air we breathe?", "21%"))
+        flashCardList.add(FlashCard("Cellular metabolism produces what which must be eliminated from the body to maintain normal aci-base balance?", "carbon dioxide"))
+        flashCardList.add(FlashCard("Delivery of oxygen and removal of carbon dioxide require the integration of several systems including?", "hematologic, cardiovascular and respiratory systems"))
+        flashCardList.add(FlashCard("Respiration which is essentially exchange of gases involves four components one of which is?","Movement of oxygen and carbon dioxide between the systematic capillaries and the tissues"))
+
+        return flashCardList
+    }
+
+    fun oxygenationStructureAndProcessesOfTheRespiratorySystem() : ArrayList<FlashCard> {
+        val flashCardList = arrayListOf<FlashCard>()
+        flashCardList.add(FlashCard("The structure of the respiratory system facilitates gas exchange and protects the body from foreign matter such as", "particulates and pathogens"))
+        flashCardList.add(FlashCard("The four processes of the respiratory system includes", "pulmonary ventilation, alveolar gas exchange, transport of oxygen and carbon dioxide and systematic diffusion"))
+        flashCardList.add(FlashCard("The respiratory system is divided into", "the upper respiratory system and the lower respiratory system"))
+        flashCardList.add(FlashCard("The upper respiratory system consists of", "The mouth, nose, pharynx, and the larynx"))
+        flashCardList.add(FlashCard("The lower respiratory system includes", "The trachea, lungs, the bronchi and the pleural membranes"))
+        flashCardList.add(FlashCard("What is the shared pathway for air and food?", "The pharynx"))
+        flashCardList.add(FlashCard("What traps and destroys pathogens entering with the air?", "oropharynx and the oropharynx"))
+        flashCardList.add(FlashCard("What is often identified as the Adam's Apple?", "The larynx"))
+        flashCardList.add(FlashCard("During swallowing, what closes, routing food to the esophagus?", "epiglottis"))
+        flashCardList.add(FlashCard("What lines the thorax adn surface of the diaphragm?", "The parietal pleural"))
+
+        return flashCardList
+    }
+
+    fun oxygenationPulmonaryVentilation() : ArrayList<FlashCard> {
+        val flashCardList = arrayListOf<FlashCard>()
+
+        flashCardList.add(FlashCard("Expansion and recoil of the lungs occur passively in response to what?", "Changes in pressures within the thoracic cavity and the lungs themselves"))
+        flashCardList.add(FlashCard("What is a major factor in creating negative pressure in the lungs?", "The recoil tendency of the lungs"))
+        flashCardList.add(FlashCard("What always equalizes with atmospheric pressure?", "The intrapulmonary pressure"))
+        flashCardList.add(FlashCard("When does inspiration occur?", "When the diaphragm and intercostal muscles contract, increasing the size of the thoracic cavity"))
+        flashCardList.add(FlashCard("In adults, mL of air is inspired and expired with each breath?", "500mL"))
+        flashCardList.add(FlashCard("Diseases such as muscular dystrophy or trauma can cause what effect?", "affect the muscle of respiration, impairing the ability of the thoracic cavity to expand and contract"))
+        flashCardList.add(FlashCard("What plays a significant role in the ease of ventilation?", "Lung compliance"))
+        flashCardList.add(FlashCard("Premature infants whose lungs are not yet capable of producing adequate surfactant often develop what?", "respiratory distress syndrome"))
+
+        return flashCardList
+    }
+
+    fun oxygenationAlveolarGasExchange() : ArrayList<FlashCard> {
+        val flashCardList = arrayListOf<FlashCard>()
+
+        flashCardList.add(FlashCard("When the pressure of oxygen is greater in the alveoli than in the blood, what happens?", "oxygen diffuses into the blood"))
+        flashCardList.add(FlashCard("The partial pressure in the alveoli is about what?", "100 torr"))
+        flashCardList.add(FlashCard("Carbon dioxide in the venous blood entering the pulmonary cappilaries has a partial pressure of what?", "45mmHg"))
+        return flashCardList
+
+    }
+
+
+    fun oxygenationTransportOfOxygenandCarbondioxide() : ArrayList<FlashCard> {
+        val flashCardList = arrayListOf<FlashCard>()
+
+        flashCardList.add(FlashCard("Oxygen needs to be transported how?", "from the lungs to the tissues"))
+        flashCardList.add(FlashCard("Carbon dioxide must b e transported how?", "from the tissues back to the lungs"))
+        flashCardList.add(FlashCard("The small amount of oxygen not bound to hemoglobin is dissolved and transported in the plasma as what?", "Pa02"))
+
+        return flashCardList
+
+    }
+
+    fun oxygenationFactorsAffectingRespiratoryFunction() : ArrayList<FlashCard> {
+        val flashCardList = arrayListOf<FlashCard>()
+
+        flashCardList.add(FlashCard("Environmental factors affecting respiration includes", "Heat, cold, and air pollution"))
+        flashCardList.add(FlashCard("The higher the altitude,", "the lower the P02 an individual breathes"))
+        flashCardList.add(FlashCard("A factor that affects respiratory function is", "lifestyle"))
+        return flashCardList
+
+    }
+
+
 }

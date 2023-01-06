@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools = "http://schemas.android.com/tools"
+    tools:showIn = "navigation_view">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Home"/>
+
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/avatar4"
+        android:title="Profile"/>
+
+
+    <item
+        android:title="">
+
+        <menu>
+
+
+            <item
+                android:id="@+id/introduction"
+                android:title="Introduction"/>
+
+            <item
+                android:id="@+id/structure"
+                android:title="Structure and processes of the respiratory system"/>
+
+            <item
+                android:id="@+id/pulmonary"
+                android:title="Pulmonary Ventilation"/>
+
+            <item
+                android:id="@+id/alveolar"
+                android:title="Alveolar gas exchange"/>
+
+            <item
+                android:id="@+id/transport"
+                android:title="Transport of Oxygen and Carbon dioxide"/>
+
+            <item
+                android:id="@+id/factors"
+                android:title="Factors affecting respiratory functions" />
+
+            <!--            <item-->
+            <!--                android:id="@+id/quiz"-->
+            <!--                android:icon="@drawable/ic_baseline_assessment_24"-->
+            <!--                android:title="Take Quiz"/>-->
+
+
+        </menu>
+
+
+    </item>
+
+
+    <item
+        android:title="Logout">
+
+        <menu>
+
+            <item
+                android:id="@+id/Logout"
+                android:icon="@drawable/logout"
+                android:title="Logout"/>
+
+
+        </menu>
+
+
+    </item>
+</menu>

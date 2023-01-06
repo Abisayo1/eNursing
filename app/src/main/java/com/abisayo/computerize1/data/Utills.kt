@@ -8,6 +8,7 @@ import com.abisayo.computerize1.communication.CommunicationFlashcardActivity
 import com.abisayo.computerize1.discharge.DischargeFlashcardActivity
 import com.abisayo.computerize1.flashcard.FlashCard
 import com.abisayo.computerize1.historyOfNursing.HistoryFlashcardActivity
+import com.abisayo.computerize1.oxygenation.OxygenationFlashCardActivity
 import com.abisayo.computerize1.roles.RolesFlashcardActivity
 import com.abisayo.computerize1.trendsInNursing.TrendsFlashcardActivity
 
@@ -56,6 +57,13 @@ fun Activity.startDischargeFlashcardActivity(flashCards: ArrayList<FlashCard>){
 fun Activity.startCommunicationFlashcardActivity(flashCards: ArrayList<FlashCard>){
     val activityIntent =
         Intent(this, CommunicationFlashcardActivity::class.java)
+    activityIntent.putExtra(Constants.EXTRA_FLASH_CARD, flashCards)
+    startActivity(activityIntent)
+}
+
+fun Activity.startOxygenationFlashCardActivity(flashCards: ArrayList<FlashCard>){
+    val activityIntent =
+        Intent(this, OxygenationFlashCardActivity::class.java)
     activityIntent.putExtra(Constants.EXTRA_FLASH_CARD, flashCards)
     startActivity(activityIntent)
 }

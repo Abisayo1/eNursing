@@ -16,6 +16,7 @@ import com.abisayo.computerize1.data.Topic
 import com.abisayo.computerize1.databinding.ActivityTopics1Binding
 import com.abisayo.computerize1.discharge.DischargeSubTopicActivity
 import com.abisayo.computerize1.historyOfNursing.HistorySubTopicActivity
+import com.abisayo.computerize1.oxygenation.OxygenationSubTopicActivity
 import com.abisayo.computerize1.roles.RolesSubTopicActivity
 import com.abisayo.computerize1.standards.StandardsActivity
 import com.abisayo.computerize1.trendsInNursing.TrendsSubTopicActivity
@@ -57,6 +58,7 @@ class TopicsActivity : AppCompatActivity() {
         topicList.add(Topic(0, "Admission process", ""))
         topicList.add(Topic(0, "Discharge process", ""))
         topicList.add(Topic(0, "Communication skills", ""))
+        topicList.add(Topic(0, "Oxygenation", ""))
 
 
 
@@ -128,6 +130,13 @@ class TopicsActivity : AppCompatActivity() {
                     7 -> {
                         val intent =
                             Intent(this@TopicsActivity, CommunicationSubTopicActivity::class.java)
+                        startActivity(intent)
+
+                    }
+
+                    8 -> {
+                        val intent =
+                            Intent(this@TopicsActivity, OxygenationSubTopicActivity::class.java)
                         startActivity(intent)
 
                     }

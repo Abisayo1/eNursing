@@ -1011,4 +1011,38 @@ object Flashcards {
     }
 
 
+    fun oxygentherapyIntroduction() : ArrayList<FlashCard> {
+        val flashCardList = arrayListOf<FlashCard>()
+        flashCardList.add(FlashCard("How much is CO2 in room air?", "0.03%"))
+        flashCardList.add(FlashCard("How much is nitrogen in room air?", "79%"))
+        flashCardList.add(FlashCard("What is the administration of oxygen at a concentration of pressure greater than that found in the environmental temperature?", "Oxygen Therapy"))
+        flashCardList.add(FlashCard("What is the key treatment in respiratory care?", "Oxygen Therapy"))
+        flashCardList.add(FlashCard("Oxygen therapy is used to treat what?", "Documented hypoxemia, severe respiratory distress, severe trauma"))
+        flashCardList.add(FlashCard("What is required for oxygen therapy except in emergency use?", "a physician's therapy"))
+        return flashCardList
+
+    }
+
+    fun oxygentherapyMethodsOfOxygenAdministration() : ArrayList<FlashCard> {
+        val flashCardList = arrayListOf<FlashCard>()
+        flashCardList.add(FlashCard("Classifications of Oxygen delivery systems include", "Low flow systems and High flow systems"))
+        flashCardList.add(FlashCard("Examples of Low flow systems include", "nasal cannula, simple mask and non-re breather mask"))
+        flashCardList.add(FlashCard("Examples of High Flow systems include", "Venturi mask, trach collar and T-piece"))
+        flashCardList.add(FlashCard("A characteristic of nasal cannula is that it is", "Disposable"))
+        flashCardList.add(FlashCard("Nasal cannula is also", "used for low-medium concentrations of oxygen"))
+        flashCardList.add(FlashCard("Simple Oxygen mask does what?", "delivers 35% to 60% of oxygen"))
+        return flashCardList
+
+    }
+
+    fun oxygentherapyOxygenToxicity() : ArrayList<FlashCard> {
+        val flashCardList = arrayListOf<FlashCard>()
+        flashCardList.add(FlashCard("What is oxygen toxicity?", "It is a condition in which ventilator failure occurs due to inspiration of high concentration of oxygen for a prolonged period of time"))
+        flashCardList.add(FlashCard("Oxygen concentration greater than 50% over 24 to 48 hours can cause what?", "pathological changes in the lungs"))
+        flashCardList.add(FlashCard("Some signs and symptoms of oxygen toxicity includes what?", "Non-productive cough, Nausea and vomiting, and fatigue"))
+        return flashCardList
+
+    }
+
+
 }

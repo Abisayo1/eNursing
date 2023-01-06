@@ -13,6 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Computerize1">
         <activity
+            android:name=".OxygenTherapy.OxygenTherapySubTopicActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OxygenTherapy.OxygenTherapyFlashCardActivity"
+            android:exported="false" />
+        <activity
             android:name=".oxygenation.OxygenationFlashCardActivity"
             android:exported="false" />
         <activity
@@ -162,7 +168,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".oxygenation.OxygenationSubTopicActivity"
             android:exported="false">

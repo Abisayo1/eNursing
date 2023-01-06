@@ -8,6 +8,7 @@ import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.abisayo.computerize1.OxygenTherapy.OxygenTherapySubTopicActivity
 import com.abisayo.computerize1.data.Constants.EXTRA_CLOSE_APP
 import com.abisayo.computerize1.admission.AdmissionSubTopicActivity
 import com.abisayo.computerize1.assessment.AssessmentSubTopicActivity
@@ -59,6 +60,7 @@ class TopicsActivity : AppCompatActivity() {
         topicList.add(Topic(0, "Discharge process", ""))
         topicList.add(Topic(0, "Communication skills", ""))
         topicList.add(Topic(0, "Oxygenation", ""))
+        topicList.add(Topic(0, "Oxygen Therapy", ""))
 
 
 
@@ -137,6 +139,13 @@ class TopicsActivity : AppCompatActivity() {
                     8 -> {
                         val intent =
                             Intent(this@TopicsActivity, OxygenationSubTopicActivity::class.java)
+                        startActivity(intent)
+
+                    }
+
+                    9 -> {
+                        val intent =
+                            Intent(this@TopicsActivity, OxygenTherapySubTopicActivity::class.java)
                         startActivity(intent)
 
                     }

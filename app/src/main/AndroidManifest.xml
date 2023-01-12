@@ -7,11 +7,23 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/e_nursing"
+        android:icon="@drawable/csimplify_icon1"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/e_nursing"
+        android:roundIcon="@drawable/csimplify_icon1"
         android:supportsRtl="true"
         android:theme="@style/Theme.Computerize1">
+        <activity
+            android:name=".Flowcharts.FlowChartQuizActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Flowcharts.FlowchartExampleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Flowcharts.FlowchartElementsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Algorithms.AlgorithmExampleActivity"
+            android:exported="false" />
         <activity
             android:name=".OxygenTherapy.OxygenTherapySubTopicActivity"
             android:exported="false" />
@@ -92,7 +104,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".historyOfNursing.HistoryQuizActivity"
+            android:name=".Algorithms.HistoryQuizActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -106,35 +118,35 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".historyOfNursing.HistoryYoutubeActivity"
+            android:name=".Algorithms.HistoryYoutubeActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".historyOfNursing.HistorySubTopicActivity"
+            android:name=".Algorithms.AlgorithmSubTopicActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".historyOfNursing.HistoryFlashcardActivity"
+            android:name=".Algorithms.AlgorithmFlashcardActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".trendsInNursing.TrendsFlashcardActivity"
+            android:name=".Flowcharts.FlowchartsFlashcardActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".trendsInNursing.TrendsSubTopicActivity"
+            android:name=".Flowcharts.FlowchartsSubTopicActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

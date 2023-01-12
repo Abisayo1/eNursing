@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawerLayout"
-    tools:context=".trendsInNursing.TrendsFlashcardActivity">
+    tools:context=".Flowcharts.FlowchartsFlashcardActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler"

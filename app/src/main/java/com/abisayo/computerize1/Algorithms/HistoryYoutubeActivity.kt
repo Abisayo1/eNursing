@@ -1,4 +1,4 @@
-package com.abisayo.computerize1.historyOfNursing
+package com.abisayo.computerize1.Algorithms
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -63,45 +63,25 @@ class HistoryYoutubeActivity : AppCompatActivity() {
                     startActivity(intent)
                 }
 
-                R.id.women_role -> {
+                R.id.Introduction -> {
                     this.startHistoryFlashcardActivity(Flashcards.womenRoleFlashcard1())
                 }
-                R.id.religion -> {
+                R.id.algo_types -> {
                     this.startHistoryFlashcardActivity(Flashcards.religionFlashcard())
                 }
-                R.id.war -> {
+                R.id.algo_characteristics -> {
                     this.startHistoryFlashcardActivity(Flashcards.warFlashcard())
                 }
-                R.id.societal_att -> {
+                R.id.algo_importance -> {
                     this.startHistoryFlashcardActivity(Flashcards.societalAttitudeFlashcard())
                 }
-                R.id.florence -> {
+                R.id.algo_steps -> {
                     this.startHistoryFlashcardActivity(Flashcards.florenceFlashcard())
                 }
-                R.id.clara -> {
+                R.id.algo_examples -> {
                     this.startHistoryFlashcardActivity(Flashcards.claraFlashcard())
                 }
-                R.id.linda -> {
-                    this.startHistoryFlashcardActivity(Flashcards.lindaFlashcard())
-                }
-                R.id.mary -> {
-                    this.startHistoryFlashcardActivity(Flashcards.maryFlashcard())
-                }
-                R.id.lilian -> {
-                    this.startHistoryFlashcardActivity(Flashcards.lilianFlashcard())
-                }
-                R.id.lavinia -> {
-                    this.startHistoryFlashcardActivity(Flashcards.laviniaFlashcard())
-                }
-                R.id.margaret -> {
-                    this.startHistoryFlashcardActivity(Flashcards.margaretFlashcard())
-                }
-                R.id.mary2 -> {
-                    this.startHistoryFlashcardActivity(Flashcards.mary2Flashcard())
-                }
-                R.id.men -> {
-                    this.startHistoryFlashcardActivity(Flashcards.menFlashcard())
-                }
+
                 R.id.videos -> {
                     startActivity(Intent(this,
                         HistoryYoutubeActivity::class.java))

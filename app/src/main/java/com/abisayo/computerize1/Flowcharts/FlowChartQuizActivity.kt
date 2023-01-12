@@ -1,4 +1,4 @@
-package com.abisayo.computerize1.historyOfNursing
+package com.abisayo.computerize1.Flowcharts
 
 import android.app.AlertDialog
 import android.content.Intent
@@ -10,15 +10,14 @@ import android.view.WindowManager
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
-import com.abisayo.computerize1.data.Constants
-import com.abisayo.computerize1.data.Question
 import com.abisayo.computerize1.R
 import com.abisayo.computerize1.ResultActivity
-import com.abisayo.computerize1.databinding.ActivityHistoryQuizBinding
+import com.abisayo.computerize1.data.Constants
+import com.abisayo.computerize1.data.Question
+import com.abisayo.computerize1.databinding.ActivityFlowChartQuizBinding
 
-class HistoryQuizActivity : AppCompatActivity(), View.OnClickListener {
-
-    private lateinit var binding: ActivityHistoryQuizBinding
+class FlowChartQuizActivity : AppCompatActivity(), View.OnClickListener {
+    private lateinit var binding: ActivityFlowChartQuizBinding
     private var mCurrentPosition:Int = 1
     private var mQuestionsList: ArrayList<Question>? = null
     private var mSelectedOptionPosition: Int = 0
@@ -33,7 +32,7 @@ class HistoryQuizActivity : AppCompatActivity(), View.OnClickListener {
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
-        binding = ActivityHistoryQuizBinding.inflate(layoutInflater)
+        binding = ActivityFlowChartQuizBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         mQuestionsList = Constants.getQuestions()

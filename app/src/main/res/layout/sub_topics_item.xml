@@ -78,7 +78,7 @@
                     android:layout_toEndOf="@+id/detail"
                     android:layout_toRightOf="@+id/detail"
                     android:maxHeight="100dp"
-                    android:src="@drawable/history_of_nursing"
+                    android:src="@drawable/flowchart"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />

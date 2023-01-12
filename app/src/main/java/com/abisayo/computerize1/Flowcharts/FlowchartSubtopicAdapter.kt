@@ -11,8 +11,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.abisayo.computerize1.R.*
 import com.abisayo.computerize1.data.Topic
 
-class SubTopicsAdapter(private val topicList: ArrayList<Topic>) :
-    RecyclerView.Adapter<SubTopicsAdapter.SubTopicsViewHolder>() {
+class FlowchartSubtopicAdapter(private val topicList: ArrayList<Topic>) :
+    RecyclerView.Adapter<FlowchartSubtopicAdapter.SubTopicsViewHolder>() {
 
     private lateinit var mListner: onItemClickListener
 
@@ -59,7 +59,7 @@ class SubTopicsAdapter(private val topicList: ArrayList<Topic>) :
         holder.textView.text = topic.name
         holder.detail.text = topic.details
 
-        holder.imageView.setImageResource(drawable.algorithm)
+        holder.imageView.setImageResource(drawable.flowchart)
 
         when (position) {
             0, 6, 12, 18 -> {

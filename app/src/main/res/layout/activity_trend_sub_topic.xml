@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#262626"
-    tools:context=".trendsInNursing.TrendsSubTopicActivity">
+    tools:context=".Flowcharts.FlowchartsSubTopicActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler"

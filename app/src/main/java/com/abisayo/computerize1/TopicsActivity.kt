@@ -16,12 +16,11 @@ import com.abisayo.computerize1.communication.CommunicationSubTopicActivity
 import com.abisayo.computerize1.data.Topic
 import com.abisayo.computerize1.databinding.ActivityTopics1Binding
 import com.abisayo.computerize1.discharge.DischargeSubTopicActivity
-import com.abisayo.computerize1.historyOfNursing.HistorySubTopicActivity
+import com.abisayo.computerize1.Algorithms.AlgorithmSubTopicActivity
 import com.abisayo.computerize1.oxygenation.OxygenationSubTopicActivity
 import com.abisayo.computerize1.roles.RolesSubTopicActivity
 import com.abisayo.computerize1.standards.StandardsActivity
-import com.abisayo.computerize1.trendsInNursing.TrendsSubTopicActivity
-import kotlin.system.exitProcess
+import com.abisayo.computerize1.Flowcharts.FlowchartsSubTopicActivity
 
 
 class TopicsActivity : AppCompatActivity() {
@@ -51,16 +50,9 @@ class TopicsActivity : AppCompatActivity() {
 
         topicList = ArrayList()
 
-        topicList.add(Topic(0, "History of Nursing", ""))
-        topicList.add(Topic(0, "Trends in Nursing", ""))
-        topicList.add(Topic(0, "Professional Standards in Nursing Practice", ""))
-        topicList.add(Topic(0, "Roles and Functions of a Nurse", ""))
-        topicList.add(Topic(0, "Health Assessment", ""))
-        topicList.add(Topic(0, "Admission process", ""))
-        topicList.add(Topic(0, "Discharge process", ""))
-        topicList.add(Topic(0, "Communication skills", ""))
-        topicList.add(Topic(0, "Oxygenation", ""))
-        topicList.add(Topic(0, "Oxygen Therapy", ""))
+        topicList.add(Topic(0, "Algorithms", ""))
+        topicList.add(Topic(0, "Flowcharts", ""))
+
 
 
 
@@ -91,12 +83,12 @@ class TopicsActivity : AppCompatActivity() {
                 when (position) {
                     0 -> {
                         val intent =
-                            Intent(this@TopicsActivity, HistorySubTopicActivity::class.java)
+                            Intent(this@TopicsActivity, AlgorithmSubTopicActivity::class.java)
                         startActivity(intent)
 
                     }
                     1 -> {
-                        val intent = Intent(this@TopicsActivity, TrendsSubTopicActivity::class.java)
+                        val intent = Intent(this@TopicsActivity, FlowchartsSubTopicActivity::class.java)
                         startActivity(intent)
 
                     }

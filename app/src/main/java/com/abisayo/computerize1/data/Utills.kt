@@ -8,21 +8,21 @@ import com.abisayo.computerize1.assessment.AssessmentFlashCardActivity
 import com.abisayo.computerize1.communication.CommunicationFlashcardActivity
 import com.abisayo.computerize1.discharge.DischargeFlashcardActivity
 import com.abisayo.computerize1.flashcard.FlashCard
-import com.abisayo.computerize1.historyOfNursing.HistoryFlashcardActivity
+import com.abisayo.computerize1.Algorithms.AlgorithmFlashcardActivity
 import com.abisayo.computerize1.oxygenation.OxygenationFlashCardActivity
 import com.abisayo.computerize1.roles.RolesFlashcardActivity
-import com.abisayo.computerize1.trendsInNursing.TrendsFlashcardActivity
+import com.abisayo.computerize1.Flowcharts.FlowchartsFlashcardActivity
 
 fun Activity.startHistoryFlashcardActivity(flashCards: ArrayList<FlashCard>){
     val activityIntent =
-        Intent(this, HistoryFlashcardActivity::class.java)
+        Intent(this, AlgorithmFlashcardActivity::class.java)
     activityIntent.putExtra(Constants.EXTRA_FLASH_CARD, flashCards)
     startActivity(activityIntent)
 }
 
 fun Activity.startTrendsFlashcardActivity(flashCards: ArrayList<FlashCard>){
     val activityIntent =
-        Intent(this, TrendsFlashcardActivity::class.java)
+        Intent(this, FlowchartsFlashcardActivity::class.java)
     activityIntent.putExtra(Constants.EXTRA_FLASH_CARD, flashCards)
     startActivity(activityIntent)
 }

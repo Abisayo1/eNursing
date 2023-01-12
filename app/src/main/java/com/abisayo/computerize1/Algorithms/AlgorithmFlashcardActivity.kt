@@ -1,35 +1,35 @@
-package com.abisayo.computerize1.trendsInNursing
+package com.abisayo.computerize1.Algorithms
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.abisayo.computerize1.*
+import com.abisayo.computerize1.Games.GameClaraActivity
 import com.abisayo.computerize1.data.Constants.EXTRA_FLASH_CARD
-import com.abisayo.computerize1.databinding.ActivityTrendsFlashcardBinding
+import com.abisayo.computerize1.databinding.ActivityHistoryFlashcardBinding
 import com.abisayo.computerize1.flashcard.FlashCard
 import com.abisayo.computerize1.flashcard.FlashCardAdapter
 import com.abisayo.computerize1.data.Flashcards
 import com.abisayo.computerize1.data.startHistoryFlashcardActivity
-import com.abisayo.computerize1.data.startTrendsFlashcardActivity
 import com.google.android.material.navigation.NavigationView
 
-class TrendsFlashcardActivity : AppCompatActivity() {
+class AlgorithmFlashcardActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityTrendsFlashcardBinding
+    private lateinit var binding: ActivityHistoryFlashcardBinding
     private lateinit var recyclerView: RecyclerView
     private lateinit var flashCardAdapter: FlashCardAdapter
     private lateinit var toggle: ActionBarDrawerToggle
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityTrendsFlashcardBinding.inflate(layoutInflater)
+        binding = ActivityHistoryFlashcardBinding.inflate(layoutInflater)
         setContentView(binding.root)
         recyclerView = binding.recycler
 
@@ -67,55 +67,32 @@ class TrendsFlashcardActivity : AppCompatActivity() {
                     startActivity(intent)
                 }
 
-                R.id.introduction -> {
-                    this.startHistoryFlashcardActivity(Flashcards.trendIntroFlashcard())
+                R.id.Introduction -> {
+                    this.startHistoryFlashcardActivity(Flashcards.womenRoleFlashcard1())
+                }
+                R.id.algo_types -> {
+                    this.startHistoryFlashcardActivity(Flashcards.religionFlashcard())
+                }
+                R.id.algo_characteristics -> {
+                    this.startHistoryFlashcardActivity(Flashcards.warFlashcard())
+                }
+                R.id.algo_importance -> {
+                    this.startHistoryFlashcardActivity(Flashcards.societalAttitudeFlashcard())
+                }
+                R.id.algo_steps -> {
+                    this.startHistoryFlashcardActivity(Flashcards.florenceFlashcard())
+                }
+                R.id.algo_examples -> {
+                    startActivity(Intent(this,
+                        AlgorithmExampleActivity::class.java))
                 }
 
-                R.id.telehealth -> {
-                    this.startTrendsFlashcardActivity(Flashcards.trendTeleHealthFlashcard())
+                R.id.quiz -> {
+                    startActivity(Intent(this,
+                        HistoryQuizActivity::class.java))
                 }
-                R.id.specialization -> {
-                    this.startTrendsFlashcardActivity(Flashcards.trendSpecializationFlashcard())
-                }
-                R.id.outpatient -> {
-                    this.startTrendsFlashcardActivity(Flashcards.trendOutpatientFlashcard())
-                }
-                R.id.navigator -> {
-                    this.startTrendsFlashcardActivity(Flashcards.trendNavigatorFlashcard())
-                }
-                R.id.ent -> {
-                    this.startTrendsFlashcardActivity(Flashcards.trendENTFlashcard())
-                }
-                R.id.doctoral -> {
-                    this.startTrendsFlashcardActivity(Flashcards.trendDoctoralFlashcard())
-                }
-                R.id.eduOnline -> {
-                    this.startTrendsFlashcardActivity(Flashcards.trendEduOnlineFlashcard())
-                }
-                R.id.shortage -> {
-                    this.startTrendsFlashcardActivity(Flashcards.trendShortageFlashcard())
-                }
-                R.id.advocacy -> {
-                    this.startTrendsFlashcardActivity(Flashcards.trendAdvocacyFlashcard())
-                }
-                R.id.selfCare -> {
-                    this.startTrendsFlashcardActivity(Flashcards.trendSelfCareFlashcard())
-                }
-                R.id.salaries -> {
-                    this.startTrendsFlashcardActivity(Flashcards.trendSalariesFlashcard())
-                }
-                R.id.bilingual -> {
-                    this.startTrendsFlashcardActivity(Flashcards.trendBiLingualFlashcard())
-                }
-                R.id.males -> {
-                    this.startTrendsFlashcardActivity(Flashcards.trendMalesFlashcard())
-                }
-                R.id.holistic -> {
-                    this.startTrendsFlashcardActivity(Flashcards.trendHolisticFlashcard())
-                }
-                R.id.patients -> {
-                    this.startTrendsFlashcardActivity(Flashcards.trendPatientsFlashcard())
-                }
+
+
 
             }
             true

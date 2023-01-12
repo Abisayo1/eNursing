@@ -28,19 +28,19 @@ class FirstActivity : AppCompatActivity() {
 
         }
 
-
-       binding.game.setOnClickListener {
-            val intent = Intent(this, GameClaraActivity::class.java)
-            startActivity(intent)
-            overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
-
-        }
-
-       binding.puzzle.setOnClickListener {
-            val intent = Intent(this, PuzzleActivity::class.java)
-            startActivity(intent)
-            overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
-
-        }
+//
+//       binding.game.setOnClickListener {
+//            val intent = Intent(this, GameClaraActivity::class.java)
+//            startActivity(intent)
+//            overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
+//
+//        }
+//
+//       binding.puzzle.setOnClickListener {
+//            val intent = Intent(this, PuzzleActivity::class.java)
+//            startActivity(intent)
+//            overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
+//
+//        }
     }
 }

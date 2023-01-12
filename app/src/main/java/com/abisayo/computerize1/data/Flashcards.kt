@@ -6,31 +6,29 @@ object Flashcards {
 
     fun womenRoleFlashcard1(): ArrayList<FlashCard> {
         val flashCardList = arrayListOf<FlashCard>()
-        flashCardList.add(FlashCard("History of nursing can be viewed from what 5 perspectives",
-            "Women’s roles and Status, Religion, War, Societal Attitudes, and Nursing leaders"))
-        flashCardList.add(FlashCard("Traditional female role included?",
-            "Care and nurturing of other family members including infants and children"))
-        flashCardList.add(FlashCard("Nursing have its roots in?",
-            "Subservient and dependent"))
-        flashCardList.add(FlashCard("Traditional nursing role includes?",
-            "Providing humanistic caring, nurturing, comforting and supporting"))
+        flashCardList.add(FlashCard("What are Algorithms?",
+            "It is a sequence of finished steps to solve a problem"))
+        flashCardList.add(FlashCard("Every good algorithm should?",
+            "Terminate"))
+        flashCardList.add(FlashCard("Algorithms should be unambiguous meaning?",
+            "Its instructions should be clear and straightforward"))
         return flashCardList
     }
 
     fun religionFlashcard(): ArrayList<FlashCard> {
         val flashCardList = arrayListOf<FlashCard>()
-        flashCardList.add(FlashCard("Religion played a significant role in the development of nursing through",
-            "Through the need to practice biblical injunctions"))
-        flashCardList.add(FlashCard("Who provided houses to care for the poor, sick and the homeless",
-            "Fabiola, a wealthy matron of the Roman Empire"))
-        flashCardList.add(FlashCard("Which group cared for people with leprosy, syphilis and chronic skin conditions",
-            "The crusaders (the formation of several orders of knights)"))
-        flashCardList.add(FlashCard("Which suppressed group resurfaced during the third and fourth centuries",
-            "The deaconess groups of the Roman Empire resurfaced after being suppressed during the middle Ages by Western churches"))
-        flashCardList.add(FlashCard("When did Theodore Fliedner reinstitute the order of deaconesses",
-            "1836"))
-        flashCardList.add(FlashCard("What religious values dominated the practice of nursing",
-            "Self-denial, spiritual calling, devotion to duty and hard work"))
+        flashCardList.add(FlashCard("Some types of algorithms include",
+            "Brute force, Recursive, Backtracking, Searching, Sorting and Divide and Conquer"))
+        flashCardList.add(FlashCard("The first approach to solving when we see a problem is also known as",
+            "Brute Force Algorithm"))
+        flashCardList.add(FlashCard("An algorithm in which the problem is broken into several sub-parts and called the same function again and again is known as?",
+            "Recursive Algorithm)"))
+        flashCardList.add(FlashCard("Algorithms that are used for searching elements or group of elements from a particular data structure is known as what?",
+            "Searching Algorithm"))
+        flashCardList.add(FlashCard("In sorting algorithm, we",
+            "Arrange a group of data in a particular manner according to the requirement"))
+        flashCardList.add(FlashCard("This algorithm break problems into sub-problems",
+            "Divide and Conquer"))
         return flashCardList
     }
 
@@ -57,66 +55,27 @@ object Flashcards {
 
     fun societalAttitudeFlashcard(): ArrayList<FlashCard> {
         val flashCardList = arrayListOf<FlashCard>()
-        flashCardList.add(FlashCard("What was the state of Nursing before the mid-1800’s",
-            "Nursing had no organization, education or social status"))
-        flashCardList.add(FlashCard("Women in the mid-1800’s were previously seen as?",
-            "Educated to complement their husband. Hence they were not respected"))
-        flashCardList.add(FlashCard("What was the image of nurses in the mid-1800’s?",
-            "They were seen as poorly educated incarcerated criminals, stealing from and abusing the sick"))
-        flashCardList.add(FlashCard("What were nurses seen as in the late 1900s?",
-            "Nurses were seen as a sex object, surrogate mother and tyrannical mother"))
-        flashCardList.add(FlashCard("In the early 19th century, what was the image of nurses",
-            "Nurses was seen as a doctor’s handmaiden"))
-        flashCardList.add(FlashCard("What image was portrayed of nurses during the World War II",
-            "The \"Heroine\" image was portrayed due to nurses contributions to fighting poliomyelitis, particularly the Australian nurse Elizabeth Kenney"))
-        flashCardList.add(FlashCard("Whose activities caused a wave of changes in the latter part of the 19th century",
-            "Florence Nightingale. During the Crimean War"))
-        flashCardList.add(FlashCard("What were the results of Florence Nightingale's action to nursing?",
-            "Nurses were then viewed as noble, compassionate, moral, religious, dedicated and self-sacrificing"))
-        flashCardList.add(FlashCard("What organisations constitutes the Tri-Council of Nursing?",
-            "American Association of Colleges of Nursing, American Nurses Association, American Organization of Nurse Executives, National League for Nursing"))
-        flashCardList.add(FlashCard("When were the Tri-Council of Nursing initiated?",
-            "In the early 1990’s to improve the image of nursing"))
-        flashCardList.add(FlashCard("When did the Johnson & Johnson Corporation launch the “Campaign for Nursing’s Future”?",
-            "In 2002 to promote nursing as a positive career choice"))
+        flashCardList.add(FlashCard("Reasons why we require algorithms include",
+            "scalability and performance"))
+        flashCardList.add(FlashCard("What as an importance of algorithms enables us to break down complex problems so as to solve them quickly?",
+            "scalability"))
+        flashCardList.add(FlashCard("Algorithms make us understand if a problem is",
+            "feasible or not"))
+
         return flashCardList
     }
 
     fun florenceFlashcard(): ArrayList<FlashCard> {
         val flashCardList = arrayListOf<FlashCard>()
-        flashCardList.add(FlashCard("What status was she born into",
-            "She was born into a wealthy and intellectual family"))
-        flashCardList.add(FlashCard("What did she believe",
-            "She believed she was called by God to help mankind"))
-        flashCardList.add(FlashCard("What was her family reaction to becoming a nurse",
-            "She was opposed by her family, but she was determined"))
-        flashCardList.add(FlashCard("Where did she receive nurse training",
-            "Kaiserswerth in 1847, where she received 3 months training in nursing"))
-        flashCardList.add(FlashCard("Where did she study",
-            "In Paris with the sisters of Charity in 1853"))
-        flashCardList.add(FlashCard("What was her position in a charity hospital in England",
-            "She became the superintendent of a charity hospital"))
-        flashCardList.add(FlashCard("What title did she earn during the war",
-            "She earned the title \"Lady of the lamp\""))
-        flashCardList.add(FlashCard("How was she appreciated by the English public",
-            "With an honorarium of 4500 pounds following her return from the war"))
-        flashCardList.add(FlashCard("What did she use her honorarium money for",
-            "She set up the Nightingale Training School for Nurses, in 1860"))
-        flashCardList.add(FlashCard("She was notably the first nurse to do what",
-            "Exert political pressure on the government"))
-        flashCardList.add(FlashCard("Why was she recognized as the first nurse scientist-theorist",
-            "It was because of her work: \"Notes on Nursing: What it is, and What it is not\""))
-        flashCardList.add(FlashCard("What other passion did she have",
-            "Statistics and conducting extensive research and analysis"))
-        flashCardList.add(FlashCard("What age did she die",
-            "At age 90"))
+        flashCardList.add(FlashCard("How are algorithms written?",
+            "No definite way, but usually sequentially"))
         return flashCardList
     }
 
     fun claraFlashcard(): ArrayList<FlashCard> {
         val flashCardList = arrayListOf<FlashCard>()
-        flashCardList.add(FlashCard("What was Clara Barton's profession",
-            "She was a schoolteacher"))
+        flashCardList.add(FlashCard("Write an algorithm to find the area and perimeter of a square",
+            "Step 1 - Start\nStep 2 - Input side length of square, say L\nStep 3 - AREA = L*L\nStep4\nPERFEMETER = 4*L\nStep 5 - Display AREA, PERIMETER\nSTEP 6 - Stop"))
         flashCardList.add(FlashCard("When did she volunteer as a nurse",
             "During the American Civil War"))
         flashCardList.add(FlashCard("What services did she organise ",
@@ -223,12 +182,12 @@ object Flashcards {
 
     fun trendIntroFlashcard(): ArrayList<FlashCard> {
         val flashCardList = arrayListOf<FlashCard>()
-        flashCardList.add(FlashCard("What is the nation’s largest health care profession",
-            "Nursing"))
-        flashCardList.add(FlashCard("What is important for practicing nurses and those who aspire to become nurses",
-            "It is important to stay on top of the latest trends in the field"))
-        flashCardList.add(FlashCard("Why is it important to stay on top of the latest trends in the field",
-            "It allows nurses to better serve their patients and strive for clinical excellence"))
+        flashCardList.add(FlashCard("What is the meaning of flowcharts?",
+            "This is a graphical representation of an algorithm"))
+        flashCardList.add(FlashCard("One benefit ofg flowchart is?",
+            "It helps to clarify complex processes"))
+        flashCardList.add(FlashCard("How does flowcharts help team members?",
+            "It helps team members gain a shared understanding of the process and identify resources"))
         return flashCardList
     }
 
@@ -259,48 +218,42 @@ object Flashcards {
 
     fun trendSpecializationFlashcard(): ArrayList<FlashCard> {
         val flashCardList = arrayListOf<FlashCard>()
-        flashCardList.add(FlashCard("What doe specialization enable nurses do",
-            "It enables nurses become experts in a specific career area"))
-        flashCardList.add(FlashCard("What assurance does specialization provide",
-            "It assures the patients and the health care institution that the nurse is highly knowledgeable in a specific area of care"))
-        flashCardList.add(FlashCard("What is causing the widening of the scope of specializations for nurses",
-            "The scope of specialization is widening because healthcare needs are becoming increasingly complex"))
-        flashCardList.add(FlashCard("How does specialization increase the demand of nurses",
-            "A nurse who specializes is in higher demand than the ones that do not"))
+        flashCardList.add(FlashCard("Flowchart opening statement must be what?",
+            "start"))
+        flashCardList.add(FlashCard("end is what statement of a flowchart?",
+            "ending statement"))
+        flashCardList.add(FlashCard("All symbols in the flowchart must be connected with what?",
+            "An arrow line"))
         return flashCardList
     }
 
     fun trendOutpatientFlashcard(): ArrayList<FlashCard> {
         val flashCardList = arrayListOf<FlashCard>()
-        flashCardList.add(FlashCard("What trent has healthcare been moving towards",
-            "Health care has been increasingly shifting from inpatient to outpatient settings"))
-        flashCardList.add(FlashCard("What is causing the shift from inpatient to outpatient settings",
-            "The emergence of new and better health care technologies\nand\nThe need to control health care costs"))
-        flashCardList.add(FlashCard("What is the goal of nurses",
-            "To help people get and stay healthy"))
-        flashCardList.add(FlashCard("What helps nurses achieve their goal",
-            "When nurses provide preventive and restorative care in the community"))
-        flashCardList.add(FlashCard("What helps nurses provide preventive and restorative care",
-            "The reduction of unnecessary visits and stays in unpleasant care institutions"))
+        flashCardList.add(FlashCard("Flowcharts is a better way of doing what?",
+            "communicating the logic of the system"))
+        flashCardList.add(FlashCard("Flowchart acts as sa guide of blueprint during what?",
+            "program design"))
+        flashCardList.add(FlashCard("Flowchart also helps programmers in what aspect?",
+            "debugging processes"))
+        flashCardList.add(FlashCard("Flow charts are easy to?",
+            "understand"))
+        flashCardList.add(FlashCard("Flowcharts can easily be",
+            "reused for inconvenience in the future"))
         return flashCardList
     }
 
     fun trendNavigatorFlashcard(): ArrayList<FlashCard> {
         val flashCardList = arrayListOf<FlashCard>()
-        flashCardList.add(FlashCard("Who are nurse navigators",
-            "They are nurses who use their medical knowledge and their management and people skills to guide patients through their health care journey"))
-        flashCardList.add(FlashCard("What is the trend towards nurse navigators",
-            "Hospitals are choosing to hire more nurse navigators"))
-        flashCardList.add(FlashCard("What dual role do nurse navigators have",
-            "They provide nursing care and act as case managers"))
-        flashCardList.add(FlashCard("How do nurse navigators help patients",
-            "They guide patients through the healthcare journey, from diagnosis and treatment to follow-up and beyond"))
-        flashCardList.add(FlashCard("What are nurse navigators particularly helpful in doing",
-            "They are particularly helpful in reducing the rate at which discharged patients must be readmitted"))
-        flashCardList.add(FlashCard("What is one way nurse navigators can help patients",
-            "They can connect patients to needed community resources and educate family members"))
-        flashCardList.add(FlashCard("Where can nurse navigators work",
-            "They can work for themselves, for an independent nurse company, for an insurance company, or for physician groups and medical facilities"))
+        flashCardList.add(FlashCard("When programs become large and complex, what happens using a flowchart?",
+            "It becomes difficult to draw flowcharts"))
+        flashCardList.add(FlashCard("A disadvantage of flowchart is that?",
+            "It is difficult to modify"))
+        flashCardList.add(FlashCard("What doe some developers think about flowcharts?",
+            "Some developers think that it is a waste of time"))
+        flashCardList.add(FlashCard("flowcharts make what processes slow?",
+            "software processes"))
+        flashCardList.add(FlashCard("if changes are done in software, what happens to its flowchart?",
+            "It must be redrawn"))
         return flashCardList
     }
 

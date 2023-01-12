@@ -1,35 +1,36 @@
-package com.abisayo.computerize1.historyOfNursing
+package com.abisayo.computerize1.Flowcharts
 
 import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
-import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.abisayo.computerize1.*
-import com.abisayo.computerize1.Games.GameClaraActivity
+import com.abisayo.computerize1.Algorithms.AlgorithmExampleActivity
 import com.abisayo.computerize1.data.Constants.EXTRA_FLASH_CARD
-import com.abisayo.computerize1.databinding.ActivityHistoryFlashcardBinding
+import com.abisayo.computerize1.databinding.ActivityTrendsFlashcardBinding
 import com.abisayo.computerize1.flashcard.FlashCard
 import com.abisayo.computerize1.flashcard.FlashCardAdapter
 import com.abisayo.computerize1.data.Flashcards
 import com.abisayo.computerize1.data.startHistoryFlashcardActivity
+import com.abisayo.computerize1.data.startTrendsFlashcardActivity
 import com.google.android.material.navigation.NavigationView
 
-class HistoryFlashcardActivity : AppCompatActivity() {
+class FlowchartsFlashcardActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityHistoryFlashcardBinding
+    private lateinit var binding: ActivityTrendsFlashcardBinding
     private lateinit var recyclerView: RecyclerView
     private lateinit var flashCardAdapter: FlashCardAdapter
     private lateinit var toggle: ActionBarDrawerToggle
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityHistoryFlashcardBinding.inflate(layoutInflater)
+        binding = ActivityTrendsFlashcardBinding.inflate(layoutInflater)
         setContentView(binding.root)
         recyclerView = binding.recycler
 
@@ -67,64 +68,26 @@ class HistoryFlashcardActivity : AppCompatActivity() {
                     startActivity(intent)
                 }
 
-                R.id.women_role -> {
-                    this.startHistoryFlashcardActivity(Flashcards.womenRoleFlashcard1())
-                }
-                R.id.religion -> {
-                    this.startHistoryFlashcardActivity(Flashcards.religionFlashcard())
-                }
-                R.id.war -> {
-                    this.startHistoryFlashcardActivity(Flashcards.warFlashcard())
-                }
-                R.id.societal_att -> {
-                    this.startHistoryFlashcardActivity(Flashcards.societalAttitudeFlashcard())
-                }
-                R.id.florence -> {
-                    this.startHistoryFlashcardActivity(Flashcards.florenceFlashcard())
-                }
-                R.id.clara -> {
-                    this.startHistoryFlashcardActivity(Flashcards.claraFlashcard())
-                }
-                R.id.linda -> {
-                    this.startHistoryFlashcardActivity(Flashcards.lindaFlashcard())
-                }
-                R.id.mary -> {
-                    this.startHistoryFlashcardActivity(Flashcards.maryFlashcard())
-                }
-                R.id.lilian -> {
-                    this.startHistoryFlashcardActivity(Flashcards.lilianFlashcard())
-                }
-                R.id.lavinia -> {
-                    this.startHistoryFlashcardActivity(Flashcards.laviniaFlashcard())
-                }
-                R.id.margaret -> {
-                    this.startHistoryFlashcardActivity(Flashcards.margaretFlashcard())
-                }
-                R.id.mary2 -> {
-                    this.startHistoryFlashcardActivity(Flashcards.mary2Flashcard())
-                }
-                R.id.men -> {
-                    this.startHistoryFlashcardActivity(Flashcards.menFlashcard())
+                R.id.introduction -> {
+                    this.startHistoryFlashcardActivity(Flashcards.trendIntroFlashcard())
                 }
 
-                R.id.puzzles_games -> {
+                R.id.flow_elements -> {
                     startActivity(Intent(this,
-                        PuzzleActivity::class.java))
+                        FlowchartElementsActivity::class.java))
                 }
-
-                R.id.videos -> {
-                    startActivity(Intent(this,
-                        HistoryYoutubeActivity::class.java))
+                R.id.guidelines -> {
+                    this.startTrendsFlashcardActivity(Flashcards.trendSpecializationFlashcard())
                 }
-
-                R.id.quiz -> {
-                    startActivity(Intent(this,
-                        HistoryQuizActivity::class.java))
+                R.id.advantages -> {
+                    this.startTrendsFlashcardActivity(Flashcards.trendOutpatientFlashcard())
                 }
-
-                R.id.clara_game -> {
+                R.id.disadvantages -> {
+                    this.startTrendsFlashcardActivity(Flashcards.trendNavigatorFlashcard())
+                }
+                R.id.examples -> {
                     startActivity(Intent(this,
-                        GameClaraActivity::class.java))
+                        FlowchartExampleActivity::class.java))
                 }
 
             }

@@ -59,10 +59,20 @@ class TopicAdapter(private val topicList: ArrayList<Topic>) :
         holder.detail.text = topic.details
 
         holder.imageView.setImageResource(drawable.history_of_nursing)
+
+        if (position == 0)  {
+            holder.imageView.setImageResource(drawable.algorithm)
+        }
         when (position) {
             0, 6, 12, 18 -> {
                 holder.layout.setBackgroundColor(Color.parseColor("#da3a3a"))
             }
+
+
+            1 -> {
+                holder.imageView.setImageResource(drawable.flowchart)
+            }
+
             1, 7, 13, 19 -> {
                 holder.layout.setBackgroundColor(Color.parseColor("#6CD0FF"))
             }

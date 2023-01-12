@@ -15,34 +15,35 @@
 
 
     <item
-        android:title="Topics">
+        android:title="">
 
         <menu>
 
-
             <item
-                android:id="@+id/introduction"
+                android:id="@+id/Introduction"
                 android:title="Introduction"/>
 
             <item
-                android:id="@+id/flow_elements"
-                android:title="Elements"/>
+                android:id="@+id/algo_types"
+                android:title="Types"/>
 
             <item
-                android:id="@+id/guidelines"
-                android:title="Guidelines"/>
+                android:id="@+id/algo_characteristics"
+                android:title="Characteristics"/>
 
             <item
-                android:id="@+id/advantages"
-                android:title="Advantages"/>
+                android:id="@+id/algo_importance"
+                android:title="Importance"/>
 
             <item
-                android:id="@+id/disadvantages"
-                android:title="Disadvantages"/>
+                android:id="@+id/algo_steps"
+                android:title="Steps"/>
 
             <item
-                android:id="@+id/examples"
+                android:id="@+id/algo_examples"
                 android:title="Examples"/>
+
+
 
             <item
                 android:id="@+id/quiz"

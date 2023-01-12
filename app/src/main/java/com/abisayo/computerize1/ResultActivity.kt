@@ -7,11 +7,10 @@ import android.os.Handler
 import android.view.Window
 import android.view.WindowManager
 import android.widget.TextView
-import android.widget.Toast
 import com.abisayo.computerize1.Games.GameClaraActivity
 import com.abisayo.computerize1.data.Constants
 import com.abisayo.computerize1.databinding.ActivityResultBinding
-import com.abisayo.computerize1.historyOfNursing.HistoryQuizActivity
+import com.abisayo.computerize1.Algorithms.HistoryQuizActivity
 
 class ResultActivity : AppCompatActivity() {
     private lateinit var binding: ActivityResultBinding

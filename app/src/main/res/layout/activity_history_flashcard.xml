@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawerLayout"
-    tools:context=".historyOfNursing.HistoryFlashcardActivity">
+    tools:context=".Algorithms.AlgorithmFlashcardActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler"
@@ -20,7 +20,7 @@
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navView"
         app:headerLayout="@layout/nav_header"
-        app:menu="@menu/history_nav_menu"
+        app:menu="@menu/algorithm_nav_menu"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"

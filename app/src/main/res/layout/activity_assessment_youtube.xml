@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/drawerLayout"
     android:padding="2dp"
-    tools:context=".historyOfNursing.HistoryYoutubeActivity">
+    tools:context=".Algorithms.HistoryYoutubeActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler"

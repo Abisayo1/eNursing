@@ -13,10 +13,11 @@ import com.abisayo.computerize1.oxygenation.OxygenationFlashCardActivity
 import com.abisayo.computerize1.roles.RolesFlashcardActivity
 import com.abisayo.computerize1.Flowcharts.FlowchartsFlashcardActivity
 
-fun Activity.startHistoryFlashcardActivity(flashCards: ArrayList<FlashCard>){
+fun Activity.startAlgorithmFlashcardActivity(flashCards: ArrayList<FlashCard>, item: Int){
     val activityIntent =
         Intent(this, AlgorithmFlashcardActivity::class.java)
     activityIntent.putExtra(Constants.EXTRA_FLASH_CARD, flashCards)
+    activityIntent.putExtra("item", item)
     startActivity(activityIntent)
 }
 

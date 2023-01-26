@@ -5,21 +5,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.abisayo.computerize1.Profile
 import com.abisayo.computerize1.R
 import com.abisayo.computerize1.TopicsActivity
-import com.abisayo.computerize1.data.Constants
 import com.abisayo.computerize1.data.Flashcards
-import com.abisayo.computerize1.data.startHistoryFlashcardActivity
+import com.abisayo.computerize1.data.startAlgorithmFlashcardActivity
 import com.abisayo.computerize1.databinding.ActivityAlgorithmExampleBinding
-import com.abisayo.computerize1.databinding.ActivityHistoryFlashcardBinding
-import com.abisayo.computerize1.flashcard.FlashCard
-import com.abisayo.computerize1.flashcard.FlashCardAdapter
 import com.google.android.material.navigation.NavigationView
 
 class AlgorithmExampleActivity : AppCompatActivity() {
@@ -30,6 +23,8 @@ class AlgorithmExampleActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityAlgorithmExampleBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        supportActionBar?.setTitle("Examples of Algorithms")
 
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
@@ -55,19 +50,19 @@ class AlgorithmExampleActivity : AppCompatActivity() {
                 }
 
                 R.id.Introduction -> {
-                    this.startHistoryFlashcardActivity(Flashcards.womenRoleFlashcard1())
+                    this.startAlgorithmFlashcardActivity(Flashcards.womenRoleFlashcard1(), 0)
                 }
                 R.id.algo_types -> {
-                    this.startHistoryFlashcardActivity(Flashcards.religionFlashcard())
+                    this.startAlgorithmFlashcardActivity(Flashcards.religionFlashcard(), 1)
                 }
                 R.id.algo_characteristics -> {
-                    this.startHistoryFlashcardActivity(Flashcards.warFlashcard())
+                    this.startAlgorithmFlashcardActivity(Flashcards.warFlashcard(), 2)
                 }
                 R.id.algo_importance -> {
-                    this.startHistoryFlashcardActivity(Flashcards.societalAttitudeFlashcard())
+                    this.startAlgorithmFlashcardActivity(Flashcards.societalAttitudeFlashcard(), 3)
                 }
                 R.id.algo_steps -> {
-                    this.startHistoryFlashcardActivity(Flashcards.florenceFlashcard())
+                    this.startAlgorithmFlashcardActivity(Flashcards.florenceFlashcard(), 4)
                 }
                 R.id.algo_examples -> {
                     startActivity(
@@ -91,7 +86,7 @@ class AlgorithmExampleActivity : AppCompatActivity() {
 
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.main, menu)
         return true

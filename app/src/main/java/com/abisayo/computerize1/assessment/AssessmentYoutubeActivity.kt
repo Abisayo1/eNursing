@@ -10,11 +10,9 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.abisayo.computerize1.*
-import com.abisayo.computerize1.databinding.ActivityHistoryYoutubeBinding
 import com.abisayo.computerize1.data.Flashcards
 import com.abisayo.computerize1.data.YoutubeVideo
 import com.abisayo.computerize1.data.startAssessmentFlashcardActivity
-import com.abisayo.computerize1.data.startHistoryFlashcardActivity
 import com.abisayo.computerize1.databinding.ActivityAssessmentYoutubeBinding
 import com.google.android.material.navigation.NavigationView
 import java.util.*
@@ -91,7 +89,7 @@ class AssessmentYoutubeActivity : AppCompatActivity() {
         }
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.main, menu)
         return true

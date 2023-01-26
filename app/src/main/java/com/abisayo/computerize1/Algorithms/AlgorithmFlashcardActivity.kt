@@ -11,13 +11,12 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.abisayo.computerize1.*
-import com.abisayo.computerize1.Games.GameClaraActivity
 import com.abisayo.computerize1.data.Constants.EXTRA_FLASH_CARD
 import com.abisayo.computerize1.databinding.ActivityHistoryFlashcardBinding
 import com.abisayo.computerize1.flashcard.FlashCard
 import com.abisayo.computerize1.flashcard.FlashCardAdapter
 import com.abisayo.computerize1.data.Flashcards
-import com.abisayo.computerize1.data.startHistoryFlashcardActivity
+import com.abisayo.computerize1.data.startAlgorithmFlashcardActivity
 import com.google.android.material.navigation.NavigationView
 
 class AlgorithmFlashcardActivity : AppCompatActivity() {
@@ -39,6 +38,19 @@ class AlgorithmFlashcardActivity : AppCompatActivity() {
         if (flashCardList.isNullOrEmpty()) {
             Toast.makeText(this, "No flashcard on this topic", Toast.LENGTH_SHORT).show()
             finish()
+        }
+
+        val item = intent.getIntExtra("item", 999)
+        if (item == 0) {
+            supportActionBar?.setTitle("Introduction to Flowchart")
+        } else if (item == 1) {
+            supportActionBar?.setTitle("Types of Algorithms")
+        } else if (item == 2) {
+            supportActionBar?.setTitle("Algorithm Characteristics")
+        } else if (item == 3) {
+            supportActionBar?.setTitle("Importances of Algorithms")
+        } else if (item ==4) {
+            supportActionBar?.setTitle("Steps in Writing Algorithms")
         }
 
         flashCardAdapter = FlashCardAdapter(flashCardList!!)
@@ -68,19 +80,21 @@ class AlgorithmFlashcardActivity : AppCompatActivity() {
                 }
 
                 R.id.Introduction -> {
-                    this.startHistoryFlashcardActivity(Flashcards.womenRoleFlashcard1())
+                    this.startAlgorithmFlashcardActivity(Flashcards.womenRoleFlashcard1(), 0)
+                    supportActionBar?.setTitle("Introduction to Flowchart")
                 }
                 R.id.algo_types -> {
-                    this.startHistoryFlashcardActivity(Flashcards.religionFlashcard())
+                    this.startAlgorithmFlashcardActivity(Flashcards.religionFlashcard(), 1)
+                    supportActionBar?.setTitle("Types of Algorithms")
                 }
                 R.id.algo_characteristics -> {
-                    this.startHistoryFlashcardActivity(Flashcards.warFlashcard())
+                    this.startAlgorithmFlashcardActivity(Flashcards.warFlashcard(), 2)
                 }
                 R.id.algo_importance -> {
-                    this.startHistoryFlashcardActivity(Flashcards.societalAttitudeFlashcard())
+                    this.startAlgorithmFlashcardActivity(Flashcards.societalAttitudeFlashcard(), 3)
                 }
                 R.id.algo_steps -> {
-                    this.startHistoryFlashcardActivity(Flashcards.florenceFlashcard())
+                    this.startAlgorithmFlashcardActivity(Flashcards.florenceFlashcard(), 4)
                 }
                 R.id.algo_examples -> {
                     startActivity(Intent(this,
@@ -100,7 +114,7 @@ class AlgorithmFlashcardActivity : AppCompatActivity() {
 
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.main, menu)
         return true

@@ -1,9 +1,11 @@
 package com.abisayo.computerize1
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.Window
 import android.view.WindowManager
+import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -40,10 +42,14 @@ class TopicsActivity : AppCompatActivity() {
         binding = ActivityTopics1Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         binding.imageView3.setOnClickListener {
             val intent = Intent(this, Profile::class.java)
             startActivity(intent)
         }
+
+        val sharedPreferences = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
+        val savedInt = sharedPreferences.getInt("score", 999)
 
         recyclerView = findViewById(R.id.recycler)
         recyclerView.layoutManager = LinearLayoutManager(this)
@@ -87,9 +93,14 @@ class TopicsActivity : AppCompatActivity() {
                         startActivity(intent)
 
                     }
-                    1 -> {
-                        val intent = Intent(this@TopicsActivity, FlowchartsSubTopicActivity::class.java)
+                    1 -> { if (savedInt>=6) {
+                        val intent =
+                            Intent(this@TopicsActivity, FlowchartsSubTopicActivity::class.java)
                         startActivity(intent)
+                    } else {
+                        message()
+
+                    }
 
                     }
                     2 -> {
@@ -147,5 +158,9 @@ class TopicsActivity : AppCompatActivity() {
         })
 
 
+    }
+
+    private fun message() {
+        Toast.makeText(this, "You need to score at least 60% in the assessment test to unlock this course", Toast.LENGTH_LONG).show()
     }
 }

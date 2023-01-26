@@ -8,11 +8,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.abisayo.computerize1.*
-import com.abisayo.computerize1.data.Constants
 import com.abisayo.computerize1.databinding.ActivityHistorySubTopicBinding
 import com.abisayo.computerize1.data.Flashcards
 import com.abisayo.computerize1.data.Topic
-import com.abisayo.computerize1.data.startHistoryFlashcardActivity
+import com.abisayo.computerize1.data.startAlgorithmFlashcardActivity
 
 class AlgorithmSubTopicActivity : AppCompatActivity() {
 
@@ -53,19 +52,19 @@ class AlgorithmSubTopicActivity : AppCompatActivity() {
 
                 when (position) {
                     0 -> {
-                        this@AlgorithmSubTopicActivity.startHistoryFlashcardActivity(Flashcards.womenRoleFlashcard1())
+                        this@AlgorithmSubTopicActivity.startAlgorithmFlashcardActivity(Flashcards.womenRoleFlashcard1(), 0)
                     }
                     1 -> {
-                        this@AlgorithmSubTopicActivity.startHistoryFlashcardActivity(Flashcards.religionFlashcard())
+                        this@AlgorithmSubTopicActivity.startAlgorithmFlashcardActivity(Flashcards.religionFlashcard(), 1)
                     }
                     2 -> {
-                        this@AlgorithmSubTopicActivity.startHistoryFlashcardActivity(Flashcards.warFlashcard())
+                        this@AlgorithmSubTopicActivity.startAlgorithmFlashcardActivity(Flashcards.warFlashcard(), 2)
                     }
                     3 -> {
-                        this@AlgorithmSubTopicActivity.startHistoryFlashcardActivity(Flashcards.societalAttitudeFlashcard())
+                        this@AlgorithmSubTopicActivity.startAlgorithmFlashcardActivity(Flashcards.societalAttitudeFlashcard(), 3)
                     }
                     4 -> {
-                        this@AlgorithmSubTopicActivity.startHistoryFlashcardActivity(Flashcards.florenceFlashcard())
+                        this@AlgorithmSubTopicActivity.startAlgorithmFlashcardActivity(Flashcards.florenceFlashcard(), 4)
                     }
                     5 -> {
                         val intent = Intent(this@AlgorithmSubTopicActivity, AlgorithmExampleActivity::class.java)

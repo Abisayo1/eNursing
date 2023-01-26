@@ -11,13 +11,12 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.abisayo.computerize1.*
-import com.abisayo.computerize1.Algorithms.AlgorithmExampleActivity
 import com.abisayo.computerize1.data.Constants.EXTRA_FLASH_CARD
 import com.abisayo.computerize1.databinding.ActivityTrendsFlashcardBinding
 import com.abisayo.computerize1.flashcard.FlashCard
 import com.abisayo.computerize1.flashcard.FlashCardAdapter
 import com.abisayo.computerize1.data.Flashcards
-import com.abisayo.computerize1.data.startHistoryFlashcardActivity
+import com.abisayo.computerize1.data.startAlgorithmFlashcardActivity
 import com.abisayo.computerize1.data.startTrendsFlashcardActivity
 import com.google.android.material.navigation.NavigationView
 
@@ -69,7 +68,7 @@ class FlowchartsFlashcardActivity : AppCompatActivity() {
                 }
 
                 R.id.introduction -> {
-                    this.startHistoryFlashcardActivity(Flashcards.trendIntroFlashcard())
+                    this.startTrendsFlashcardActivity(Flashcards.trendIntroFlashcard())
                 }
 
                 R.id.flow_elements -> {
@@ -96,7 +95,7 @@ class FlowchartsFlashcardActivity : AppCompatActivity() {
 
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.main, menu)
         return true

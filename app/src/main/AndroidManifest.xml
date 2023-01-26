@@ -13,6 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Computerize1">
         <activity
+            android:name=".AddEditNoteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NoteActivity"
+            android:exported="false" />
+        <activity
             android:name=".Flowcharts.FlowChartQuizActivity"
             android:exported="false" />
         <activity
@@ -23,6 +29,7 @@
             android:exported="false" />
         <activity
             android:name=".Algorithms.AlgorithmExampleActivity"
+            android:label="Examples of Algorithms"
             android:exported="false" />
         <activity
             android:name=".OxygenTherapy.OxygenTherapySubTopicActivity"

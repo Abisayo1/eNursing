@@ -28,6 +28,13 @@ class FirstActivity : AppCompatActivity() {
 
         }
 
+
+        binding.button3.setOnClickListener {
+            val intent = Intent(this, NoteActivity::class.java)
+            startActivity(intent)
+            overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
+
+        }
 //
 //       binding.game.setOnClickListener {
 //            val intent = Intent(this, GameClaraActivity::class.java)

@@ -5,18 +5,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
 import com.abisayo.computerize1.Profile
 import com.abisayo.computerize1.R
 import com.abisayo.computerize1.TopicsActivity
-import com.abisayo.computerize1.data.Constants
 import com.abisayo.computerize1.data.Flashcards
-import com.abisayo.computerize1.data.startHistoryFlashcardActivity
+import com.abisayo.computerize1.data.startAlgorithmFlashcardActivity
 import com.abisayo.computerize1.data.startTrendsFlashcardActivity
 import com.abisayo.computerize1.databinding.ActivityFlowchartExampleBinding
-import com.abisayo.computerize1.flashcard.FlashCard
 import com.google.android.material.navigation.NavigationView
 
 class FlowchartExampleActivity : AppCompatActivity() {
@@ -53,7 +50,7 @@ class FlowchartExampleActivity : AppCompatActivity() {
                 }
 
                 R.id.introduction -> {
-                    this.startHistoryFlashcardActivity(Flashcards.trendIntroFlashcard())
+                    this.startTrendsFlashcardActivity(Flashcards.trendIntroFlashcard())
                 }
 
                 R.id.flow_elements -> {
@@ -91,7 +88,7 @@ class FlowchartExampleActivity : AppCompatActivity() {
 
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.main, menu)
         return true

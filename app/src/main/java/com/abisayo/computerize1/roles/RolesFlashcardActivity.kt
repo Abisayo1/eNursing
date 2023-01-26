@@ -16,8 +16,9 @@ import com.abisayo.computerize1.databinding.ActivityRolesFlashcardBinding
 import com.abisayo.computerize1.flashcard.FlashCard
 import com.abisayo.computerize1.flashcard.FlashCardAdapter
 import com.abisayo.computerize1.data.Flashcards
-import com.abisayo.computerize1.data.startHistoryFlashcardActivity
+import com.abisayo.computerize1.data.startAlgorithmFlashcardActivity
 import com.abisayo.computerize1.data.startRolesFlashcardActivity
+import com.abisayo.computerize1.data.startTrendsFlashcardActivity
 import com.google.android.material.navigation.NavigationView
 
 class RolesFlashcardActivity : AppCompatActivity() {
@@ -68,7 +69,7 @@ class RolesFlashcardActivity : AppCompatActivity() {
                 }
 
                 R.id.caregiver -> {
-                    this.startHistoryFlashcardActivity(Flashcards.standardCaregiverFlashcard())
+                    this.startTrendsFlashcardActivity(Flashcards.standardCaregiverFlashcard())
                 }
                 R.id.communicator -> {
                     this.startRolesFlashcardActivity(Flashcards.standardCommunicationFlashcard())
@@ -98,7 +99,7 @@ class RolesFlashcardActivity : AppCompatActivity() {
 
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.main, menu)
         return true

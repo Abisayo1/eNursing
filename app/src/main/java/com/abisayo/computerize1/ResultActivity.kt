@@ -1,5 +1,6 @@
 package com.abisayo.computerize1
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -18,6 +19,7 @@ class ResultActivity : AppCompatActivity() {
     private lateinit var progressText : TextView
     var i = 0
     var j = 0
+    var correctAnswers = 999
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,9 +42,11 @@ class ResultActivity : AppCompatActivity() {
         }
 
         val  totalQuestions = intent.getIntExtra(Constants.TOTAL_QUESTIONS, 0)
-        val correctAnswers = intent.getIntExtra(Constants.CORRECT_ANSWERS, 0)
+        correctAnswers = intent.getIntExtra(Constants.CORRECT_ANSWERS, 0)
         val activity = intent.getStringExtra(Constants.ACTIVITY)
         val topic = intent.getStringExtra(Constants.TOPIC)
+
+        saveData()
 
 //        Toast.makeText(this, "$activity", Toast.LENGTH_SHORT).show()
 
@@ -119,4 +123,14 @@ class ResultActivity : AppCompatActivity() {
 
         handler?.sendEmptyMessage(0)
 }
+
+    private fun saveData() {
+        val sharedPreferences = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.apply {
+            putInt("score", correctAnswers)
+        }.apply()
+
+
+    }
 }

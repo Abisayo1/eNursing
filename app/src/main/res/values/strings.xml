@@ -67,4 +67,6 @@ Step 5 − Display AREA, PERIMETER\n\n
     <string name="examples_flow2">2. Find the largest among three different numbers entered by the user.</string>
     <string name="examples_flow3">3. Find all the roots of a quadratic equation ax2+bx+c=0</string>
     <string name="examples_flow4">4. Determine and Output Whether Number N is Even or Odd.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

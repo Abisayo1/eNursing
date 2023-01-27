@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Computerize1">
         <activity
+            android:name=".DisplayCoursesActivity"
+            android:exported="false" />
+        <activity
             android:name=".AddEditNoteActivity"
             android:exported="false" />
         <activity
@@ -29,8 +32,8 @@
             android:exported="false" />
         <activity
             android:name=".Algorithms.AlgorithmExampleActivity"
-            android:label="Examples of Algorithms"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Examples of Algorithms" />
         <activity
             android:name=".OxygenTherapy.OxygenTherapySubTopicActivity"
             android:exported="false" />

@@ -1,5 +1,7 @@
 package com.abisayo.computerize1
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,7 +11,9 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.abisayo.computerize1.Algorithms.AlgorithmSubTopicActivity
 import com.abisayo.computerize1.adapter.MyAdapter
+import com.abisayo.computerize1.data.Constants
 import com.abisayo.computerize1.data.Topic
 import com.abisayo.computerize1.models.Courses
 import com.abisayo.computerize1.models.CoursesViewModel
@@ -77,11 +81,21 @@ class Home : Fragment() {
 
 
 
+
         courseRecyclerView = view.findViewById(R.id.recyclerView)
         courseRecyclerView.layoutManager = LinearLayoutManager(context)
         courseRecyclerView.setHasFixedSize(true)
         adapter = MyAdapter()
         courseRecyclerView.adapter = adapter
+
+        adapter.setonItemClickListener(object : MyAdapter.onItemClickListener{
+            override fun onItemClicked(position: Int) {
+
+
+
+            }
+
+        })
 
         viewModel = ViewModelProvider(this).get(CoursesViewModel::class.java)
 

@@ -96,7 +96,7 @@ dependencies {
     })
     androidTestImplementation "androidx.test.ext:junit:$rootProject.androidxJunitVersion"
 
-    implementation "androidx.lifecycle:lifecycle-viewmodel-kyx:2.4.1"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1"
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.5.1"
-    implementation 'org.jetbrains.kotlinx-coroutines-android:1.3.9'
+
 }

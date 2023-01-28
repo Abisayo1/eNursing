@@ -9,6 +9,9 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.abisayo.computerize1.databinding.ActivityAddEditNoteBinding
+import com.abisayo.computerize1.models.Courses
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -16,6 +19,7 @@ class AddEditNoteActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAddEditNoteBinding
     lateinit var viewModel: NoteViewModel
     var noteID = -1
+    private lateinit var database : DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,6 +45,14 @@ class AddEditNoteActivity : AppCompatActivity() {
         binding.addUpdateBtn.setOnClickListener {
             val noteTitle = binding.editNoteTitle.text.toString().trim()
             val noteDescription = binding.editNoteDescription.text.toString()
+
+            database = FirebaseDatabase.getInstance().getReference("Courses")
+            val Course = Courses(noteTitle, noteDescription)
+            database.child(noteTitle).setValue(Course).addOnSuccessListener {
+                Toast.makeText(this, "Successfully Saved", Toast.LENGTH_SHORT).show()
+            }.addOnFailureListener {
+                Toast.makeText(this, "Failed", Toast.LENGTH_SHORT).show()
+            }
 
             if (noteType.equals("Edit")) {
                 if (noteTitle.isNotEmpty() && noteDescription.isNotEmpty()) {

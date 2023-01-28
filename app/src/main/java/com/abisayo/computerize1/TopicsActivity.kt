@@ -58,6 +58,7 @@ class TopicsActivity : AppCompatActivity() {
 
         topicList.add(Topic(0, "Algorithms", ""))
         topicList.add(Topic(0, "Flowcharts", ""))
+        topicList.add(Topic(0, "View Other Courses", ""))
 
 
 
@@ -93,7 +94,7 @@ class TopicsActivity : AppCompatActivity() {
                         startActivity(intent)
 
                     }
-                    1 -> { if (savedInt>=6) {
+                    1 -> { if (savedInt>=7) {
                         val intent =
                             Intent(this@TopicsActivity, FlowchartsSubTopicActivity::class.java)
                         startActivity(intent)
@@ -104,11 +105,9 @@ class TopicsActivity : AppCompatActivity() {
 
                     }
                     2 -> {
-//                        startActivity(Intent(Intent.ACTION_VIEW,
-//                            Uri.parse("https://www.youtube.com/watch?v=xu0pGgQWPYc")));
-
-                        startActivity(Intent(this@TopicsActivity,
-                            StandardsActivity::class.java))
+                        val intent =
+                            Intent(this@TopicsActivity, DisplayCoursesActivity::class.java)
+                        startActivity(intent)
                     }
                     3 -> {
                         val intent = Intent(this@TopicsActivity, RolesSubTopicActivity::class.java)

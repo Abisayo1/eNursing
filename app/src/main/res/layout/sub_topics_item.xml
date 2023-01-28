@@ -58,7 +58,7 @@
                     android:layout_alignLeft="@+id/question"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:text="Characteristics"
+                    android:text=""
                     android:layout_margin="8dp"
                     android:textAlignment="center"
                     android:textColor="#ffff"

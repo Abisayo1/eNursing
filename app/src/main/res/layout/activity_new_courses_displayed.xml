@@ -29,8 +29,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:src="@drawable/flowchart"
-                tools:srcCompat="@drawable/flowchart" />
+                android:src="@drawable/display"
+                tools:srcCompat="@drawable/display" />
 
             <TextView
                 android:id="@+id/flow"

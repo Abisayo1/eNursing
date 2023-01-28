@@ -1,5 +1,6 @@
 package com.abisayo.computerize1
 
+import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -30,6 +31,7 @@ class TopicsActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var topicList: ArrayList<Topic>
     private lateinit var topicAdapter: TopicAdapter
+    private lateinit var builder : AlertDialog.Builder
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,6 +43,8 @@ class TopicsActivity : AppCompatActivity() {
         )
         binding = ActivityTopics1Binding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        builder = AlertDialog.Builder(this)
 
 
         binding.imageView3.setOnClickListener {
@@ -105,9 +109,21 @@ class TopicsActivity : AppCompatActivity() {
 
                     }
                     2 -> {
-                        val intent =
-                            Intent(this@TopicsActivity, DisplayCoursesActivity::class.java)
-                        startActivity(intent)
+                        builder.setTitle("Alert!")
+                            .setMessage("You will need an internet connection")
+                            .setCancelable(true)
+                            .setPositiveButton("Continue") { dialogInterface, it ->
+                                val intent = Intent(this@TopicsActivity, DisplayCoursesActivity::class.java)
+                                startActivity(intent)
+                                overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
+                                finish()
+                            }
+                            .setNegativeButton("No") { dialogInterface, it ->
+                                dialogInterface.cancel()
+                            }
+
+                            .show()
+
                     }
                     3 -> {
                         val intent = Intent(this@TopicsActivity, RolesSubTopicActivity::class.java)

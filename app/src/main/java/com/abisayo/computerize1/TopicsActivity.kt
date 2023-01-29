@@ -53,7 +53,7 @@ class TopicsActivity : AppCompatActivity() {
         }
 
         val sharedPreferences = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
-        val savedInt = sharedPreferences.getInt("score", 999)
+        val savedInt = sharedPreferences.getInt("score", 0)
 
         recyclerView = findViewById(R.id.recycler)
         recyclerView.layoutManager = LinearLayoutManager(this)
@@ -98,7 +98,7 @@ class TopicsActivity : AppCompatActivity() {
                         startActivity(intent)
 
                     }
-                    1 -> { if (savedInt>=7) {
+                    1 -> { if (savedInt>=6) {
                         val intent =
                             Intent(this@TopicsActivity, FlowchartsSubTopicActivity::class.java)
                         startActivity(intent)

@@ -69,20 +69,25 @@ class FlowchartsFlashcardActivity : AppCompatActivity() {
 
                 R.id.introduction -> {
                     this.startTrendsFlashcardActivity(Flashcards.trendIntroFlashcard())
+                    supportActionBar?.setTitle("Introduction to Flowcharts")
                 }
 
                 R.id.flow_elements -> {
                     startActivity(Intent(this,
                         FlowchartElementsActivity::class.java))
+
                 }
                 R.id.guidelines -> {
                     this.startTrendsFlashcardActivity(Flashcards.trendSpecializationFlashcard())
+                    supportActionBar?.setTitle("Flowchart Guidelines")
                 }
                 R.id.advantages -> {
                     this.startTrendsFlashcardActivity(Flashcards.trendOutpatientFlashcard())
+                    supportActionBar?.setTitle("Advantages of Flowcharts")
                 }
                 R.id.disadvantages -> {
                     this.startTrendsFlashcardActivity(Flashcards.trendNavigatorFlashcard())
+                    supportActionBar?.setTitle("Disadvantages of Flowchart")
                 }
                 R.id.examples -> {
                     startActivity(Intent(this,

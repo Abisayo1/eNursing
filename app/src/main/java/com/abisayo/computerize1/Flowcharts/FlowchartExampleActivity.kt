@@ -25,6 +25,8 @@ class FlowchartExampleActivity : AppCompatActivity() {
         binding = ActivityFlowchartExampleBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        supportActionBar?.setTitle("Examples of FlowChart")
+
 
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView

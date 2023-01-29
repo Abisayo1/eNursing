@@ -24,6 +24,7 @@ class FlowchartElementsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityFlowchartElementsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar?.setTitle("Elements of Flowchart")
 
 
 

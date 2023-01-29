@@ -34,22 +34,14 @@ object Flashcards {
 
     fun warFlashcard(): ArrayList<FlashCard> {
         val flashCardList = arrayListOf<FlashCard>()
-        flashCardList.add(FlashCard("What was on thing that necessitated the need for nurses",
-            "War"))
-        flashCardList.add(FlashCard("Give an example of a war that necessitated the need for nurses",
-            "The Crimean war of 1854-1856"))
-        flashCardList.add(FlashCard("Name a significant role in solving the problem of care for wounded soldiers",
-            "Florence Nightingale"))
-        flashCardList.add(FlashCard("On who's delegation did Florence Nightingale provide care to the sick and injured",
-            "On the delegation of Sir Sydney Herbert of the British War Department in the Crimea"))
-        flashCardList.add(FlashCard("How were the military hospitals transformed",
-            "By setting up sanitation practices"))
-        flashCardList.add(FlashCard("What war did Hariet Tubman and Sojourner Truth provide care and safety to slaves",
-            "During the American Civil War of 1861-1865, they cared for slaves on the run"))
-        flashCardList.add(FlashCard("Who cared for wounded and dying soldiers on the battlefield",
-            "Mother Biekerdyke and Clara Barton"))
-        flashCardList.add(FlashCard("Who volunteered to give care to the injured soldiers in military hospitals",
-            "Walt Whitman and Louisa May Alcott"))
+        flashCardList.add(FlashCard("One characteristic of algorithm is?",
+            "Algorithm has both an input and an output"))
+        flashCardList.add(FlashCard("Algorithms are typically what?",
+            "unambiguous"))
+        flashCardList.add(FlashCard("Algorithms should have a limited number of instructions. This means that algorithms should be what?",
+            "Finite"))
+        flashCardList.add(FlashCard("Algorithms being language independent means what?",
+            "Its instructions can be implemented in any language and produce the same results"))
         return flashCardList
     }
 

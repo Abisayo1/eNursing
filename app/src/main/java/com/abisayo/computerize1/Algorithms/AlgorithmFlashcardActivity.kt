@@ -43,14 +43,19 @@ class AlgorithmFlashcardActivity : AppCompatActivity() {
         val item = intent.getIntExtra("item", 999)
         if (item == 0) {
             supportActionBar?.setTitle("Introduction to Flowchart")
+            binding.textView10.text = getString(R.string.algo_def)
         } else if (item == 1) {
             supportActionBar?.setTitle("Types of Algorithms")
+            binding.textView10.text = getString(R.string.types_algo)
         } else if (item == 2) {
             supportActionBar?.setTitle("Algorithm Characteristics")
+            binding.textView10.text = getString(R.string.characteristic_algo)
         } else if (item == 3) {
             supportActionBar?.setTitle("Importances of Algorithms")
+            binding.textView10.text = getString(R.string.characteristic_algo)
         } else if (item ==4) {
             supportActionBar?.setTitle("Steps in Writing Algorithms")
+            binding.textView10.text = getString(R.string.algo_how_write)
         }
 
         flashCardAdapter = FlashCardAdapter(flashCardList!!)

@@ -26,7 +26,7 @@ class FirstActivity : AppCompatActivity() {
         builder = AlertDialog.Builder(this)
 
        binding.course.setOnClickListener {
-            val intent = Intent(this, TopicsActivity::class.java)
+            val intent = Intent(this, PretestActivity::class.java)
             startActivity(intent)
             overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
 

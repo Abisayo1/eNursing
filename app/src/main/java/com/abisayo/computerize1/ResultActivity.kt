@@ -5,9 +5,11 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.view.View
 import android.view.Window
 import android.view.WindowManager
 import android.widget.TextView
+import androidx.core.view.isVisible
 import com.abisayo.computerize1.Games.GameClaraActivity
 import com.abisayo.computerize1.data.Constants
 import com.abisayo.computerize1.databinding.ActivityResultBinding
@@ -45,6 +47,11 @@ class ResultActivity : AppCompatActivity() {
         correctAnswers = intent.getIntExtra(Constants.CORRECT_ANSWERS, 0)
         val activity = intent.getStringExtra(Constants.ACTIVITY)
         val topic = intent.getStringExtra(Constants.TOPIC)
+
+        if (topic == "Pretest Questions") {
+            binding.goHome.text = "Start learning"
+            binding.tryAgain.visibility = View.GONE
+        }
 
         saveData()
 

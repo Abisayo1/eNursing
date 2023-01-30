@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Computerize1">
         <activity
+            android:name=".PretestActivity"
+            android:exported="false" />
+        <activity
             android:name=".EnterAdminPasswordActivity"
             android:exported="false" />
         <activity

@@ -271,6 +271,305 @@ object Constants {
 
         return questionsList
     }
+
+    fun pretestQuestion(): ArrayList<Question> {
+        val questionsList = ArrayList<Question>()
+
+        val que1 = Question(
+            1,"Algorithms and flowchart are two types of tools to explain the process of a program?",
+            (R.drawable.flowchart),
+            "Computing",
+            "Program",
+            "ICT",
+            "Data flow",
+            4
+        )
+
+        questionsList.add(que1)
+
+
+        val que2 = Question(
+            2,"Algorithms is the",
+            (R.drawable.flowchart),
+            "Object file for executing a program",
+            "Step by step manner for executing a program",
+            "Executable file for a program",
+            "Source file manner for executing a program",
+            2
+        )
+
+        questionsList.add(que2)
+
+
+        val que3 = Question(
+            3,"Which of the following is the pictorial representation of an algorithm?",
+            (R.drawable.flowchart),
+            "Data flow",
+            "Algorithm",
+            "Diagram",
+            "Flowchart",
+            4
+        )
+
+        questionsList.add(que3)
+
+        val que4 = Question(
+            4,"The shape above signifies what function in a flowchart?",
+            (R.drawable.process),
+            "connector",
+            "input/output",
+            "processing",
+            "end",
+            3
+        )
+
+        questionsList.add(que4)
+
+        val que5 = Question(
+            5,"Which of the following symbols is used at the beginning of a flowchart?",
+            (R.drawable.flowchart),
+            "Oval",
+            "Diamond",
+            "Rectangle",
+            "Sphere",
+            1
+        )
+
+        questionsList.add(que5)
+
+        val que6 = Question(
+            6,"A benefit of using flowcharts is that they",
+            (R.drawable.flowchart),
+            "help you program fast",
+            "write the program for you",
+            "social manner of solving the problem",
+            "singular manner of solving the problem",
+            1
+        )
+
+        questionsList.add(que6)
+
+        val que7 = Question(
+            7,"In flowchart, diamond shaped symbol is used to represent",
+            (R.drawable.flowchart),
+            "statement box",
+            "error box",
+            "if-statement box",
+            "decision box",
+            3
+        )
+
+        questionsList.add(que7)
+
+        val que8 = Question(
+            8,"Terminal symbol in a flowchart indicates the",
+            (R.drawable.flowchart),
+            "processing",
+            "input and output",
+            "end",
+            "decision",
+            3
+        )
+
+        questionsList.add(que8)
+
+        val que9 = Question(
+            9,"Which of the following symbols in a flowchart is used to indicate all arithmetic operations like addition?",
+            (R.drawable.flowchart),
+            "processing",
+            "input and output",
+            "decision",
+            "connector",
+            1
+        )
+
+        questionsList.add(que9)
+
+        val que10 = Question(
+            10,"Which of these is a characteristic of an algorithm?",
+            (R.drawable.flowchart),
+            "effective",
+            "logical",
+            "expedient",
+            "source",
+            1
+        )
+
+        questionsList.add(que10)
+
+
+        val que11 = Question(
+            11,"Which symbol is used to represent output in a flowchart?",
+            (R.drawable.flowchart),
+            "square",
+            "circle",
+            "parallelogram",
+            "triangle",
+            3
+        )
+
+        questionsList.add(que11)
+
+        val que12 = Question(
+            12,"Algorithm is a",
+            (R.drawable.flowchart),
+            "systematic manner of solving a problem",
+            "social manner of solving a problem",
+            "singular manner of solving a problem",
+            "sensational manner of a solving a problem",
+            1
+        )
+
+        questionsList.add(que12)
+
+        val que13 = Question(
+            13,"What is the function of the image above in a flowchart?",
+            (R.drawable.flowchart_parallel),
+            "start",
+            "input",
+            "end",
+            "process",
+            2
+        )
+
+        questionsList.add(que13)
+
+        val que14 = Question(
+            14,"The symbol used to connect two symbols is called",
+            (R.drawable.flowchart),
+            "arrow",
+            "line",
+            "curve",
+            "rope",
+            1
+        )
+
+        questionsList.add(que14)
+
+        val que15 = Question(
+            15,"The shape above signifies what function in a flowchart?",
+            (R.drawable.flowchart_oval),
+            "start/end",
+            "input/output",
+            "sing/dance",
+            "clap/jump",
+            1
+        )
+
+        questionsList.add(que15)
+
+        val que16 = Question(
+            16,"An algorithm is written with",
+            (R.drawable.flowchart),
+            "sign language",
+            "human language",
+            "animal language",
+            "singing language",
+            2
+        )
+
+        questionsList.add(que16)
+
+        val que17 = Question(
+            17,"In a flowchart, decision is made with which symbol?",
+            (R.drawable.flowchart),
+            "Oval",
+            "Parallelogram",
+            "Rectangle",
+            "Diamond",
+            4
+        )
+
+        questionsList.add(que17)
+
+        val que18 = Question(
+            18,"The unambiguous characteristics of an algorithm means that it should be easily",
+            (R.drawable.flowchart),
+            "understood",
+            "drawn",
+            "jumped",
+            "dictated",
+            1
+        )
+
+        questionsList.add(que18)
+
+        val que19 = Question(
+            19,"What symbol terminates a flowchart?",
+            (R.drawable.flowchart),
+            "Diamond",
+            "Oval",
+            "Parallelogram",
+            "Square",
+            2
+        )
+
+        questionsList.add(que19)
+
+        val que20 = Question(
+            20,"A good algorithm must always have",
+            (R.drawable.flowchart),
+            "throughput and singput",
+            "high put and low put",
+            "sing put and dance put",
+            "input and out put",
+            4
+        )
+
+        questionsList.add(que20)
+
+        val que21 = Question(
+            21,"Flowchart refers to the",
+            (R.drawable.flowchart),
+            "input representation",
+            "processing representation",
+            "pictorial representation",
+            "decision representation",
+            3
+        )
+
+        questionsList.add(que21)
+
+        val que22 = Question(
+            22,"The shape above signifies what function in a flowchart",
+            (R.drawable.decision),
+            "start/end",
+            "input/output",
+            "decision making",
+            "end",
+            3
+        )
+
+        questionsList.add(que22)
+
+        val que23 = Question(
+            23,"The shape above signifies what function in a flowchart?",
+            (R.drawable.connectors),
+            "connector",
+            "input/output",
+            "decision making",
+            "end",
+            1
+        )
+
+        questionsList.add(que23)
+
+        val que24 = Question(
+            24,"An algorithm uses mainly ____ to describe the steps",
+            (R.drawable.flowchart),
+            "arrows",
+            "words",
+            "shapes",
+            "diagram",
+            2
+        )
+
+        questionsList.add(que24)
+
+
+        return questionsList
+    }
+
 }
 
 

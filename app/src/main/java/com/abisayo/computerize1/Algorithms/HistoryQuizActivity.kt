@@ -24,6 +24,7 @@ class HistoryQuizActivity : AppCompatActivity(), View.OnClickListener {
     private var mSelectedOptionPosition: Int = 0
     private var mCorrectAnswers = 0
     private lateinit var builder : AlertDialog.Builder
+    var topic = "Jesus"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,14 +37,25 @@ class HistoryQuizActivity : AppCompatActivity(), View.OnClickListener {
         binding = ActivityHistoryQuizBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        mQuestionsList = Constants.getQuestion()
-        setQuestion()
+        topic = intent.getStringExtra(Constants.TOPIC).toString()
+
+        if (topic== "Pretest Questions"){
+            mQuestionsList = Constants.pretestQuestion()
+            setQuestion()
+        } else {
+            mQuestionsList = Constants.getQuestion()
+            setQuestion()
+        }
+
+
 
         binding.option1.setOnClickListener(this)
         binding.option2.setOnClickListener(this)
         binding.option3.setOnClickListener(this)
         binding.option4.setOnClickListener(this)
         binding.next.setOnClickListener(this)
+
+
     }
 
     override fun onBackPressed() {
@@ -64,9 +76,18 @@ class HistoryQuizActivity : AppCompatActivity(), View.OnClickListener {
         val question = mQuestionsList!![mCurrentPosition -1]
         defaultOptionsView()
 
-        if (mCurrentPosition == 5) {
-            binding.imgQuestion.isVisible = true
-        }else binding.imgQuestion.isVisible = mCurrentPosition == 6
+        if (topic!= "Pretest Questions") {
+            if (mCurrentPosition == 5) {
+                binding.imgQuestion.isVisible = true
+            }
+        } else if (topic == "Pretest Questions") {
+            if (mCurrentPosition == 4) {
+                binding.imgQuestion.isVisible = true
+            } else {
+                binding.imgQuestion.isVisible = false
+            }
+        }
+
 
         if (mCurrentPosition == mQuestionsList!!.size){
             binding.nxt.text = "Finish"
@@ -140,7 +161,7 @@ class HistoryQuizActivity : AppCompatActivity(), View.OnClickListener {
                         val intent = Intent(this, ResultActivity::class.java)
                         intent.putExtra(Constants.CORRECT_ANSWERS, mCorrectAnswers)
                         intent.putExtra(Constants.TOTAL_QUESTIONS, mQuestionsList!!.size)
-                        intent.putExtra(Constants.TOPIC, "History")
+                        intent.putExtra(Constants.TOPIC, topic)
                         startActivity(intent)
                         finish()
                     }

@@ -13,6 +13,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Computerize1">
         <activity
+            android:name=".ManageLMSActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DisplayStudentScoresActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EnterNameQuizActivity"
+            android:exported="false" />
+        <activity
             android:name=".PretestActivity"
             android:exported="false" />
         <activity
@@ -123,7 +132,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Algorithms.HistoryQuizActivity"
+            android:name=".HistoryQuizActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

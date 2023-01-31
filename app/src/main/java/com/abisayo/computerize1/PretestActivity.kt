@@ -5,9 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Window
 import android.view.WindowManager
-import com.abisayo.computerize1.Algorithms.HistoryQuizActivity
 import com.abisayo.computerize1.data.Constants
-import com.abisayo.computerize1.databinding.ActivityFirstBinding
 import com.abisayo.computerize1.databinding.ActivityPretestBinding
 
 class PretestActivity : AppCompatActivity() {
@@ -26,7 +24,7 @@ class PretestActivity : AppCompatActivity() {
 
         binding.button.setOnClickListener {
             val intent = Intent(this, HistoryQuizActivity::class.java)
-            intent.putExtra(Constants.TOPIC, "Pretest Questions")
+            intent.putExtra(Constants.TOPIC, "Pretest")
             startActivity(intent)
             overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
 

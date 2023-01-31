@@ -11,6 +11,7 @@ object Constants {
     const val CORRECT_ANSWERS = "correct_answers"
     const val NEXT_LEVEL = "next_level"
     const val ACTIVITY = "activity"
+    const val STUDENT_NAME = "student_name"
 
     fun getQuestions(): ArrayList<Question> {
         val questionsList = ArrayList<Question>()
@@ -565,6 +566,138 @@ object Constants {
         )
 
         questionsList.add(que24)
+
+        val que25 = Question(
+            25,"Algorithms can be presented by ___ languages",
+            (R.drawable.flowchart),
+            "Computer",
+            "Natural",
+            "Coding",
+            "Specific",
+            2
+        )
+
+        questionsList.add(que25)
+
+        val que26 = Question(
+            26,"The ____ provides a pictorial representation of a given problem",
+            (R.drawable.flowchart),
+            "Algorithm",
+            "Flowchart",
+            "Pseudocode",
+            "Pie chart",
+            2
+        )
+
+        questionsList.add(que26)
+
+        val que27 = Question(
+            27,"___ id a procedure of step by step process of solving a problem",
+            (R.drawable.flowchart),
+            "Algorithm",
+            "Flowchart",
+            "Pseudocode",
+            "Pie chart",
+            1
+        )
+
+        questionsList.add(que27)
+
+        val que28 = Question(
+            28,"___ is a symbol used to connect two symbols of a flowchart",
+            (R.drawable.flowchart),
+            "circle",
+            "rectangle",
+            "diamond",
+            "arrow",
+            1
+        )
+
+        questionsList.add(que28)
+
+        val que29 = Question(
+            24,"___ symbol is used to represent input and output operation in a flowchart",
+            (R.drawable.flowchart),
+            "circle",
+            "rectangle",
+            "diamond",
+            "parallelogram",
+            4
+        )
+
+        questionsList.add(que29)
+
+        val que30 = Question(
+            30,"The process of drawing a flowchart for an algorithm is called _____",
+            (R.drawable.flowchart),
+            "performance",
+            "evaluation",
+            "algorithm representation",
+            "flowcharting",
+            4
+        )
+
+        questionsList.add(que30)
+
+        val que31 = Question(
+            31,"Actual instructions in flowcharting are represented in ____",
+            (R.drawable.flowchart),
+            "circles",
+            "boxes",
+            "arrows",
+            "lines",
+            2
+        )
+
+        questionsList.add(que31)
+
+        val que32 = Question(
+            32,"A box that can represent two different conditions",
+            (R.drawable.flowchart),
+            "rectangle",
+            "diamond",
+            "circle",
+            "parallelogram",
+            4
+        )
+
+        questionsList.add(que32)
+
+        val que33 = Question(
+            33,"Which of the following is not an advantage of a flowchart?",
+            (R.drawable.flowchart),
+            "better communication",
+            "efficient coding",
+            "systematic testing",
+            "improper documentation",
+            4
+        )
+
+        questionsList.add(que33)
+
+        val que34 = Question(
+            34,"Part of algorithms which is repeated for the fixed number of times is classified as",
+            (R.drawable.flowchart),
+            "iteration",
+            "selection",
+            "sequence",
+            "reverse action",
+            1
+        )
+
+        questionsList.add(que34)
+
+        val que35 = Question(
+            35,"Symbols used in flowchart such as rectangle with the horizontal lines on two sides is used for",
+            (R.drawable.flowchart),
+            "defined statement",
+            "predefined process",
+            "error fix",
+            "variables defined",
+            2
+        )
+
+        questionsList.add(que35)
 
 
         return questionsList

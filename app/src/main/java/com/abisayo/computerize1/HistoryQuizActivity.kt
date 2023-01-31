@@ -1,4 +1,4 @@
-package com.abisayo.computerize1.Algorithms
+package com.abisayo.computerize1
 
 import android.app.AlertDialog
 import android.content.Intent
@@ -12,8 +12,6 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import com.abisayo.computerize1.data.Constants
 import com.abisayo.computerize1.data.Question
-import com.abisayo.computerize1.R
-import com.abisayo.computerize1.ResultActivity
 import com.abisayo.computerize1.databinding.ActivityHistoryQuizBinding
 
 class HistoryQuizActivity : AppCompatActivity(), View.OnClickListener {
@@ -25,6 +23,7 @@ class HistoryQuizActivity : AppCompatActivity(), View.OnClickListener {
     private var mCorrectAnswers = 0
     private lateinit var builder : AlertDialog.Builder
     var topic = "Jesus"
+    var name_student = "Jesus"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,8 +37,9 @@ class HistoryQuizActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(binding.root)
 
         topic = intent.getStringExtra(Constants.TOPIC).toString()
+        name_student = intent.getStringExtra(Constants.STUDENT_NAME).toString()
 
-        if (topic== "Pretest Questions"){
+        if (topic== "Pretest"){
             mQuestionsList = Constants.pretestQuestion()
             setQuestion()
         } else {
@@ -76,14 +76,23 @@ class HistoryQuizActivity : AppCompatActivity(), View.OnClickListener {
         val question = mQuestionsList!![mCurrentPosition -1]
         defaultOptionsView()
 
-        if (topic!= "Pretest Questions") {
+        if (topic!= "Pretest") {
             if (mCurrentPosition == 5) {
                 binding.imgQuestion.isVisible = true
             }
-        } else if (topic == "Pretest Questions") {
+        } else if (topic == "Pretest") {
             if (mCurrentPosition == 4) {
                 binding.imgQuestion.isVisible = true
-            } else {
+            } else if (mCurrentPosition ==13) {
+                binding.imgQuestion.isVisible = true
+            } else if (mCurrentPosition ==15) {
+                binding.imgQuestion.isVisible = true
+            } else if (mCurrentPosition ==22) {
+                binding.imgQuestion.isVisible = true
+            } else if (mCurrentPosition ==23) {
+                binding.imgQuestion.isVisible = true
+            }
+            else {
                 binding.imgQuestion.isVisible = false
             }
         }
@@ -162,6 +171,7 @@ class HistoryQuizActivity : AppCompatActivity(), View.OnClickListener {
                         intent.putExtra(Constants.CORRECT_ANSWERS, mCorrectAnswers)
                         intent.putExtra(Constants.TOTAL_QUESTIONS, mQuestionsList!!.size)
                         intent.putExtra(Constants.TOPIC, topic)
+                        intent.putExtra(Constants.STUDENT_NAME, name_student)
                         startActivity(intent)
                         finish()
                     }

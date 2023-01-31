@@ -5,15 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/next_level"
-    tools:context=".FirstActivity">
+    tools:context=".ManageLMSActivity">
+
 
     <TextView
         android:id="@+id/welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="112dp"
         android:gravity="center"
-        android:text="Welcome to cSimplify!"
+        android:text="Welcome Mrs Ebison"
         android:textColor="#FFFFFF"
         android:textSize="50sp"
         android:textStyle="bold"
@@ -26,10 +27,10 @@
         android:id="@+id/course"
         android:layout_width="311dp"
         android:layout_height="83dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="172dp"
         android:backgroundTint="#5200FF"
         android:gravity="center"
-        android:text="Take Course"
+        android:text="Manage Courses"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         app:cornerRadius="20dp"
@@ -38,28 +39,13 @@
         app:layout_constraintTop_toBottomOf="@+id/welcome" />
 
     <Button
-        android:id="@+id/game"
-        android:layout_width="311dp"
-        android:layout_height="83dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#5200FF"
-        android:gravity="center"
-        android:text="Play Game"
-        android:textAllCaps="false"
-        android:textColor="#FFFFFF"
-        app:cornerRadius="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/puzzle" />
-
-    <Button
-        android:id="@+id/puzzle"
+        android:id="@+id/check_student_scores"
         android:layout_width="311dp"
         android:layout_height="83dp"
         android:layout_marginTop="4dp"
         android:backgroundTint="#5200FF"
         android:gravity="center"
-        android:text="Play puzzle"
+        android:text="Student Scores"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         app:cornerRadius="20dp"
@@ -67,19 +53,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/course" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="311dp"
-        android:layout_height="83dp"
-        android:layout_marginTop="4dp"
-        android:backgroundTint="#5200FF"
-        android:gravity="center"
-        android:text="Manage LMS"
-        android:textAllCaps="false"
-        android:textColor="#FFFFFF"
-        app:cornerRadius="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/game" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

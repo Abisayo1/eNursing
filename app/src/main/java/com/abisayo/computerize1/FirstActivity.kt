@@ -38,9 +38,9 @@ class FirstActivity : AppCompatActivity() {
                 .setMessage("You will need an internet connection")
                 .setCancelable(true)
                 .setPositiveButton("Continue") { dialogInterface, it ->
+                    dialogInterface.cancel()
                     val intent = Intent(this, EnterAdminPasswordActivity::class.java)
                     startActivity(intent)
-                    overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
 
                 }
                 .setNegativeButton("No") { dialogInterface, it ->

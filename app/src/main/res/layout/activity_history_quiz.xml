@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/quiz_backgrnd"
     android:fillViewport="true"
-    tools:context=".Algorithms.HistoryQuizActivity">
+    tools:context=".HistoryQuizActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

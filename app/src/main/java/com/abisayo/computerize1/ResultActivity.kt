@@ -9,11 +9,13 @@ import android.view.View
 import android.view.Window
 import android.view.WindowManager
 import android.widget.TextView
-import androidx.core.view.isVisible
+import android.widget.Toast
 import com.abisayo.computerize1.Games.GameClaraActivity
 import com.abisayo.computerize1.data.Constants
 import com.abisayo.computerize1.databinding.ActivityResultBinding
-import com.abisayo.computerize1.Algorithms.HistoryQuizActivity
+import com.abisayo.computerize1.models.Scores
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 class ResultActivity : AppCompatActivity() {
     private lateinit var binding: ActivityResultBinding
@@ -22,6 +24,7 @@ class ResultActivity : AppCompatActivity() {
     var i = 0
     var j = 0
     var correctAnswers = 999
+    private lateinit var database : DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,6 +40,8 @@ class ResultActivity : AppCompatActivity() {
         binding = ActivityResultBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
+
         binding.goHome.setOnClickListener {
             val intent = Intent(this, TopicsActivity::class.java)
             startActivity(intent)
@@ -47,6 +52,22 @@ class ResultActivity : AppCompatActivity() {
         correctAnswers = intent.getIntExtra(Constants.CORRECT_ANSWERS, 0)
         val activity = intent.getStringExtra(Constants.ACTIVITY)
         val topic = intent.getStringExtra(Constants.TOPIC)
+        val student_name = intent.getStringExtra(Constants.STUDENT_NAME)
+
+        val noteTitle = topic
+        val studentName = student_name
+        val score = "$correctAnswers/${totalQuestions}"
+
+        database = FirebaseDatabase.getInstance().getReference("Scores")
+        val Score = Scores(studentName, noteTitle, score)
+            if (noteTitle != null) {
+                database.child(noteTitle).setValue(Score).addOnSuccessListener {
+                    Toast.makeText(this, "Successfully Saved", Toast.LENGTH_SHORT).show()
+                }.addOnFailureListener {
+                    Toast.makeText(this, "Failed", Toast.LENGTH_SHORT).show()
+                }
+            }
+
 
         if (topic == "Pretest Questions") {
             binding.goHome.text = "Start learning"

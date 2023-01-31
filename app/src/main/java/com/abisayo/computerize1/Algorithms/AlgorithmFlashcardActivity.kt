@@ -11,6 +11,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.abisayo.computerize1.*
+import com.abisayo.computerize1.data.Constants
 import com.abisayo.computerize1.data.Constants.EXTRA_FLASH_CARD
 import com.abisayo.computerize1.databinding.ActivityHistoryFlashcardBinding
 import com.abisayo.computerize1.flashcard.FlashCard
@@ -107,8 +108,10 @@ class AlgorithmFlashcardActivity : AppCompatActivity() {
                 }
 
                 R.id.quiz -> {
-                    startActivity(Intent(this,
-                        HistoryQuizActivity::class.java))
+                    val intent = Intent(this, EnterNameQuizActivity::class.java)
+                    intent.putExtra(Constants.TOPIC, "Algorithms")
+                    startActivity(intent)
+                    finish()
                 }
 
 

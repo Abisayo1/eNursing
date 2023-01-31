@@ -7,6 +7,7 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
+import com.abisayo.computerize1.HistoryQuizActivity
 import com.abisayo.computerize1.Profile
 import com.abisayo.computerize1.R
 import com.abisayo.computerize1.TopicsActivity

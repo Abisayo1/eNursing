@@ -7,19 +7,21 @@
     android:background="@drawable/next_level"
     tools:context=".EnterAdminPasswordActivity">
 
+
     <EditText
-        android:id="@+id/editTextTextPassword3"
+        android:id="@+id/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="128dp"
         android:ems="10"
-        android:hint="Enter Admin Password"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="429dp"
+        android:layout_marginTop="128dp"
+        android:hint="Enter name"
         android:textColorHint = "#FFFFFF"
-        android:inputType="textPassword"
+        android:inputType="textPersonName"
         android:textStyle="bold"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
@@ -29,15 +31,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="128dp"
         android:gravity="center"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginEnd="20dp"
-        android:text="Enter password to manage LMS"
+        android:text="Enter your name"
         android:textColor="#FFFFFF"
         android:textSize="35sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -57,4 +56,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword3" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

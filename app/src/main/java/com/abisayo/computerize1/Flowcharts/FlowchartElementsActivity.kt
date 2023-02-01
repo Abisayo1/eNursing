@@ -7,12 +7,13 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
+import com.abisayo.computerize1.EnterNameQuizActivity
 import com.abisayo.computerize1.Profile
 import com.abisayo.computerize1.R
 import com.abisayo.computerize1.TopicsActivity
+import com.abisayo.computerize1.data.Constants
 import com.abisayo.computerize1.data.Flashcards
-import com.abisayo.computerize1.data.startAlgorithmFlashcardActivity
-import com.abisayo.computerize1.data.startTrendsFlashcardActivity
+import com.abisayo.computerize1.data.startFlowChartActivity
 import com.abisayo.computerize1.databinding.ActivityFlowchartElementsBinding
 import com.google.android.material.navigation.NavigationView
 
@@ -52,7 +53,7 @@ class FlowchartElementsActivity : AppCompatActivity() {
                 }
 
                 R.id.introduction -> {
-                    this.startTrendsFlashcardActivity(Flashcards.trendIntroFlashcard())
+                    this.startFlowChartActivity(Flashcards.trendIntroFlashcard(), 0)
                 }
 
                 R.id.flow_elements -> {
@@ -62,13 +63,13 @@ class FlowchartElementsActivity : AppCompatActivity() {
                     )
                 }
                 R.id.guidelines -> {
-                    this.startTrendsFlashcardActivity(Flashcards.trendSpecializationFlashcard())
+                    this.startFlowChartActivity(Flashcards.trendSpecializationFlashcard(), 1)
                 }
                 R.id.advantages -> {
-                    this.startTrendsFlashcardActivity(Flashcards.trendOutpatientFlashcard())
+                    this.startFlowChartActivity(Flashcards.trendOutpatientFlashcard(), 2)
                 }
                 R.id.disadvantages -> {
-                    this.startTrendsFlashcardActivity(Flashcards.trendNavigatorFlashcard())
+                    this.startFlowChartActivity(Flashcards.trendNavigatorFlashcard(), 3)
                 }
                 R.id.examples -> {
                     startActivity(
@@ -78,10 +79,10 @@ class FlowchartElementsActivity : AppCompatActivity() {
                 }
 
                 R.id.quiz -> {
-                    startActivity(
-                        Intent(this,
-                            FlowChartQuizActivity::class.java)
-                    )
+                    val intent = Intent(this, EnterNameQuizActivity::class.java)
+                    intent.putExtra(Constants.TOPIC, "Flowcharts")
+                    startActivity(intent)
+                    finish()
                 }
 
             }

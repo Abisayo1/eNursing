@@ -7,10 +7,8 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
-import com.abisayo.computerize1.HistoryQuizActivity
-import com.abisayo.computerize1.Profile
-import com.abisayo.computerize1.R
-import com.abisayo.computerize1.TopicsActivity
+import com.abisayo.computerize1.*
+import com.abisayo.computerize1.data.Constants
 import com.abisayo.computerize1.data.Flashcards
 import com.abisayo.computerize1.data.startAlgorithmFlashcardActivity
 import com.abisayo.computerize1.databinding.ActivityAlgorithmExampleBinding
@@ -73,10 +71,10 @@ class AlgorithmExampleActivity : AppCompatActivity() {
                 }
 
                 R.id.quiz -> {
-                    startActivity(
-                        Intent(this,
-                        HistoryQuizActivity::class.java)
-                    )
+                    val intent = Intent(this, EnterNameQuizActivity::class.java)
+                    intent.putExtra(Constants.TOPIC, "Algorithms")
+                    startActivity(intent)
+                    finish()
                 }
 
 

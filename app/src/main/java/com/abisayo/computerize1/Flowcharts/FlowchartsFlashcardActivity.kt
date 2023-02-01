@@ -11,13 +11,14 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.abisayo.computerize1.*
+import com.abisayo.computerize1.data.Constants
 import com.abisayo.computerize1.data.Constants.EXTRA_FLASH_CARD
 import com.abisayo.computerize1.databinding.ActivityTrendsFlashcardBinding
 import com.abisayo.computerize1.flashcard.FlashCard
 import com.abisayo.computerize1.flashcard.FlashCardAdapter
 import com.abisayo.computerize1.data.Flashcards
 import com.abisayo.computerize1.data.startAlgorithmFlashcardActivity
-import com.abisayo.computerize1.data.startTrendsFlashcardActivity
+import com.abisayo.computerize1.data.startFlowChartActivity
 import com.google.android.material.navigation.NavigationView
 
 class FlowchartsFlashcardActivity : AppCompatActivity() {
@@ -47,6 +48,26 @@ class FlowchartsFlashcardActivity : AppCompatActivity() {
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
 
+        binding.readMore.setOnClickListener {
+            intent = Intent(this, ReadMoreActivity::class.java)
+            startActivity(intent)
+        }
+
+        val item = intent.getIntExtra("item", 999)
+        if (item == 0) {
+            supportActionBar?.setTitle("Introduction to Flowchart")
+            binding.textView10.text = getString(R.string.definition)
+        } else if (item == 1) {
+            supportActionBar?.setTitle("Flowchart Guidelines")
+            binding.textView10.text = getString(R.string.rules_flow)
+        } else if (item == 2) {
+            supportActionBar?.setTitle("Flowchart Advantages")
+            binding.textView10.text = getString(R.string.advantages_flow)
+        } else if (item == 3) {
+            supportActionBar?.setTitle("Flowchart Disadvantages")
+            binding.textView10.text = getString(R.string.disadvantages_flow)
+        }
+
         toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close)
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
@@ -68,7 +89,7 @@ class FlowchartsFlashcardActivity : AppCompatActivity() {
                 }
 
                 R.id.introduction -> {
-                    this.startTrendsFlashcardActivity(Flashcards.trendIntroFlashcard())
+                    this.startFlowChartActivity(Flashcards.trendIntroFlashcard(), 0)
                     supportActionBar?.setTitle("Introduction to Flowcharts")
                 }
 
@@ -78,20 +99,27 @@ class FlowchartsFlashcardActivity : AppCompatActivity() {
 
                 }
                 R.id.guidelines -> {
-                    this.startTrendsFlashcardActivity(Flashcards.trendSpecializationFlashcard())
+                    this.startFlowChartActivity(Flashcards.trendSpecializationFlashcard(), 1)
                     supportActionBar?.setTitle("Flowchart Guidelines")
                 }
                 R.id.advantages -> {
-                    this.startTrendsFlashcardActivity(Flashcards.trendOutpatientFlashcard())
+                    this.startFlowChartActivity(Flashcards.trendOutpatientFlashcard(), 2)
                     supportActionBar?.setTitle("Advantages of Flowcharts")
                 }
                 R.id.disadvantages -> {
-                    this.startTrendsFlashcardActivity(Flashcards.trendNavigatorFlashcard())
+                    this.startFlowChartActivity(Flashcards.trendNavigatorFlashcard(), 3)
                     supportActionBar?.setTitle("Disadvantages of Flowchart")
                 }
                 R.id.examples -> {
                     startActivity(Intent(this,
                         FlowchartExampleActivity::class.java))
+                }
+
+                R.id.quiz -> {
+                    val intent = Intent(this, EnterNameQuizActivity::class.java)
+                    intent.putExtra(Constants.TOPIC, "Flowcharts")
+                    startActivity(intent)
+                    finish()
                 }
 
             }

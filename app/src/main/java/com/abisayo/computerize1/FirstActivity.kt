@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.Window
 import android.view.WindowManager
 import com.abisayo.computerize1.Games.GameClaraActivity
+import com.abisayo.computerize1.data.Constants
 import com.abisayo.computerize1.databinding.ActivityFirstBinding
 
 class FirstActivity : AppCompatActivity() {
@@ -48,6 +49,14 @@ class FirstActivity : AppCompatActivity() {
                 }
 
                 .show()
+
+        }
+
+        binding.playGame.setOnClickListener {
+            val intent = Intent(this, EnterNameQuizActivity::class.java)
+            intent.putExtra(Constants.TOPIC, "game")
+            startActivity(intent)
+
 
         }
 //

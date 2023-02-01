@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Computerize1">
         <activity
+            android:name=".ReadMoreActivity"
+            android:exported="false" />
+        <activity
             android:name=".ManageLMSActivity"
             android:exported="false" />
         <activity

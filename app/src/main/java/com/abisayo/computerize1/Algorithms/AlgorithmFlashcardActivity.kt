@@ -41,9 +41,14 @@ class AlgorithmFlashcardActivity : AppCompatActivity() {
             finish()
         }
 
+        binding.readMore.setOnClickListener {
+            intent = Intent(this, ReadMoreActivity::class.java)
+            startActivity(intent)
+        }
+
         val item = intent.getIntExtra("item", 999)
         if (item == 0) {
-            supportActionBar?.setTitle("Introduction to Flowchart")
+            supportActionBar?.setTitle("Introduction to Algorithms")
             binding.textView10.text = getString(R.string.algo_def)
         } else if (item == 1) {
             supportActionBar?.setTitle("Types of Algorithms")

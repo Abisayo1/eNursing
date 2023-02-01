@@ -24,6 +24,7 @@ import com.abisayo.computerize1.oxygenation.OxygenationSubTopicActivity
 import com.abisayo.computerize1.roles.RolesSubTopicActivity
 import com.abisayo.computerize1.standards.StandardsActivity
 import com.abisayo.computerize1.Flowcharts.FlowchartsSubTopicActivity
+import com.abisayo.computerize1.data.Constants
 
 
 class TopicsActivity : AppCompatActivity() {
@@ -54,6 +55,7 @@ class TopicsActivity : AppCompatActivity() {
 
         val sharedPreferences = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
         val savedInt = sharedPreferences.getInt("score", 0)
+        val savedTopic = sharedPreferences.getString("topic", "")
 
         recyclerView = findViewById(R.id.recycler)
         recyclerView.layoutManager = LinearLayoutManager(this)
@@ -62,6 +64,7 @@ class TopicsActivity : AppCompatActivity() {
 
         topicList.add(Topic(0, "Algorithms", ""))
         topicList.add(Topic(0, "Flowcharts", ""))
+        topicList.add(Topic(0, "Take Exam", ""))
         topicList.add(Topic(0, "View Other Courses", ""))
 
 
@@ -98,7 +101,7 @@ class TopicsActivity : AppCompatActivity() {
                         startActivity(intent)
 
                     }
-                    1 -> { if (savedInt>=6) {
+                    1 -> { if (savedInt>=6 && savedTopic == "Algorithms") {
                         val intent =
                             Intent(this@TopicsActivity, FlowchartsSubTopicActivity::class.java)
                         startActivity(intent)
@@ -108,7 +111,7 @@ class TopicsActivity : AppCompatActivity() {
                     }
 
                     }
-                    2 -> {
+                    3 -> {
                         builder.setTitle("Alert!")
                             .setMessage("You will need an internet connection")
                             .setCancelable(true)
@@ -125,11 +128,18 @@ class TopicsActivity : AppCompatActivity() {
                             .show()
 
                     }
-                    3 -> {
-                        val intent = Intent(this@TopicsActivity, RolesSubTopicActivity::class.java)
+                    2 -> { if (savedInt>=6 && savedTopic == "Flowcharts") {
+                        val intent =
+                            Intent(this@TopicsActivity, EnterNameQuizActivity::class.java)
+                        intent.putExtra(Constants.TOPIC, "Post test")
                         startActivity(intent)
+                    } else {
+                        message2()
 
                     }
+
+                    }
+
                     4 -> {
                         val intent = Intent(this@TopicsActivity, AssessmentSubTopicActivity::class.java)
                         startActivity(intent)
@@ -177,5 +187,9 @@ class TopicsActivity : AppCompatActivity() {
 
     private fun message() {
         Toast.makeText(this, "You need to score at least 60% in the assessment test to unlock this course", Toast.LENGTH_LONG).show()
+    }
+
+    private fun message2() {
+        Toast.makeText(this, "You need to score at least 60% in the assessment test to unlock this exam", Toast.LENGTH_LONG).show()
     }
 }

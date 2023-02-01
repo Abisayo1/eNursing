@@ -38,28 +38,29 @@
         app:layout_constraintTop_toBottomOf="@+id/welcome" />
 
     <Button
-        android:id="@+id/game"
+        android:id="@+id/play_puzzle"
         android:layout_width="311dp"
         android:layout_height="83dp"
         android:layout_marginTop="8dp"
         android:backgroundTint="#5200FF"
         android:gravity="center"
-        android:text="Play Game"
+        android:text="Play puzzle"
+        android:visibility="gone"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         app:cornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/puzzle" />
+        app:layout_constraintTop_toBottomOf="@+id/play_game" />
 
     <Button
-        android:id="@+id/puzzle"
+        android:id="@+id/play_game"
         android:layout_width="311dp"
         android:layout_height="83dp"
         android:layout_marginTop="4dp"
         android:backgroundTint="#5200FF"
         android:gravity="center"
-        android:text="Play puzzle"
+        android:text="Play game"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         app:cornerRadius="20dp"
@@ -80,6 +81,6 @@
         app:cornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/game" />
+        app:layout_constraintTop_toBottomOf="@+id/play_puzzle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

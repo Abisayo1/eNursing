@@ -1,5 +1,6 @@
 package com.abisayo.computerize1.Flowcharts
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Window
 import android.view.WindowManager
@@ -7,10 +8,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.abisayo.computerize1.*
+import com.abisayo.computerize1.Algorithms.AlgorithmExampleActivity
 import com.abisayo.computerize1.databinding.ActivityTrendSubTopicBinding
 import com.abisayo.computerize1.data.Flashcards
 import com.abisayo.computerize1.data.Topic
-import com.abisayo.computerize1.data.startTrendsFlashcardActivity
+import com.abisayo.computerize1.data.startFlowChartActivity
 
 class FlowchartsSubTopicActivity : AppCompatActivity() {
 
@@ -51,53 +53,26 @@ class FlowchartsSubTopicActivity : AppCompatActivity() {
 
                 when (position) {
                     0 -> {
-                        this@FlowchartsSubTopicActivity.startTrendsFlashcardActivity(Flashcards.trendIntroFlashcard())
+                        this@FlowchartsSubTopicActivity.startFlowChartActivity(Flashcards.trendIntroFlashcard(), 0)
                     }
                     1 -> {
-                        this@FlowchartsSubTopicActivity.startTrendsFlashcardActivity(Flashcards.trendTeleHealthFlashcard())
+                        val intent = Intent(this@FlowchartsSubTopicActivity, FlowchartElementsActivity::class.java)
+                        startActivity(intent)
                     }
                     2 -> {
-                        this@FlowchartsSubTopicActivity.startTrendsFlashcardActivity(Flashcards.trendSpecializationFlashcard())
+                        this@FlowchartsSubTopicActivity.startFlowChartActivity(Flashcards.trendSpecializationFlashcard(), 1)
                     }
                     3 -> {
-                        this@FlowchartsSubTopicActivity.startTrendsFlashcardActivity(Flashcards.trendOutpatientFlashcard())
+                        this@FlowchartsSubTopicActivity.startFlowChartActivity(Flashcards.trendOutpatientFlashcard(), 2)
                     }
                     4 -> {
-                        this@FlowchartsSubTopicActivity.startTrendsFlashcardActivity(Flashcards.trendNavigatorFlashcard())
+                        this@FlowchartsSubTopicActivity.startFlowChartActivity(Flashcards.trendNavigatorFlashcard(), 3)
                     }
                     5 -> {
-                        this@FlowchartsSubTopicActivity.startTrendsFlashcardActivity(Flashcards.trendENTFlashcard())
+                        val intent = Intent(this@FlowchartsSubTopicActivity, FlowchartExampleActivity::class.java)
+                        startActivity(intent)
                     }
-                    6 -> {
-                        this@FlowchartsSubTopicActivity.startTrendsFlashcardActivity(Flashcards.trendDoctoralFlashcard())
-                    }
-                    7 -> {
-                        this@FlowchartsSubTopicActivity.startTrendsFlashcardActivity(Flashcards.trendEduOnlineFlashcard())
-                    }
-                    8 -> {
-                        this@FlowchartsSubTopicActivity.startTrendsFlashcardActivity(Flashcards.trendShortageFlashcard())
-                    }
-                    9 -> {
-                        this@FlowchartsSubTopicActivity.startTrendsFlashcardActivity(Flashcards.trendAdvocacyFlashcard())
-                    }
-                    10 -> {
-                        this@FlowchartsSubTopicActivity.startTrendsFlashcardActivity(Flashcards.trendSelfCareFlashcard())
-                    }
-                    11 -> {
-                        this@FlowchartsSubTopicActivity.startTrendsFlashcardActivity(Flashcards.trendSalariesFlashcard())
-                    }
-                    12 -> {
-                        this@FlowchartsSubTopicActivity.startTrendsFlashcardActivity(Flashcards.trendBiLingualFlashcard())
-                    }
-                    13 -> {
-                        this@FlowchartsSubTopicActivity.startTrendsFlashcardActivity(Flashcards.trendMalesFlashcard())
-                    }
-                    14 -> {
-                        this@FlowchartsSubTopicActivity.startTrendsFlashcardActivity(Flashcards.trendHolisticFlashcard())
-                    }
-                    15 -> {
-                        this@FlowchartsSubTopicActivity.startTrendsFlashcardActivity(Flashcards.trendPatientsFlashcard())
-                    }
+
                 }
             }
         })

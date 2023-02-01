@@ -18,6 +18,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
 import com.abisayo.computerize1.NextLevelActivity
 import com.abisayo.computerize1.R
+import com.abisayo.computerize1.ResultActivity
 import com.abisayo.computerize1.data.Constants
 import com.abisayo.computerize1.databinding.ActivityGameClaraBinding
 
@@ -44,11 +45,12 @@ class GameClaraActivity : AppCompatActivity() {
 
         binding.constraint.setOnClickListener {
             if (trialNum == 5) {
-                val intent = Intent(this, NextLevelActivity::class.java)
+                val intent = Intent(this, ResultActivity::class.java)
                 intent.putExtra(Constants.TOTAL_QUESTIONS, trialNum)
                 intent.putExtra(Constants.CORRECT_ANSWERS, i)
                 intent.putExtra(Constants.NEXT_LEVEL, NextLevel)
                 intent.putExtra(Constants.ACTIVITY,  "GameClaraActivity")
+                intent.putExtra(Constants.TOPIC,  "Game")
                 startActivity(intent)
                 finish()
             }
@@ -105,21 +107,21 @@ class GameClaraActivity : AppCompatActivity() {
         mydialog.show()
 
         if (que == binding.clockBtn) {
-            question.text = "She volunteered as a nurse during the America?"
-            secondBtn.text = "Civil war"
-            firstBtn.text = "Democracy"
+            question.text = "The rectangle shape in flowcharts represents"
+            secondBtn.text = "processing"
+            firstBtn.text = "input/output"
         } else if (que == binding.btnChair) {
-            question.text = "She organised what services?"
-            secondBtn.text = "teaching"
-            firstBtn.text = "nursing"
+            question.text = "What symbol is used at the beginning of flowcharts?"
+            secondBtn.text = "diamond"
+            firstBtn.text = "oval"
         } else if (que == binding.btnGown) {
-            question.text = "She was the one who established the American?"
-            firstBtn.text = "flag"
-            secondBtn.text = "Red Cross"
+            question.text = "In flowchart, diamond shaped symbol is used to represent"
+            firstBtn.text = "error box"
+            secondBtn.text = "decision box"
         } else if (que == binding.btnLefthand) {
-            question.text = "She persuaded the congress to ratify the treaty in what year?"
-            firstBtn.text = "1882"
-            secondBtn.text = "1992"
+            question.text = "Terminal symbol in a flowchart indicates the"
+            firstBtn.text = "end"
+            secondBtn.text = "decision"
         }
 
             secondBtn.setOnClickListener {

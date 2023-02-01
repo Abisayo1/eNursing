@@ -28,6 +28,14 @@ fun Activity.startTrendsFlashcardActivity(flashCards: ArrayList<FlashCard>){
     startActivity(activityIntent)
 }
 
+fun Activity.startFlowChartActivity(flashCards: ArrayList<FlashCard>, item: Int){
+    val activityIntent =
+        Intent(this, FlowchartsFlashcardActivity::class.java)
+    activityIntent.putExtra(Constants.EXTRA_FLASH_CARD, flashCards)
+    activityIntent.putExtra("item", item)
+    startActivity(activityIntent)
+}
+
 fun Activity.startRolesFlashcardActivity(flashCards: ArrayList<FlashCard>){
     val activityIntent =
         Intent(this, RolesFlashcardActivity::class.java)

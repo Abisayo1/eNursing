@@ -23,17 +23,15 @@ class PretestActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.button.setOnClickListener {
-            val intent = Intent(this, HistoryQuizActivity::class.java)
+            val intent = Intent(this, EnterNameQuizActivity::class.java)
             intent.putExtra(Constants.TOPIC, "Pretest")
             startActivity(intent)
-            overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
 
         }
 
         binding.textView20.setOnClickListener {
             val intent = Intent(this, TopicsActivity::class.java)
             startActivity(intent)
-            overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
 
         }
     }

@@ -23,8 +23,9 @@ class ResultActivity : AppCompatActivity() {
     private lateinit var progressText : TextView
     var i = 0
     var j = 0
-    var correctAnswers = 999
+    var correctAnswers = 0
     private lateinit var database : DatabaseReference
+    var topic = "Jesus"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,7 +52,7 @@ class ResultActivity : AppCompatActivity() {
         val  totalQuestions = intent.getIntExtra(Constants.TOTAL_QUESTIONS, 0)
         correctAnswers = intent.getIntExtra(Constants.CORRECT_ANSWERS, 0)
         val activity = intent.getStringExtra(Constants.ACTIVITY)
-        val topic = intent.getStringExtra(Constants.TOPIC)
+        topic = intent.getStringExtra(Constants.TOPIC).toString()
         val student_name = intent.getStringExtra(Constants.STUDENT_NAME)
 
         val noteTitle = topic
@@ -69,7 +70,7 @@ class ResultActivity : AppCompatActivity() {
             }
 
 
-        if (topic == "Pretest Questions") {
+        if (topic == "Pretest") {
             binding.goHome.text = "Start learning"
             binding.tryAgain.visibility = View.GONE
         }
@@ -113,8 +114,9 @@ class ResultActivity : AppCompatActivity() {
                 }
             }
             when (topic) {
-                "History" -> {
+                "Algorithms" -> {
                     val intent = Intent(this, HistoryQuizActivity::class.java)
+                    intent.putExtra(Constants.TOPIC, "Algorithms")
                     startActivity(intent)
                     finish()
                 }
@@ -157,6 +159,7 @@ class ResultActivity : AppCompatActivity() {
         val editor = sharedPreferences.edit()
         editor.apply {
             putInt("score", correctAnswers)
+            putString("topic", topic)
         }.apply()
 
 

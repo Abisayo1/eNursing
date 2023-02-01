@@ -39,11 +39,14 @@ class HistoryQuizActivity : AppCompatActivity(), View.OnClickListener {
         topic = intent.getStringExtra(Constants.TOPIC).toString()
         name_student = intent.getStringExtra(Constants.STUDENT_NAME).toString()
 
-        if (topic== "Pretest"){
+        if (topic== "Pretest" || topic == "Post test"){
             mQuestionsList = Constants.pretestQuestion()
             setQuestion()
-        } else {
+        } else if (topic == "Algorithms") {
             mQuestionsList = Constants.getQuestion()
+            setQuestion()
+        } else if (topic == "Flowcharts") {
+            mQuestionsList = Constants.getQuestions()
             setQuestion()
         }
 
@@ -76,11 +79,16 @@ class HistoryQuizActivity : AppCompatActivity(), View.OnClickListener {
         val question = mQuestionsList!![mCurrentPosition -1]
         defaultOptionsView()
 
-        if (topic!= "Pretest") {
+        if (topic == "Flowcharts") {
             if (mCurrentPosition == 5) {
                 binding.imgQuestion.isVisible = true
+            } else if (mCurrentPosition == 6) {
+                binding.imgQuestion.isVisible = true
+            } else {
+                binding.imgQuestion.isVisible = false
             }
-        } else if (topic == "Pretest") {
+        }
+        if (topic== "Pretest" || topic == "Post test") {
             if (mCurrentPosition == 4) {
                 binding.imgQuestion.isVisible = true
             } else if (mCurrentPosition ==13) {

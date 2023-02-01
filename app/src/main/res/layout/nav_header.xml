@@ -19,7 +19,7 @@
         android:id="@+id/user_name"
         android:paddingTop="8dp"
         android:textSize="20sp"
-        android:text="Oluwatosin"
+        android:text="Mrs Ebison"
         android:textColor="@color/black"
         android:textStyle="bold"/>
 
@@ -27,6 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="8dp"
+        android:visibility="gone"
         android:textSize="16sp"
         android:text="info@9jahub.com.ng"/>
 

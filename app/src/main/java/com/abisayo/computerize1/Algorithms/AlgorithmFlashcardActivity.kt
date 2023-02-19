@@ -112,6 +112,13 @@ class AlgorithmFlashcardActivity : AppCompatActivity() {
                         AlgorithmExampleActivity::class.java))
                 }
 
+                R.id.read_more -> {
+                    val intent = Intent(this, WebViewActivity::class.java)
+                    intent.putExtra(Constants.TOPIC, "Algorithms")
+                    startActivity(intent)
+                    finish()
+                }
+
                 R.id.quiz -> {
                     val intent = Intent(this, EnterNameQuizActivity::class.java)
                     intent.putExtra(Constants.TOPIC, "Algorithms")

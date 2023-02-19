@@ -49,9 +49,11 @@
         <entry key="..\:/Users/dell/AndroidStudioProjects/cSimplify/app/src/main/res/drawable/default_option_border_bg.xml" value="0.15885416666666666" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/cSimplify/app/src/main/res/layout/activity_add_edit_note.xml" value="0.23148148148148148" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/cSimplify/app/src/main/res/layout/activity_algorithm_example.xml" value="0.26871794871794874" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/cSimplify/app/src/main/res/layout/activity_behavioural_objectives.xml" value="0.33" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/cSimplify/app/src/main/res/layout/activity_create_account.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/cSimplify/app/src/main/res/layout/activity_display_courses.xml" value="0.2074074074074074" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/cSimplify/app/src/main/res/layout/activity_display_student_scores.xml" value="0.14270833333333333" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/cSimplify/app/src/main/res/layout/activity_edit_profile.xml" value="0.15833333333333333" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/cSimplify/app/src/main/res/layout/activity_enter_admin_password.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/cSimplify/app/src/main/res/layout/activity_enter_name_quiz.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/cSimplify/app/src/main/res/layout/activity_first.xml" value="0.26871794871794874" />
@@ -67,10 +69,12 @@
         <entry key="..\:/Users/dell/AndroidStudioProjects/cSimplify/app/src/main/res/layout/activity_new_courses_displayed.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/cSimplify/app/src/main/res/layout/activity_note.xml" value="0.23148148148148148" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/cSimplify/app/src/main/res/layout/activity_pretest.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/cSimplify/app/src/main/res/layout/activity_profile.xml" value="0.5" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/cSimplify/app/src/main/res/layout/activity_result.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/cSimplify/app/src/main/res/layout/activity_topics1.xml" value="0.20185185185185187" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/cSimplify/app/src/main/res/layout/activity_trend_sub_topic.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/cSimplify/app/src/main/res/layout/activity_trends_flashcard.xml" value="0.24537037037037038" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/cSimplify/app/src/main/res/layout/activity_web_view.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/cSimplify/app/src/main/res/layout/dialog_layout.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/cSimplify/app/src/main/res/layout/display_score_item.xml" value="0.33" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/cSimplify/app/src/main/res/layout/flash_card_item_view.xml" value="0.26871794871794874" />

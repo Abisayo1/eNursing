@@ -43,6 +43,10 @@
                 android:title="Examples"/>
 
             <item
+                android:id="@+id/learn_more"
+                android:title="Learn more"/>
+
+            <item
                 android:id="@+id/quiz"
                 android:icon="@drawable/ic_baseline_assessment_24"
                 android:title="Take Quiz"/>

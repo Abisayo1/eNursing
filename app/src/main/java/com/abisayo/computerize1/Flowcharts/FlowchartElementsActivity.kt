@@ -7,10 +7,7 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
-import com.abisayo.computerize1.EnterNameQuizActivity
-import com.abisayo.computerize1.Profile
-import com.abisayo.computerize1.R
-import com.abisayo.computerize1.TopicsActivity
+import com.abisayo.computerize1.*
 import com.abisayo.computerize1.data.Constants
 import com.abisayo.computerize1.data.Flashcards
 import com.abisayo.computerize1.data.startFlowChartActivity
@@ -76,6 +73,13 @@ class FlowchartElementsActivity : AppCompatActivity() {
                         Intent(this,
                         FlowchartExampleActivity::class.java)
                     )
+                }
+
+                R.id.read_more -> {
+                    val intent = Intent(this, WebViewActivity::class.java)
+                    intent.putExtra(Constants.TOPIC, "Flowcharts")
+                    startActivity(intent)
+                    finish()
                 }
 
                 R.id.quiz -> {

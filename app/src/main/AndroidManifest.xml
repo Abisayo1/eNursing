@@ -13,6 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Computerize1">
         <activity
+            android:name=".BehaviouralObjectivesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WebViewActivity"
+            android:exported="false" />
+        <activity
             android:name=".ReadMoreActivity"
             android:exported="false" />
         <activity

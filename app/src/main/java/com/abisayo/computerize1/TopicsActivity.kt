@@ -97,13 +97,15 @@ class TopicsActivity : AppCompatActivity() {
                 when (position) {
                     0 -> {
                         val intent =
-                            Intent(this@TopicsActivity, AlgorithmSubTopicActivity::class.java)
+                            Intent(this@TopicsActivity, BehaviouralObjectivesActivity::class.java)
+                        intent.putExtra(Constants.TOPIC, "Algorithms")
                         startActivity(intent)
 
                     }
                     1 -> { if (savedInt>=6 && savedTopic == "Algorithms") {
                         val intent =
-                            Intent(this@TopicsActivity, FlowchartsSubTopicActivity::class.java)
+                            Intent(this@TopicsActivity, BehaviouralObjectivesActivity::class.java)
+                        intent.putExtra(Constants.TOPIC, "Flowcharts")
                         startActivity(intent)
                     } else {
                         message()

@@ -43,6 +43,10 @@
                 android:id="@+id/algo_examples"
                 android:title="Examples"/>
 
+            <item
+                android:id="@+id/read_more"
+                android:title="Read more"/>
+
 
 
             <item

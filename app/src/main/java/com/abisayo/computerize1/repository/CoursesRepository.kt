@@ -4,6 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import com.abisayo.computerize1.models.Courses
 import com.google.firebase.database.*
 
+
 class CoursesRepository {
 
     private val databaseReference : DatabaseReference = FirebaseDatabase.getInstance().getReference("Courses")
@@ -22,7 +23,7 @@ class CoursesRepository {
 
     fun loadCourses(courseList : MutableLiveData<List<Courses>>){
 
-        databaseReference.addValueEventListener(object : ValueEventListener{
+        databaseReference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 try {
 
